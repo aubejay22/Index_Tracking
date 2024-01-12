@@ -6,9 +6,8 @@ from pypfopt import expected_returns, objective_functions
 from prafe.evaluation import Evaluator
 from prafe.portfolio import Portfolio
 from prafe.universe import Universe
-from prafe.strategy import GenerativeStrategy
 from prafe.objective import cumulative_return, variance, mdd, mdd_duration
-from prafe.constraint.constraint import weights_sum_constraint, variance_constraint, mdd_constraint, mdd_duration_constraint, cumulative_return_constraint, stocks_number_constraint, industry_ratio_constraint, stock_ratio_constraint
+from prafe.constraint.constraint import weights_sum_constraint, stocks_number_constraint
 
 from sklearn.model_selection import ParameterGrid, ParameterSampler
 import time
@@ -30,14 +29,11 @@ class Solution():
         self,
         universe : Universe,
         portfolio : Portfolio,
-        strategy: GenerativeStrategy
         ):
         self.stock_list = universe.stock_list
         self.portfolio = portfolio
         self.universe = universe
-        self.strategy = strategy
 
-        self.objective = strategy.objective
         self.initial_weights = portfolio.get_weights()
 
     def compute_objective(

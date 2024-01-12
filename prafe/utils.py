@@ -4,8 +4,6 @@ import json
 import datetime 
 from prafe.universe import Universe
 from prafe.portfolio import Portfolio
-from prafe.strategy import Strategy, GenerativeStrategy
-from prafe.solution import Solution, HeuristicSearch, MVO
 from prafe.solution.lagrange import Lagrange
 from prafe.evaluation import Evaluator
 from prafe.constraint import *
@@ -32,40 +30,28 @@ def get_data_preprocessed(args, start_year, end_year):
         df_prices.append(pd.read_csv(data_path + '/price_data_' + str(current_year) + '.csv', parse_dates=True, index_col="date").fillna(value=0.0))
         df_returns.append(pd.read_csv(data_path + '/returns_data_' + str(current_year) + '.csv', parse_dates=True, index_col="date").fillna(value=0.0))
         df_multifactors.append(pd.read_csv(data_path + '/multifactor_data_' + str(current_year) + '.csv', parse_dates=['date']).fillna(value=0.0))
-
+    df_index = pd.read_csv(data_path + '/2018_2023_index.csv', parse_dates=True)
+    
     df_price = pd.concat(df_prices)
     df_return = pd.concat(df_returns)
     df_multifactor = pd.concat(df_multifactors)
+    
     
     os.makedirs(data_path + '/processed_' + str(start_year) + '_' + str(end_year), exist_ok=True)
     df_price.to_pickle(data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/price_data.pkl')
     df_return.to_pickle(data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl')
     df_multifactor.to_pickle(data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/multifactor_data.pkl')  
+    df_index.to_pickle(data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/index_data.pkl')
 
-    return df_price, df_return, df_multifactor
+    return df_price, df_return, df_multifactor, df_index
 
 
-def print_constraints_satisfication(args, portfolio, universe, strategy):
-    if args.max_weights_sum : 
-        print("weights sum                  : ", weights_sum_constraint(portfolio, universe, strategy))
-    if args.min_cumulative_return :
-        print("cumulative_return_constraint : ", cumulative_return_constraint(portfolio, universe, strategy))
-    if args.max_stocks_number_constraint : 
-        print("stocks_number_constraint     : ", stocks_number_constraint(portfolio, universe,strategy))
-    if args.min_industry_ratio : 
-        print("industry_ratio_constraint: ", industry_ratio_constraint(portfolio, universe, strategy))
-    if args.min_stock_ratio : 
-        print("stock_ratio_constraint       : ", stock_ratio_constraint(portfolio, universe, strategy))
-    if args.max_mdd : #!
-        print("mdd_constraint               : ", mdd_constraint(portfolio, universe, strategy))
-    if args.max_mdd_duration : #!
-        print("mdd_duration_constraint      : ", mdd_duration_constraint(portfolio, universe, strategy))
-    if args.max_variance :
-        print("variance_constraint          : ", variance_constraint(portfolio, universe, strategy))
-    if args.stocks_to_be_included :
-        print("including_stocks_constraint  : ", including_stocks_constraint(portfolio, universe, strategy))
-        
-        
+def print_constraints_satisfication(args, portfolio, universe):
+    print("weights sum                  : ", weights_sum_constraint(portfolio, universe))
+    if args.K is not None:
+        print("Cardinality constraint     : ", stocks_number_constraint(portfolio, universe))
+
+
 def print_portfolio(weights):
     weight_sum = 0
     eps = 1e-4 # 0.0001
@@ -83,7 +69,6 @@ def save_portfolio_csv(
     args, 
     portfolio : Portfolio, 
     universe : Universe, 
-    strategy : GenerativeStrategy, 
     evaluator : Evaluator,
     weights,
     inference_time_sec,
@@ -115,19 +100,8 @@ def save_portfolio_csv(
         
         ## Constraint Satisfication
         satisfications = {}
-        satisfications["Weight Sum"] = weights_sum_constraint(portfolio, universe, strategy)
-        satisfications["Expected Return constraint"] = cumulative_return_constraint(portfolio, universe, strategy)
-        satisfications["Variance constraint"] = variance_constraint(portfolio, universe, strategy)
-        satisfications["Stock Number constraint"] = stocks_number_constraint(portfolio, universe,strategy)
-        satisfications["Industry Ratio constraint"] = industry_ratio_constraint(portfolio, universe, strategy)
-        # if strategy.min_industry_ratio != None:
-        #     satisfications["Industry Ratio constraint"] = industry_ratio_constraint(portfolio, universe, strategy)
-        # else:
-        #     satisfications["Industry Ratio constraint"] = None
-        satisfications["Stock Ratio constraint"] = stock_ratio_constraint(portfolio, universe, strategy)
-        satisfications["MDD constraint"] = mdd_constraint(portfolio, universe, strategy)
-        satisfications["MDD duration constraint"] = mdd_duration_constraint(portfolio, universe, strategy)
-        satisfications["Including Stocks constraint"] = including_stocks_constraint(portfolio, universe, strategy)
+        satisfications["Weight Sum"] = weights_sum_constraint(portfolio, universe)
+        satisfications["Stock Number constraint"] = stocks_number_constraint(portfolio, universe)
         
         portfolio_satisfication = [[],[]]
         for constraint, satisfied in satisfications.items():
@@ -150,6 +124,7 @@ def save_portfolio_csv(
             writer = csv.writer(f)
             writer.writerow(total_result[0])
             writer.writerow(['None' if x is None else x for x in total_result[1]])
+        
         
 def single_stock_visualization(
         path: str,
@@ -221,12 +196,16 @@ def single_stock_visualization(
     plt.savefig(path + f"/Single_Portfolio_Visualization/{idx+1}th_SR.png")
     plt.close()
     
+
+# Argument Parser   
 def parse_min_stock_ratio(value):
     try:
         return [float(item) for item in value.split(',')]
     except ValueError:
         raise argparse.ArgumentTypeError("min_stock_ratio should be a list of integers")
     
+
+# Argument Parser    
 def str2bool(value):
     if isinstance(value, bool):
         return value
@@ -237,6 +216,7 @@ def str2bool(value):
     else:
         raise argparse.ArgumentTypeError('Boolean value expected.')
     
+
 def read_data(args):
     start_date = datetime.datetime.strptime(args.start_date, '%Y-%m-%d')
     end_date = datetime.datetime.strptime(args.end_date, '%Y-%m-%d')
@@ -247,11 +227,12 @@ def read_data(args):
         df_price = pd.read_pickle(args.data_path + '/processed_' + str(start_year) + '_' +str(end_year) + '/price_data.pkl').fillna(value=0.0)
         df_return = pd.read_pickle(args.data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl').fillna(value=0.0)
         df_multifactor = pd.read_pickle(args.data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/multifactor_data.pkl').fillna(value=0.0)
+        df_index = pd.read_pickle(args.data_path + '/processed_' + str(start_year) + '_' +str(end_year) + '/index_data.pkl').fillna(value=0.0)
     except Exception as e:
         print(e)    
-        df_price, df_return, df_multifactor = get_data_preprocessed(args, start_year, end_year)
+        df_price, df_return, df_multifactor, df_index = get_data_preprocessed(args, start_year, end_year)
     
-    return df_price, df_return, df_multifactor, start_date, end_date, start_year, end_year
+    return df_price, df_return, df_multifactor, df_index, start_date, end_date, start_year, end_year
         
 
 def print_result(my_evaluator):
@@ -268,21 +249,3 @@ def print_result(my_evaluator):
     print("MDD              : {:.4f}".format(my_evaluator.calculate_mdd()))
     print("Max Drawdown_duration: {:.4f}".format(my_evaluator.calculate_recovery_time()))
     
-def search_solution(
-        args: argparse.Namespace,
-        trimmed_universe: Universe,
-        trimmed_portfolio: Portfolio, 
-        strategy: Strategy
-    ):
-    solution_name = args.solution_name
-    solution = None
-    if solution_name == 'lagrange':
-        solution = Lagrange(trimmed_universe, trimmed_portfolio, strategy)
-    elif solution_name == 'heuristic_search':
-        solution = HeuristicSearch(args, trimmed_universe, trimmed_portfolio, strategy)
-    elif solution_name == 'mvo':
-        solution = MVO(trimmed_universe, trimmed_portfolio, strategy)
-    else:
-        raise Exception("Not yet completed solution type!")
-
-    return solution
