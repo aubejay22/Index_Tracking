@@ -277,10 +277,10 @@ class Evaluator():
         weights = list(investments.values())
         weights = np.array(weights)
         
-        # S = risk_models.sample_cov(self.universe.df_price[codes], frequency= self.universe.number_of_trading_days)
-        # variance = objective_functions.portfolio_variance(weights, S)
-        variance = (self.universe.df_return @ weights).std()
-        variance = variance ** 2
+        S = risk_models.sample_cov(self.universe.df_price[codes], frequency= self.universe.number_of_trading_days)
+        variance = objective_functions.portfolio_variance(weights, S)
+        # variance = (self.universe.df_return @ weights).std()
+        # variance = variance ** 2
 
         return variance
 
@@ -294,13 +294,13 @@ class Evaluator():
         weights = list(investments.values())
         weights = np.array(weights)
 
-        # S = risk_models.sample_cov(self.universe.df_price[codes], frequency= self.universe.number_of_trading_days)
-        # mu = expected_returns.mean_historical_return(self.universe.df_price[codes], frequency= self.universe.number_of_trading_days)
-        # variance = objective_functions.portfolio_variance(weights, S)
+        S = risk_models.sample_cov(self.universe.df_price[codes], frequency= self.universe.number_of_trading_days)
+        mu = expected_returns.mean_historical_return(self.universe.df_price[codes], frequency= self.universe.number_of_trading_days)
+        variance = objective_functions.portfolio_variance(weights, S)
         
-        mu = np.array(list(self.universe.get_mean_returns().values())) * self.universe.number_of_trading_days
-        sigma = (self.universe.df_return @ weights).std()
-        # sigma = np.sqrt(variance)
+        # mu = np.array(list(self.universe.get_mean_returns().values())) * self.universe.number_of_trading_days
+        # sigma = (self.universe.df_return @ weights).std()
+        sigma = np.sqrt(variance)
         
         sign = 1
         risk_free_rate = 0.02
@@ -315,8 +315,7 @@ class Evaluator():
         codes = list(investments.keys())
         weights = list(investments.values())
         weights = np.array(weights)
-        print(codes)
-        print(self.universe.df_price[codes[0]])
+
         # Step 1: Compute the daily portfolio value
         portfolio_value = (self.universe.df_price[codes] * weights).sum(axis=1) 
  

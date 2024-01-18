@@ -4,8 +4,6 @@ import json
 import datetime 
 from prafe.universe import Universe
 from prafe.portfolio import Portfolio
-from prafe.strategy import Strategy, GenerativeStrategy
-from prafe.solution import Solution, HeuristicSearch, MVO
 from prafe.solution.lagrange import Lagrange
 from prafe.evaluation import Evaluator
 from prafe.constraint import *
@@ -54,6 +52,12 @@ def get_data_preprocessed(args, start_year, end_year):
     return df_price, df_return, df_multifactor, df_index
 
 
+
+def print_constraints_satisfication(args, portfolio, universe):
+    print("weights sum                  : ", weights_sum_constraint(portfolio, universe))
+    if args.cardinality is not None:
+        print("Cardinality constraint     : ", stocks_number_constraint(portfolio, universe))
+        
         
 def print_portfolio(weights):
     weight_sum = 0
@@ -72,7 +76,6 @@ def save_portfolio_csv(
     args, 
     portfolio : Portfolio, 
     universe : Universe, 
-    strategy : GenerativeStrategy, 
     evaluator : Evaluator,
     weights,
     inference_time_sec,
@@ -102,13 +105,26 @@ def save_portfolio_csv(
             [CR, CAGR, AAR, Variance, AV, SR, LPM, VaR, ES, MDD, Max_Drawdown_duration]
         ]
         
+        ## Constraint Satisfication
+        satisfications = {}
+        satisfications["Weight Sum"] = weights_sum_constraint(portfolio, universe)
+        satisfications["Stock Number constraint"] = stocks_number_constraint(portfolio, universe, K=args.cardinality)
+       
+        portfolio_satisfication = [[],[]]
+        for constraint, satisfied in satisfications.items():
+            portfolio_satisfication[0].append(constraint)
+            portfolio_satisfication[1].append(satisfied)
+        print(portfolio_satisfication)
+         
         ## Inference Time
         inference_time = [["Seconds", "Minutes"], [inference_time_sec, inference_time_min]]
         
         total_result = [[], []]
         total_result[0].extend(portfolio_evaluation[0])
+        total_result[0].extend(portfolio_satisfication[0])
         total_result[0].extend(inference_time[0])
         total_result[1].extend(portfolio_evaluation[1])
+        total_result[1].extend(portfolio_satisfication[1])
         total_result[1].extend(inference_time[1])
         
         with open(path, 'w', newline="") as f :
@@ -186,12 +202,17 @@ def single_stock_visualization(
     plt.savefig(path + f"/Single_Portfolio_Visualization/{idx+1}th_SR.png")
     plt.close()
     
+    
+
+# Argument Parser   
 def parse_min_stock_ratio(value):
     try:
         return [float(item) for item in value.split(',')]
     except ValueError:
         raise argparse.ArgumentTypeError("min_stock_ratio should be a list of integers")
     
+
+# Argument Parser    
 def str2bool(value):
     if isinstance(value, bool):
         return value
@@ -201,6 +222,8 @@ def str2bool(value):
         return False
     else:
         raise argparse.ArgumentTypeError('Boolean value expected.')
+    
+
     
 def read_data(args):
     start_date = datetime.datetime.strptime(args.start_date, '%Y-%m-%d')
@@ -234,21 +257,3 @@ def print_result(my_evaluator):
     print("MDD              : {:.4f}".format(my_evaluator.calculate_mdd()))
     print("Max Drawdown_duration: {:.4f}".format(my_evaluator.calculate_recovery_time()))
     
-def search_solution(
-        args: argparse.Namespace,
-        trimmed_universe: Universe,
-        trimmed_portfolio: Portfolio, 
-        strategy: Strategy
-    ):
-    solution_name = args.solution_name
-    solution = None
-    if solution_name == 'lagrange':
-        solution = Lagrange(trimmed_universe, trimmed_portfolio, strategy)
-    elif solution_name == 'heuristic_search':
-        solution = HeuristicSearch(args, trimmed_universe, trimmed_portfolio, strategy)
-    elif solution_name == 'mvo':
-        solution = MVO(trimmed_universe, trimmed_portfolio, strategy)
-    else:
-        raise Exception("Not yet completed solution type!")
-
-    return solution

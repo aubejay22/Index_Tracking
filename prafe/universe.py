@@ -3,23 +3,20 @@ from datetime import datetime
 from collections import defaultdict
 import torch
 import numpy as np
-from argparse import Namespace
 
 class Universe():
     
     
     def __init__(
         self,
-        args: Namespace,
+        args,
         df_price : pd.DataFrame,
         df_return : pd.DataFrame,
-        df_multifactor : pd.DataFrame,
         df_index : pd.DataFrame,
     ) :
         self.args = args
         self.df_price = df_price
         self.df_return = df_return
-        self.df_multifactor = df_multifactor
         self.df_index = df_index
         self.number_of_trading_days = len(df_price)
         #self.universe_start_date = self._get_universe_start_date(join = 'inner')
@@ -57,11 +54,6 @@ class Universe():
                                   'end' : dataframe.index[-1]}
                 datetime_infos.append(dateframe_info)
         
-        # if not self.df_multifactor.empty :
-        #     datetime_infos.append({'start' : self.df_multifactor['date'].min(),
-        #                            'end' : self.df_multifactor['date'].max()})
-
-        # print(datetime_infos)
         return datetime_infos
     
     
@@ -101,20 +93,19 @@ class Universe():
         if type(end_datetime) != type(pd.Timestamp('now')):
             end_datetime = pd.Timestamp(end_datetime)
         
-        
         df_trimmed_price = self.df_price.loc[start_datetime:end_datetime]
         df_trimmed_returns = self.df_return.loc[start_datetime:end_datetime]
-        df_trimmed_multifactor = self.df_multifactor[(self.df_multifactor['date'] >= start_datetime) & (self.df_multifactor['date'] <= end_datetime)]
         df_trimmed_index = self.df_index.loc[start_datetime:end_datetime]
         
-        mask = (self.df_multifactor['date'] >= start_datetime) & (self.df_multifactor['date'] <= end_datetime)
-        df_trimmed_multifactor = self.df_multifactor.loc[mask]
+        common_index = df_trimmed_price.index.intersection(df_trimmed_returns.index).intersection(df_trimmed_index.index)
+        df_trimmed_price = df_trimmed_price.loc[common_index]
+        df_trimmed_returns = df_trimmed_returns.loc[common_index]
+        df_trimmed_index = df_trimmed_index.loc[common_index]
         
         # print(df_trimmed_index)
         new_universe = Universe(args = self.args,
                                 df_price = df_trimmed_price,
                                 df_return = df_trimmed_returns,
-                                df_multifactor = df_trimmed_multifactor,
                                 df_index = df_trimmed_index)
                 
         return new_universe
@@ -127,14 +118,11 @@ class Universe():
         
         df_trimmed_price = self.df_price[list_of_stock_codes]
         df_trimmed_returns = self.df_return[list_of_stock_codes]
-        # df_trimmed_multifactor = self.df_multifactor[list_of_stock_codes]
-        df_trimmed_multifactor = self.df_multifactor.loc[self.df_multifactor['code'].isin(list_of_stock_codes)]
         df_trimmed_index = self.df_index
         
         new_universe = Universe(args = self.args,
                                 df_price = df_trimmed_price,
                                 df_return = df_trimmed_returns,
-                                df_multifactor = df_trimmed_multifactor,
                                 df_index = df_trimmed_index)
         new_universe.stock_list = list_of_stock_codes
 
@@ -193,38 +181,6 @@ class Universe():
 
         return price_dim
 
-
-    def get_stock_embeddings(
-        self,
-        stock_list : list = []
-    ) -> list:
-        
-        stock_embeddings = dict()
-        date_list = set(self.df_multifactor['date'].unique())
-        
-        for stock_code in stock_list:
-            embedding = []
-            current_multifactor = self.df_multifactor[self.df_multifactor['code'] == stock_code]
-            current_date = set(current_multifactor['date'].unique())
-
-            for date in current_date:
-                daily = []
-                daily.append(self.df_price[stock_code][date])
-                # add multifactors (dim: 153) with price (dim: 1) => dim: 154
-                daily.extend(current_multifactor[current_multifactor['date'] == date].iloc[0, 4:].values)
-                embedding.append(daily)
-
-            embedding = torch.tensor(np.array(embedding), dtype=torch.float32)
-            
-            empty_date = list(date_list - current_date)
-            if len(empty_date) > 0:
-                empty_embedding = torch.mean(embedding, 0).repeat(len(empty_date), 1)
-                embedding = torch.cat((embedding, empty_embedding), dim=0)
-
-            stock_embeddings[stock_code] = embedding
-
-        return stock_embeddings
-    
     
     def get_stock_infos(
         self,
@@ -234,7 +190,6 @@ class Universe():
         series_price = self.df_price[stock_code]
         series_return = self.df_return[stock_code]
         mean_return = series_return.mean()
-        stock_multi_factor = self.df_multifactor[self.df_multifactor['code'] == stock_code]
         stock_multi_factor = stock_multi_factor.set_index('date')
         stock_multi_factor = stock_multi_factor.drop(columns = ['code'])
         stock_multi_factor = stock_multi_factor.loc[:, ~stock_multi_factor.columns.str.contains('^Unnamed')]
@@ -246,7 +201,6 @@ class Universe():
             'price' : series_price,
             'return' : series_return,
             'mean_return' : mean_return,
-            'multifactor' : stock_multi_factor
         }
         
         return stock_infos
@@ -263,7 +217,6 @@ class Universe():
             series_price = self.df_price[stock_code]
             series_return = self.df_return[stock_code]
             mean_return = series_return.mean()
-            stock_multi_factor = self.df_multifactor[self.df_multifactor['code'] == stock_code]
             stock_multi_factor = stock_multi_factor.set_index('date')
             stock_multi_factor = stock_multi_factor.drop(columns = ['code'])
             stock_multi_factor = stock_multi_factor.loc[:, ~stock_multi_factor.columns.str.contains('^Unnamed')]
@@ -272,7 +225,6 @@ class Universe():
                 'price' : series_price,
                 'series_return' : series_return,
                 'mean_return' : mean_return,
-                'multifactor' : stock_multi_factor
             }
         
         return stock_infos

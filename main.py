@@ -12,6 +12,7 @@ from sklearn.metrics import mean_squared_error
 from sympy import symbols, Eq, solve
 from scipy.optimize import minimize
 
+from prafe.solution.lagrange import Lagrange
 from prafe.utils import *
 
 warnings.filterwarnings("ignore")
@@ -34,6 +35,7 @@ def main():
     parser.add_argument('--solution_name', type=str,
                         default='lagrange_ours', choices=['lagrange_full', 'lagrange_ours', 'lagrange_forward', 'lagrange_backward', 'QP_full', 'QP_forward', 'QP_backward', 'SNN'])
     parser.add_argument('--cardinality', type=int, default=None)
+    parser.add_argument('--method', type=str)
     
     # Select the Data to Use
     parser.add_argument('--start_date', type=str, help="2018-01-02", default="2018-01-02")
@@ -48,24 +50,29 @@ def main():
 
     args = parser.parse_args()
 
-    print(0)
-    # price, return, multifactor data
-    df_price, df_return, df_multifactor, df_index, start_date, end_date, start_year, end_year = read_data(args)
-    print(-1)
+    # price, return, index data
+    df_price, df_return, df_index, start_date, end_date, start_year, end_year = read_data(args)
+
     # index type
-    if args.index_type == "kospi100":
-        df_index = df_index['IKS100'].pct_change()
-        index_stocks_list = json.load(open(args.data_path + '/stock_list.json'))['코스피100'][args.start_date]
-    elif args.index_type == "s&p500":
-        df_index = df_index['SPI@SPX'].pct_change()
-    print(-2)
+    index_type = args.index_type
+    if index_type == "kospi100":
+        df_index = df_index['IKS100'].pct_change().fillna(value=0.0)
+        index_stocks_list = json.load(open(args.data_path + '/stock_list.json'))[index_type][args.start_date]
+    elif index_type == "s&p500":
+        df_index = df_index['SPI@SPX'].pct_change()#.fillna(value=0.0)
+        index_stocks_list = df_price.dropna(axis=1).columns.tolist()
+
+    # print(index_stocks_list)
+    
     K = args.cardinality
-        
+    
+    
     # Get the universe
-    universe = Universe(args = args, df_price= df_price, df_return=df_return, df_multifactor = df_multifactor, df_index=df_index)
-        
-    # trimmed_universe = universe.get_trimmed_universe_by_stocks(list_of_stock_codes=index_stocks_list)
+    universe = Universe(args = args, df_price= df_price, df_return=df_return, df_index=df_index)
+
+    universe = universe.get_trimmed_universe_by_stocks(list_of_stock_codes=index_stocks_list)
     universe = universe.get_trimmed_universe_by_time(start_datetime=start_date, end_datetime=end_date)
+    
     print(universe._get_universe_datetime_info()) # print the universe datetime info
 
     # For Backtesting
@@ -76,7 +83,6 @@ def main():
         
     portfolio_duration = relativedelta(years=1)
 
-    print(1)
     idx = 0
     current_date = start_date
     current_to_end = current_date + portfolio_duration - pd.Timedelta(days=1)
@@ -94,13 +100,12 @@ def main():
             new_universe = universe.get_trimmed_universe_by_time(start_datetime=current_date, end_datetime=current_to_end)
         else:
             new_universe = universe
-        print(2)
+
         
         new_portfolio = Portfolio(new_universe)
         # Define Solution
-        solution = Lagrange(args, new_universe, new_portfolio, args.solution_name)
+        solution = Lagrange(new_universe, new_portfolio, args.solution_name, args.method, len(index_stocks_list), K)
         
-        print(3)
         ## Update portfolio
         print()
         print("updating portfolio...")
@@ -112,13 +117,13 @@ def main():
         print(current_date)
 
         # Print portfolio
-        print_portfolio(weights)
+        print_portfolio(weights, K)
 
         # Evaluate the portfolio
         my_evaluator = Evaluator(universe=new_universe, portfolio=new_portfolio)
         print("====================================")
         print("evaluating portfolio...")
-        print_result(my_evaluator)
+        # print_result(my_evaluator)
         print("====================================")
 
         # Constraint Satisfaction
@@ -140,15 +145,15 @@ def main():
         formatted_start_date = current_date.strftime('%Y-%m-%d')
         formatted_end_date = current_to_end.strftime('%Y-%m-%d')
         # Save the portfolio
-        if args.backtesting:
-            new_portfolio.save_portfolio(store_path+f'/{idx+1}th_portfolio_{formatted_start_date}_{formatted_end_date}.csv')
-            save_portfolio_csv(store_path + f'/{idx+1}th_evaulation_{formatted_start_date}_{formatted_end_date}.csv', args, new_portfolio, new_universe, my_evaluator, weights, inference_time_sec, inference_time_min)
-        else:
-            new_portfolio.save_portfolio(store_path+f'/portfolio.csv')
-            save_portfolio_csv(store_path + f'/evaulation.csv', args, new_portfolio, new_universe, my_evaluator, weights, inference_time_sec, inference_time_min)
+        # if args.backtesting:
+        #     new_portfolio.save_portfolio(store_path+f'/{idx+1}th_portfolio_{formatted_start_date}_{formatted_end_date}.csv')
+        #     save_portfolio_csv(store_path + f'/{idx+1}th_evaulation_{formatted_start_date}_{formatted_end_date}.csv', args, new_portfolio, new_universe, my_evaluator, weights, inference_time_sec, inference_time_min)
+        # else:
+        #     new_portfolio.save_portfolio(store_path+f'/portfolio.csv')
+        #     save_portfolio_csv(store_path + f'/evaulation.csv', args, new_portfolio, new_universe, my_evaluator, weights, inference_time_sec, inference_time_min)
 
         ## Save the Single Stock Solution visualization
-        single_stock_visualization(store_path, idx, new_universe, new_portfolio, my_evaluator, args)
+        # single_stock_visualization(store_path, idx, new_universe, new_portfolio, my_evaluator, args)
         
         if not args.backtesting: 
             break

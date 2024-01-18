@@ -1,0 +1,4506 @@
+nohup: ignoring input
+{'start': Timestamp('2018-01-02 00:00:00'), 'end': Timestamp('2018-12-28 00:00:00')}
+current_to_end: 2019-01-01 00:00:00
+end_date: 2018-12-31 00:00:00
+
+updating portfolio...
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9996205894313
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000006065316
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999898891892
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999892505227
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9992107989756
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999933996705
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999800436053
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999238609175
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000044662699
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999613574623
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999915989665
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999353141757
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000148655936
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9998319372708
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.00016663348
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999703797403
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999953669188
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999446330903
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999327703295
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999184319045
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999039148324
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9998907785866
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9998779953844
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99986191306
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999836503608
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99979338453
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999723707426
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999625000889
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99950996463
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9992107989756
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999419854385
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999979745834
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999804403215
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999994392204
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999661778347
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999144529534
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000019271718
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9997925133707
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999748827795
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000019272215
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000026986686
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000168474476
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999996189149
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999427619687
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999952344638
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999868711775
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999980636615
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000019692218
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999977664884
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999944930837
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999928817797
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999915067274
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999896296486
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999863695507
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999803449264
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999694342196
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999510521575
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999237869724
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999890193461
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9998571254373
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999831040296
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9997925133707
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9980791587795
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999303204
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999993796963
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000204976
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000022537265
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000032278085
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000052973032
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000037470636
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999968505053
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000049756705
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000016122303
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000002358938
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001442651
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000077930426
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999481373616
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000174731736
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999960771465
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000034262316
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000003105768
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999683434576
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999993746305
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999971470024
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000014166026
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000029320418
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996861798
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000030033334
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000574588
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999986840944
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999994090026
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0002014989946
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999948558334
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000050505
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000016116287
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999928883
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000015352257
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000828475
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996648553
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999995045328
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000007490808
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000170637604
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.00000029895
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000003207424
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000034422515
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999710944
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000032385037
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999089833
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000135401
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001900453
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000067265514
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000006055043
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000029056287
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000007665394
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999993712627
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000276359
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999991640316
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000635501
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999994260734
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997277064
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000301796
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000005402135
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000069289
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999978099513
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999042622
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999998839238
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000010546178
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000007349427
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998552985
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000015937354
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999929966466
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999992221437
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000006640697
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000428108
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000278294
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000786167
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000004575422
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000028012164
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000009273417
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000218346
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000682567
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999989853986
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99997561181
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000019715044
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000002722204
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999995073636
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.00000022689
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999995969483
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000565196
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999981135993
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000766736
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999819015
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999357585
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999612841
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999991723953
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000006113114
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000009059795
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000010540703
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999997768595
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999992173
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999643217
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997713885
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000091176
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999706843
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999388706
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000004558
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000004408857
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000225113415
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999984874475
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000004226664
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.00000221365
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.00000047451
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000168017
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000005649117
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000004113626
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000010340664
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997837285
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000002042294
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999977296707
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997030386
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999794245
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999979351
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999774561
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997524537
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997257764
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999684581
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996097113
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999994658338
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999991881514
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999998664185
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999997723858
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999996181905
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999993993386
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999991448599
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999989093707
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999873326447
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999862142386
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999855759397
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999852336755
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99998505627
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999984874475
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999843446
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000003137175
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000296216
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000002140714
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999989186717
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999548626
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000002924427
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001970366
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000595701
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000014548073
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001207227
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000002428084
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000006573264
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999680501
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000249338
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000002961847
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000006565206
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000004616536
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000662457
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000273355054
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000006652417
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000023582934
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000016776103
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001603464
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999985107434
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000191194
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000783376
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000009607074
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999987444253
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999954016157
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999998491292
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999937892526
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000003612217
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000532187
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999298496
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000010834497
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000011599777
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001537379
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000437367
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001440685
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000007767153
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000701285
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000426531
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000537895
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000619737
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000002785355
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001527984
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999831554
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000798419
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999996438113
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.00000101585
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000665182
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999993641704
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001063372
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001666446
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999593665
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000476619
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000008929137
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999096858
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000006156788
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000006678474
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000170052
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999788658
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000571622
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999969659
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000015237024
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999929925752
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001483992
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999995126905
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999916561
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999990887786
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001098865
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000031079044
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000005537145
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001261415
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000387805
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000334107
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000914568
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000004919639
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999994675445
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000004372396
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000007228673
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000009794685
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999965469
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000003248174
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000008938555
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000838454
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999997612722
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999992828907
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999060485
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999963128002
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001580831
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000005311044
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000019203694
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000975886
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000572321
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999610217
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001177714
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000010773274
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000009290416
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000614331
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999687411
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999989652355
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.00000081689
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000762639
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000662898
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000004722197
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001116778
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999945891
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999983709786
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999967878784
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999948869518
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999993067401
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999991666893
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999990759123
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999902344916
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999899511868
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999898037904
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999989652355
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001668176
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000021845203
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000765796
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999985130626
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999995484895
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000020742364
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000002503345
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997990053
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999978543938
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000008215284
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999979298095
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999989126695
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001021971
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000597577
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000007863414
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999761664
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999988977033
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000881478
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999989993808
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000833437
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000007389945
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000811975
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999651978
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000095538
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999979601625
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000005266274
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000023423327
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000972073
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000019610807
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999960262894
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000262748
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999997564214
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999983561115
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000278861
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000017167404
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001282414
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999986963962
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999875057374
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998526787
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999998866806
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999984345195
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999977992165
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999998431075
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999993449457
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000004251158
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999755337
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999248773
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999988623163
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999854388
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999982555
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999997896261
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999973349286
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999964162093
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999950275906
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999932446235
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999991399963
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999898763162
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999988835673
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999882139205
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999987871722
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999876918555
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999875057374
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999907693
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000004704729
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000015059213
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000020159882
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999511426
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001928643
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999987075817
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999849229
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000856343
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999252931
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000893753
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000004271241
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999748967
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999965111574
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999838122
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999988007826
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998563712
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999510137
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000754883
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999510391
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996148886
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000307746
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000013226754
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999608175
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999733406
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997380455
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999993531046
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997183936
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000041741
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996924425
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000504325
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999473835
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000727023
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999991510736
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999995777735
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999338799
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999548305
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999931638
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000017859
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999749475
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996260076
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001647745
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998042267
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999994231694
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999966349724
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999872532
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000121784
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999998875142
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000400888
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000002027906
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999995919575
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997234468
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999989928356
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999992630458
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999994106206
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000002915127
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999879865
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999971495326
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999997841137
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999974227435
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999088989
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000002072848
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000002814586
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000944222
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999552272
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999991019668
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999989373764
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999604656
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000059852
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996481397
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999812836
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999995804783
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999986072926
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999992718467
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999629159
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999984004417
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998454755
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999986293997
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000447098
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999990592646
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996254455
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999995140397
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999995265234
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999993449046
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000765094
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999930498216
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001031335
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998753024
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999544627
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999736663467
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999966931578
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000005000699
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9998022451805
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000002184422
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999932019846
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999990358183
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000667992
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000182727
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.00000024786
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000392501
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000004521717
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000004844655
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000004950684
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000004833973
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000441482
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000003477708
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000155477
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997694017
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999000447
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999974797165
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999945073887
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999888260754
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999978414464
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999607271684
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999934225634
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999011482632
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999868125821
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9998417473253
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9998022451805
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999905185
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999704139
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001457659
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999925737
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999975207
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001812558
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999995771
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998306675
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000176508
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999901269
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999852738
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999998830912
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998963613
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000005131333
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001803908
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999997144541
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997367213
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999989624403
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000910213
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999993648953
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000515856
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001322405
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999981388
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999786187
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999310622
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999991853124
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001672433
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999889057
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000002316174
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998708363
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000010800471
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000003474906
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000005594584
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000731812
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999997902787
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000263044
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999989319726
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999993824194
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997956884
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000046242553
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999966869
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999944439
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999919376
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999923114
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999840877
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999992938397
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997911186
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996158986
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996618562
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999976073764
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999989638013
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999995004873
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999991868935
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000860214
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997894824
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999991359837
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000009498635
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001161434
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001326316
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999706888
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998658163
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001635467
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999995340713
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997530927
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997137124
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000166374
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999998814811
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999757027
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999705369
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001322
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999998940455
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998007647
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999989922226
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000471664
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999479624
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000009861233
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997891982
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997606074
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998460316
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999995822263
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999371454
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999993667484
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999018937
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998852
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999996892677
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996736105
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999751131
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999732304
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999849344
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997939567
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000132034
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000141391
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999787122
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997329733
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999033425
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999988327463
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996136303
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996173583
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999540376
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997346513
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996882607
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996344304
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999358858
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000024700037
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999988348018
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999998646369
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998924877
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000130946
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999797346
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997711775
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996581932
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999224738
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999743951
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999164329
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000201995
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000049618
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999774065
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999718577
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999853267
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998689887
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000002931183
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999486825
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000090004
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000002581
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000072834
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001755415
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000015507
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000007452963
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999871192
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000002084566
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000008361
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997725035
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998482936
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998596827
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999890267
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000181346
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999361535
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000002457837
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999959588
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999766073
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999993462325
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000411387
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999973577915
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999841097
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000022683
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997342
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999998957338
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000003932723
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996779256
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000003660703
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999869251
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997761897
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996481592
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000502166
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.00000007804
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000944474
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000108846
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000081566
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000951321
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000004921465
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000004501053
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999981959863
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998249014
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999351207
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000082528
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999775142
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999931765
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998935036
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999994548684
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999652173
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000483896
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999646955
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000334003
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999845607
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999291067
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999990966035
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998161047
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999854493
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999980310063
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999849166
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998531566
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999636072
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000006546998
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999616195
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999998378392
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998795865
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999981268393
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999727513
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999721545
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997712753
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999384154
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999702196
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000030839483
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000004506032
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999995750613
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000251688
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997637506
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99998859187
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997939494
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998314565
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999980594
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999302363
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999913756
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999912394
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999111583
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999909052
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999049096
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999896646
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999880154
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998473136
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997822015
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999965421
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999406814
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999989437974
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999998127321
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999968281054
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999950643423
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999931234825
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999142461
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999902107756
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999989463654
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999890452164
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999888231746
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999988708716
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99998859187
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999810009
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.00000004976
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000086913
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000091292
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000492766
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999889629
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999990944652
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000005822126
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999953521
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000003605646
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999993097945
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998348717
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998342682
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998345997
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999998535064
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000002143515
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000005062147
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999991833
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998542785
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000067329
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000004068006
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001294493
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999993855
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001013614
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999449215
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000020564
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999224574
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999864861
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999998224801
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000003557943
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000005226902
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999515046
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001547857
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999993178494
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001153403
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999950153
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000085276
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999990479846
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001182807
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997150007
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998413546
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998231356
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999671845
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999843953
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997233813
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999981542
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000012141663
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000312048
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998647036
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998697067
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000133071
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000001645496
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001483468
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998634435
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998429307
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000066757
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999500842
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997986206
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001076723
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996953366
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001251897
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999565366
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999574065
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000433365
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999553
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000040004
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999994296604
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999948968143
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000566647
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996846786
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999927416
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997882405
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999857255
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999536609
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000045982856
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998439207
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999990873
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000043447
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000422733
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000581385
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000061051
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000060279
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000549157
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000422733
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000161817
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999642914
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998633657
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999673003
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999332891
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999987798487
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999998004881
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999971182
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999963111977
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999995715999
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999953416273
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999995129213
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999995015684
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999495694
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999994927053
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999948968143
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996625693
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999346887
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000003141413
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997587533
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999880766
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999925636
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999823954
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999991352606
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999423303
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999961208
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000000252567
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000186604
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996953748
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999835527
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999241154
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999852515
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999996232827
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999661997
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999788865
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999951443
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999997949485
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.000000196249
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999663176
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999791683
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999666536
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000002313363
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000001772432
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9997255012395
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999703772
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998828184
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999893209
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999850589
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998096505
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999826357
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998136263
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998210433
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999868923
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999849861
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999842513
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998381104
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998630415
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999835542
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999838134
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999845287
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998552676
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999876697
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998260346
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998516078
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998397802
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998584985
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998700578
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998828175
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999490647
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999856663
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999838541
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999860229
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999859193
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998633903
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998781177
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999870759
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998749954
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998684343
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998636717
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999867872
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998729654
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999934089
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999873858
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998800713
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998907297
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999892731
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999887982
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998947605
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998965086
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998884364
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999895299
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998946837
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998921658
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999894071
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998960725
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998977337
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999011907
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999908087
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999902734
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999067377
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999053666
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999127067
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999913088
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999916243
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999211987
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999220554
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999280535
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999931917
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999286556
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999998559506
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999265647
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999342335
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999933427
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999310367
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999933836
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999993447
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999583993
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999871206
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999943582
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999940652
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999519223
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999946849
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999889351
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999404563
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999430074
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2480.0000013353692
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999553347
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999893206
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999248053
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999931073
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999337188
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999350757
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999358483
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999934178
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999370775
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999372253
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999340084
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999938034
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999344045
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999376773
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999937123
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999939622
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999389706
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999404945
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999406455
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999415686
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999941485
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999421198
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999941978
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999942569
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999423644
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999427955
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999942833
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999943284
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999430784
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999435845
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999943281
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999943818
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999943492
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999440206
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999436277
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999994398
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999944133
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999944417
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999943904
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999445954
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999944113
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999446973
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999441548
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999447064
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999944429
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999448614
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999444026
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999944926
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999447546
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999945033
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999443735
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999945098
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999446613
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999944993
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999448237
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999451074
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999448737
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999452966
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999944851
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999453453
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.9999999449647
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999945403
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.999999944777
+<function ones at 0x7fca5e6d9280>
+num of stocks : 2479.99999994543
+Calculated error : 77.63798442369648
+1-th
+2018-01-02 00:00:00
+
+A000020 : 0.2432
+A000030 : -0.5915
+A000040 : 0.2480
+A000050 : 0.2476
+A000060 : -0.5879
+A000070 : 0.2482
+A000080 : 0.2491
+A000100 : -0.6104
+A000120 : -0.5932
+A000140 : 0.2445
+A000150 : 0.2456
+A000180 : 0.2431
+A000210 : 0.2451
+A000220 : 0.2434
+A000230 : 0.2443
+A000240 : 0.2467
+A000250 : 0.2461
+A000270 : 0.2438
+A000300 : 0.2492
+A000320 : 0.2477
+A000370 : 0.2482
+A000390 : -0.5892
+A000400 : 0.2433
+A000430 : -0.5797
+A000440 : 0.2472
+A000480 : 0.2446
+A000490 : 0.2435
+A000500 : -0.5594
+A000520 : -0.5824
+A000540 : 0.2454
+A000590 : -0.5877
+A000640 : 0.2448
+A000650 : -0.6019
+A000660 : 0.2454
+A000670 : 0.2451
+A000680 : -0.5914
+A000700 : 0.2438
+A000720 : 1.3304
+A000760 : 0.2431
+A000810 : -0.5951
+A000850 : 0.2442
+A000860 : 0.2456
+A000880 : 0.2447
+A000890 : 0.2470
+A000910 : -0.6086
+A000950 : 0.2473
+A000970 : -0.5846
+A000990 : 0.2432
+A001000 : 0.2434
+A001020 : 0.2448
+A001040 : 0.2453
+A001060 : 0.2436
+A001070 : 0.2431
+A001080 : 0.2444
+A001120 : -0.5733
+A001130 : 0.2455
+A001140 : -0.5947
+A001200 : 0.2463
+A001210 : 0.2435
+A001230 : 0.2483
+A001250 : 0.2484
+A001260 : 0.2455
+A001270 : 0.2445
+A001290 : 0.2463
+A001340 : 0.2433
+A001360 : 0.2450
+A001380 : 0.2433
+A001390 : 0.2467
+A001420 : 0.2434
+A001430 : 0.2611
+A001440 : 0.2456
+A001450 : 0.2443
+A001460 : 0.2438
+A001470 : 0.3154
+A001500 : 0.2457
+A001510 : 0.2442
+A001520 : 0.2448
+A001530 : -0.5967
+A001540 : 0.2435
+A001550 : -0.5884
+A001560 : 0.2446
+A001570 : 0.2635
+A001620 : 0.2455
+A001630 : 0.2452
+A001680 : 0.2435
+A001720 : -0.5370
+A001740 : 0.2431
+A001750 : 0.2436
+A001770 : 0.2436
+A001780 : 0.2608
+A001790 : -0.6159
+A001800 : 0.2439
+A001810 : -0.5405
+A001820 : -0.5708
+A001840 : -0.5868
+A001880 : 0.2440
+A001940 : 0.2446
+A002000 : 0.2489
+A002020 : 0.2448
+A002030 : 0.2438
+A002070 : -0.6075
+A002100 : -0.6074
+A002140 : -0.5956
+A002150 : 0.2431
+A002170 : 0.2451
+A002200 : 0.2456
+A002210 : -0.5093
+A002220 : -0.6022
+A002230 : 0.2441
+A002240 : -0.5944
+A002250 : 1.3975
+A002270 : 0.2437
+A002290 : -0.5855
+A002300 : 0.2603
+A002310 : -0.5495
+A002320 : 0.2442
+A002350 : 0.2432
+A002360 : 0.2442
+A002380 : 0.2450
+A002390 : 0.2485
+A002410 : 0.2441
+A002420 : 0.2432
+A002450 : 0.2432
+A002460 : 0.5747
+A002600 : 0.2473
+A002620 : -0.4568
+A002630 : 1.1562
+A002680 : 0.2759
+A002690 : 0.2474
+A002700 : 0.2431
+A002710 : 0.2435
+A002720 : 0.2440
+A002760 : 0.2456
+A002780 : 0.2434
+A002790 : -0.5892
+A002800 : 0.2468
+A002810 : 0.2449
+A002820 : 0.2434
+A002840 : 0.2445
+A002870 : 0.2445
+A002880 : 0.2436
+A002900 : 0.2437
+A002920 : -0.5883
+A002960 : 0.2444
+A002990 : 0.2435
+A003000 : -0.5822
+A003010 : -0.6214
+A003030 : 0.2451
+A003060 : 0.2470
+A003070 : 0.2436
+A003080 : -0.5769
+A003090 : -0.6016
+A003100 : 0.2450
+A003120 : 0.2486
+A003160 : 0.2434
+A003200 : -0.5829
+A003220 : 0.2452
+A003230 : 0.2439
+A003240 : 0.2464
+A003280 : 0.2481
+A003300 : 0.2521
+A003310 : 0.2437
+A003350 : 0.2451
+A003380 : -0.5808
+A003410 : -0.6002
+A003460 : 0.2441
+A003470 : 0.2459
+A003480 : 0.2442
+A003490 : 0.2434
+A003520 : 0.2446
+A003530 : -0.5899
+A003540 : 0.2466
+A003550 : 0.2432
+A003560 : 0.2440
+A003570 : 0.2432
+A003580 : 0.2438
+A003610 : 0.2451
+A003620 : 0.2454
+A003650 : 0.2470
+A003670 : 0.2482
+A003680 : -0.5928
+A003690 : 0.2449
+A003720 : -0.5967
+A003780 : -0.5841
+A003800 : 0.2435
+A003830 : 0.2431
+A003850 : 0.2462
+A003920 : 0.2456
+A003960 : 0.2439
+A004000 : -0.6028
+A004020 : 0.2481
+A004060 : 0.2490
+A004080 : 0.2461
+A004090 : 0.2547
+A004100 : 0.2449
+A004130 : -0.5735
+A004140 : 0.2467
+A004150 : -0.5820
+A004170 : -0.5531
+A004200 : 0.2451
+A004250 : 0.2436
+A004270 : -0.6054
+A004310 : 0.2440
+A004360 : 0.2448
+A004370 : -0.5942
+A004380 : -0.5816
+A004410 : -0.5711
+A004430 : -0.5892
+A004440 : -0.6900
+A004450 : 0.2434
+A004490 : 0.2443
+A004540 : 0.2450
+A004560 : -0.5943
+A004590 : -0.5558
+A004650 : -0.6062
+A004690 : -0.5839
+A004700 : -0.6069
+A004710 : -0.6295
+A004720 : -0.6036
+A004770 : 0.2476
+A004780 : 0.2463
+A004800 : 0.2491
+A004830 : 0.2433
+A004840 : -0.5576
+A004870 : 0.2434
+A004890 : 0.2435
+A004910 : 0.2490
+A004920 : 0.2435
+A004960 : -0.6131
+A004970 : 0.2445
+A004980 : -0.6100
+A004990 : -0.5847
+A005010 : -0.5917
+A005030 : -0.6266
+A005070 : -0.5948
+A005090 : -0.5850
+A005110 : 0.2462
+A005160 : 0.2432
+A005180 : 0.2447
+A005190 : -0.6318
+A005250 : 0.2467
+A005290 : -0.6510
+A005300 : -0.5616
+A005320 : -0.5926
+A005360 : 0.2478
+A005380 : 0.2431
+A005390 : 0.2434
+A005420 : 0.2702
+A005430 : 0.2446
+A005440 : 0.2442
+A005450 : 0.2455
+A005490 : 0.2477
+A005500 : 0.2431
+A005610 : 0.2453
+A005670 : 0.2433
+A005680 : 0.2441
+A005690 : 0.2459
+A005710 : 0.2438
+A005720 : -0.5941
+A005740 : 0.2439
+A005750 : 0.2475
+A005800 : 0.2432
+A005810 : 0.2445
+A005820 : 0.2443
+A005830 : 0.2438
+A005850 : -0.6326
+A005860 : 0.2434
+A005870 : 0.2431
+A005880 : 0.2469
+A005930 : 0.2432
+A005940 : 0.2489
+A005950 : 0.2474
+A005960 : -0.5923
+A005980 : 0.2453
+A005990 : 0.2433
+A006040 : 0.2455
+A006050 : 0.2440
+A006060 : -0.5420
+A006090 : 0.2480
+A006110 : -0.5882
+A006120 : 0.2432
+A006140 : 0.2447
+A006200 : -0.5728
+A006220 : 0.2453
+A006260 : -0.5694
+A006280 : 0.2481
+A006340 : 0.2446
+A006360 : 0.2431
+A006370 : 0.2529
+A006380 : -0.5879
+A006390 : 0.2468
+A006400 : 0.2543
+A006490 : -0.5686
+A006570 : 0.2441
+A006580 : 0.2443
+A006620 : 0.2444
+A006650 : -0.5948
+A006660 : 0.2447
+A006730 : -0.5851
+A006740 : 0.2456
+A006800 : 0.2432
+A006840 : 0.2455
+A006880 : 0.2644
+A006890 : 0.2451
+A006910 : 0.2434
+A006920 : 0.2489
+A006980 : -0.5837
+A007070 : 0.2463
+A007110 : 0.2437
+A007120 : 0.2442
+A007160 : -0.5941
+A007210 : -0.5959
+A007280 : 0.2433
+A007310 : 0.2465
+A007330 : 0.2448
+A007340 : -0.6128
+A007370 : 0.2491
+A007390 : 0.2479
+A007460 : 0.2443
+A007530 : 0.2466
+A007540 : 0.2436
+A007570 : -0.5604
+A007590 : 0.2435
+A007610 : 0.2433
+A007630 : -0.5445
+A007660 : -0.5956
+A007680 : 0.2977
+A007690 : 0.2477
+A007700 : -0.5732
+A007720 : -0.6136
+A007770 : 0.2444
+A007810 : 0.2432
+A007820 : 0.2499
+A007860 : 0.2451
+A007980 : 0.2432
+A008000 : -0.5840
+A008040 : 0.2439
+A008060 : 0.2451
+A008110 : 0.2480
+A008250 : 0.2445
+A008260 : 0.2474
+A008290 : -0.5727
+A008350 : 0.2432
+A008370 : 1.8201
+A008420 : -0.5181
+A008470 : -0.6497
+A008490 : 0.2462
+A008500 : 0.2446
+A008560 : 0.2436
+A008600 : 0.2439
+A008700 : 0.2431
+A008730 : 0.2431
+A008770 : -0.5912
+A008800 : -0.6033
+A008830 : -0.5880
+A008870 : 0.2474
+A008930 : 0.2466
+A008970 : -0.5881
+A009070 : 0.2465
+A009140 : 0.2459
+A009150 : 0.2432
+A009160 : 0.2432
+A009180 : 0.2452
+A009190 : 0.2455
+A009200 : 0.2432
+A009240 : -0.5156
+A009270 : -0.6075
+A009290 : 0.2646
+A009300 : 0.2470
+A009310 : -0.5931
+A009320 : 0.2911
+A009410 : 0.2442
+A009420 : -0.6011
+A009440 : -0.5793
+A009450 : 0.2433
+A009460 : 0.2449
+A009470 : -0.6202
+A009520 : -0.6287
+A009540 : 0.2565
+A009580 : 0.2659
+A009620 : 0.2544
+A009680 : 0.2462
+A009730 : 0.2433
+A009770 : 0.2081
+A009780 : -0.5933
+A009810 : 0.2431
+A009830 : 0.2461
+A009900 : 0.2469
+A009970 : 0.2446
+A010040 : -0.6200
+A010050 : 0.2443
+A010060 : 0.2445
+A010100 : 0.2442
+A010120 : -0.5924
+A010130 : 0.2432
+A010140 : -0.5821
+A010170 : -0.5379
+A010240 : -0.5758
+A010280 : 0.2445
+A010400 : 0.2432
+A010420 : -0.5894
+A010470 : 0.2438
+A010580 : 0.2438
+A010600 : 0.2483
+A010620 : 0.2498
+A010640 : 0.2436
+A010660 : 0.2435
+A010690 : 0.2453
+A010770 : 0.2435
+A010780 : 0.2432
+A010820 : 0.2432
+A010950 : -0.5848
+A010960 : 0.2433
+A011000 : -0.6008
+A011040 : 0.2435
+A011070 : -0.6306
+A011080 : 0.2435
+A011090 : -0.5895
+A011150 : -0.5733
+A011160 : -0.5752
+A011170 : 0.3209
+A011200 : -0.5515
+A011210 : -0.5742
+A011230 : -0.4768
+A011280 : 0.2434
+A011300 : 0.2692
+A011320 : 0.2445
+A011330 : 0.2438
+A011370 : 0.2437
+A011390 : -0.6138
+A011420 : 0.2432
+A011500 : 0.2467
+A011560 : -0.5904
+A011690 : 0.2451
+A011700 : -0.5704
+A011760 : 0.3188
+A011780 : 0.2454
+A011790 : 0.2479
+A011810 : 0.2436
+A011930 : 0.2449
+A012030 : -0.5977
+A012160 : 0.2485
+A012170 : 0.2487
+A012200 : 0.2451
+A012280 : 0.2439
+A012320 : 0.2437
+A012330 : 1.1854
+A012340 : 0.2444
+A012450 : 0.2434
+A012510 : 0.2529
+A012600 : 0.2432
+A012610 : -0.5900
+A012620 : 0.2445
+A012630 : 0.2434
+A012690 : 0.2466
+A012700 : -0.5709
+A012750 : 0.2473
+A012790 : 0.2439
+A012800 : 0.2441
+A012860 : -0.5820
+A013000 : 0.2445
+A013030 : 0.2433
+A013120 : 0.2468
+A013310 : 0.2431
+A013360 : 0.2545
+A013520 : 0.2618
+A013570 : 0.2609
+A013580 : -0.6011
+A013700 : -0.5860
+A013720 : 0.2434
+A013810 : 0.2580
+A013870 : 0.2458
+A013890 : 0.2452
+A013990 : 0.2481
+A014100 : -0.6135
+A014130 : 0.2444
+A014160 : 0.2437
+A014190 : -0.6149
+A014200 : 0.2432
+A014280 : 0.2456
+A014440 : -0.4485
+A014470 : 0.2433
+A014530 : 0.2451
+A014570 : 0.2491
+A014580 : 0.2467
+A014620 : 0.2443
+A014680 : 0.3019
+A014710 : 0.2445
+A014790 : 0.2636
+A014820 : 0.2442
+A014830 : -0.5738
+A014910 : 0.2434
+A014940 : -0.6240
+A014970 : -0.5970
+A014990 : -0.5949
+A015020 : 0.2486
+A015230 : 0.2466
+A015260 : 0.2442
+A015350 : 0.2471
+A015360 : 0.2444
+A015540 : 0.2465
+A015590 : 0.2436
+A015710 : 0.1799
+A015750 : 0.2456
+A015760 : 0.2448
+A015860 : 0.2577
+A015890 : 0.2567
+A016090 : 0.2464
+A016100 : 0.2438
+A016170 : 0.2445
+A016250 : 0.2464
+A016360 : -0.5923
+A016380 : 0.2438
+A016450 : 0.2463
+A016580 : 0.2437
+A016590 : 0.2443
+A016600 : -0.6278
+A016610 : 0.2448
+A016670 : 1.2874
+A016710 : 0.2472
+A016740 : -0.6424
+A016790 : -0.5982
+A016800 : 0.2377
+A016880 : -0.5973
+A016920 : 0.2440
+A017000 : -0.5919
+A017040 : 0.2444
+A017180 : 0.2460
+A017250 : 0.2445
+A017370 : 0.2449
+A017390 : 0.2455
+A017480 : -0.5918
+A017510 : 0.2442
+A017550 : -0.5925
+A017650 : -0.5778
+A017670 : 0.2736
+A017680 : 0.2430
+A017800 : 0.2659
+A017810 : -0.5856
+A017890 : 0.2442
+A017900 : 0.2446
+A017940 : 0.2450
+A017960 : 0.2435
+A018000 : 0.2440
+A018120 : 0.2435
+A018250 : 0.2431
+A018260 : -0.5107
+A018290 : 0.2439
+A018310 : -0.5924
+A018470 : 0.2442
+A018500 : 0.2434
+A018620 : -0.5916
+A018670 : 0.2432
+A018680 : -0.5838
+A018700 : 0.2473
+A018880 : -0.5995
+A019010 : 0.2445
+A019170 : -0.5673
+A019180 : -0.5830
+A019210 : -0.6064
+A019440 : 0.2485
+A019490 : 0.2469
+A019540 : 0.2434
+A019550 : 0.2487
+A019570 : 0.2462
+A019590 : 0.2449
+A019660 : 0.2478
+A019680 : 0.2439
+A019770 : -0.5762
+A019990 : 0.2455
+A020000 : 0.1789
+A020120 : 0.2459
+A020150 : 0.2448
+A020180 : 0.2444
+A020400 : -0.6024
+A020560 : 0.2477
+A020710 : -0.5772
+A020760 : 0.2473
+A021040 : -0.6126
+A021050 : -0.6041
+A021080 : -0.6020
+A021240 : 0.2444
+A021320 : 0.2432
+A021650 : 0.2443
+A021820 : -0.5829
+A021880 : 0.2445
+A022100 : 0.2456
+A022220 : 0.2438
+A023000 : 0.2447
+A023150 : -0.5849
+A023160 : 0.2435
+A023350 : 0.2529
+A023410 : -0.6042
+A023430 : -0.4403
+A023440 : -0.5881
+A023450 : 0.2463
+A023460 : -0.5780
+A023530 : 0.2442
+A023590 : 0.2432
+A023600 : -0.5804
+A023760 : 0.2489
+A023770 : -0.6284
+A023790 : -0.5890
+A023800 : -0.5879
+A023810 : 0.2344
+A023890 : 0.2438
+A023900 : -0.5764
+A023910 : 0.2447
+A023960 : 0.2484
+A024060 : 0.2559
+A024070 : 0.2433
+A024090 : -0.6062
+A024110 : -0.6032
+A024120 : -0.6498
+A024660 : 0.2446
+A024720 : -0.5945
+A024740 : -0.5709
+A024800 : 0.2444
+A024810 : -0.5311
+A024830 : 0.2447
+A024840 : 0.2440
+A024850 : -0.5823
+A024880 : 0.2477
+A024890 : 0.2436
+A024900 : 0.2446
+A024910 : 0.2490
+A024940 : 0.2453
+A024950 : 0.2440
+A025000 : 0.2454
+A025320 : 0.2489
+A025440 : -0.6176
+A025530 : 1.2077
+A025540 : -0.6265
+A025550 : 0.2432
+A025560 : 0.2442
+A025620 : -0.5755
+A025750 : 0.2432
+A025770 : 0.2437
+A025820 : 0.2436
+A025860 : -0.5898
+A025870 : -0.5971
+A025880 : 0.2462
+A025890 : -0.5884
+A025900 : -0.5397
+A025950 : -0.5033
+A025980 : 0.2431
+A026040 : 0.2433
+A026150 : 0.2496
+A026180 : 0.2458
+A026260 : 0.2434
+A026890 : -0.5780
+A026910 : -0.5934
+A026940 : 0.2310
+A026960 : 0.2474
+A027040 : -0.5944
+A027050 : -0.5861
+A027360 : -0.5740
+A027390 : 0.2536
+A027410 : -0.5954
+A027580 : -0.5463
+A027710 : 0.2452
+A027740 : 0.2440
+A027830 : 0.2452
+A027970 : 0.2467
+A028040 : -0.6050
+A028050 : -0.5953
+A028080 : 0.2482
+A028100 : 0.2609
+A028150 : 0.2432
+A028260 : -0.5645
+A028300 : 1.2591
+A028670 : -0.5844
+A029460 : 0.2442
+A029480 : 0.2516
+A029530 : 0.2449
+A029780 : 0.2497
+A029960 : -0.5659
+A030000 : 0.2432
+A030190 : 0.2432
+A030200 : 0.2445
+A030210 : 0.2457
+A030270 : 0.2438
+A030350 : -0.5928
+A030520 : 0.2432
+A030530 : 0.2441
+A030610 : 0.2446
+A030720 : 0.2446
+A030790 : -0.5937
+A030960 : -0.5950
+A031310 : 0.2489
+A031330 : 0.2439
+A031390 : -0.6053
+A031430 : 0.2444
+A031440 : 0.2482
+A031510 : 0.2728
+A031820 : -0.5865
+A031860 : 0.2432
+A031980 : 0.2443
+A032040 : 0.2449
+A032080 : 0.2491
+A032190 : 0.2433
+A032280 : -0.5841
+A032300 : 0.2452
+A032350 : 0.2463
+A032500 : 0.2431
+A032540 : -0.5957
+A032560 : 0.2431
+A032580 : 0.2434
+A032620 : -0.5887
+A032640 : 0.2447
+A032680 : 0.2462
+A032750 : -0.6031
+A032790 : -0.5908
+A032800 : 0.2475
+A032820 : -0.5833
+A032830 : 0.2454
+A032850 : 0.2438
+A032860 : 0.2433
+A032940 : 0.2729
+A032960 : 0.2445
+A032980 : -0.5872
+A033050 : 0.2433
+A033100 : 0.2506
+A033110 : 0.2459
+A033130 : 0.2451
+A033160 : -0.5794
+A033170 : -0.6162
+A033180 : 0.2446
+A033200 : 0.2438
+A033230 : 0.2458
+A033240 : -0.5832
+A033250 : 0.2431
+A033270 : 0.2450
+A033290 : 0.2450
+A033310 : -0.5651
+A033320 : 0.2434
+A033340 : -0.6079
+A033430 : -0.5983
+A033500 : 0.2435
+A033530 : -0.5894
+A033540 : -0.6081
+A033560 : 0.2435
+A033600 : 0.2481
+A033640 : -0.5967
+A033660 : 0.2496
+A033780 : 0.2443
+A033790 : -0.5720
+A033830 : -0.6023
+A033920 : -0.3911
+A034020 : 0.2447
+A034120 : 1.1735
+A034220 : 0.2442
+A034230 : 0.2608
+A034300 : 0.2658
+A034310 : -0.4287
+A034590 : 0.2450
+A034730 : 0.2465
+A034810 : 0.6126
+A034830 : 0.2434
+A034940 : 0.2434
+A034950 : 0.2484
+A035000 : -0.5827
+A035080 : 0.2438
+A035150 : 0.2472
+A035200 : -0.5955
+A035250 : 0.2574
+A035290 : -0.6097
+A035420 : -0.5982
+A035460 : 0.2433
+A035480 : 0.2499
+A035510 : -0.5623
+A035600 : 0.2459
+A035610 : 0.2481
+A035620 : 0.2434
+A035720 : 0.2465
+A035760 : 0.2454
+A035810 : 0.2483
+A035890 : -0.5496
+A035900 : 0.2495
+A036000 : 0.2522
+A036010 : 0.2440
+A036030 : 0.2453
+A036090 : -0.5350
+A036120 : 0.2493
+A036170 : -0.5989
+A036180 : -0.6028
+A036190 : 0.2649
+A036200 : 0.2437
+A036260 : 0.2466
+A036420 : 0.2431
+A036460 : 0.2441
+A036480 : 0.2439
+A036490 : 0.2476
+A036530 : 0.2449
+A036540 : -0.6438
+A036560 : 0.2460
+A036570 : 0.2432
+A036580 : 0.2452
+A036620 : 0.2438
+A036630 : 0.2451
+A036640 : 0.2441
+A036670 : 0.2444
+A036690 : -0.6011
+A036710 : -0.5909
+A036800 : 0.2485
+A036810 : 0.2445
+A036830 : 0.2431
+A036890 : 0.2489
+A036930 : 0.2488
+A037030 : 0.2442
+A037070 : 0.2445
+A037230 : -0.6006
+A037270 : 0.2446
+A037330 : 0.2444
+A037350 : 0.2459
+A037370 : -0.5915
+A037400 : 0.2463
+A037440 : 0.2431
+A037460 : 0.2465
+A037560 : -0.6049
+A037710 : -0.6051
+A037760 : -0.5966
+A037950 : -0.5960
+A038010 : -0.5754
+A038060 : 0.2404
+A038070 : 0.2487
+A038110 : -0.5844
+A038160 : 0.2437
+A038290 : 1.2662
+A038340 : 0.2433
+A038390 : -0.5627
+A038460 : 0.2434
+A038500 : 0.2438
+A038530 : 0.2435
+A038540 : 0.2445
+A038620 : 0.2467
+A038680 : -0.6157
+A038870 : 0.2610
+A038880 : 0.2447
+A038950 : 0.2471
+A039010 : -0.5935
+A039020 : 0.2444
+A039030 : -0.6269
+A039130 : 0.2441
+A039200 : 0.2432
+A039230 : 0.2557
+A039240 : 0.2469
+A039290 : -0.5857
+A039310 : 0.2435
+A039340 : -0.5751
+A039420 : 0.2446
+A039440 : 0.2431
+A039490 : 0.2465
+A039560 : 0.2468
+A039570 : 0.2463
+A039610 : -0.5656
+A039670 : -0.5870
+A039740 : 0.2432
+A039790 : 0.2457
+A039830 : 0.2454
+A039840 : -0.5756
+A039860 : 0.2436
+A039980 : -0.5985
+A040160 : 0.2438
+A040300 : -0.6000
+A040350 : -0.5843
+A040420 : -0.6195
+A040610 : 0.2660
+A040910 : 0.2431
+A041020 : 0.2435
+A041140 : 0.2432
+A041190 : -0.6123
+A041440 : 0.5479
+A041460 : -0.6386
+A041510 : 0.2720
+A041520 : 0.2437
+A041590 : 0.2490
+A041650 : 0.2438
+A041830 : 0.2457
+A041910 : 0.2432
+A041920 : 0.2435
+A041930 : 0.2481
+A041960 : 0.2453
+A042000 : -0.5950
+A042040 : 0.2432
+A042110 : 0.2457
+A042370 : 0.2200
+A042420 : 0.2468
+A042500 : -0.5663
+A042510 : 0.2447
+A042520 : 0.2463
+A042600 : -0.5884
+A042660 : -0.5016
+A042670 : 0.2479
+A042700 : 0.2450
+A042940 : -0.4977
+A043090 : -0.6248
+A043100 : 0.2453
+A043150 : -0.5892
+A043200 : -0.5844
+A043220 : 0.2440
+A043260 : -0.5806
+A043290 : 0.2484
+A043340 : 0.2443
+A043360 : 0.2433
+A043370 : 0.2446
+A043580 : -0.5961
+A043590 : 0.2444
+A043610 : 0.2490
+A043650 : 0.2432
+A043710 : 0.2436
+A043910 : 0.2576
+A044060 : 0.2434
+A044180 : -0.5717
+A044340 : 0.2436
+A044380 : 0.2486
+A044450 : 0.2437
+A044480 : 1.3167
+A044490 : -0.5489
+A044780 : 0.2447
+A044820 : 0.2431
+A044960 : -0.5736
+A045060 : -0.5923
+A045100 : -0.6338
+A045300 : 0.2434
+A045340 : 0.2458
+A045390 : 0.2433
+A045510 : -0.4898
+A045520 : 0.2432
+A045660 : 0.2439
+A045890 : 0.2438
+A045970 : 0.2434
+A046070 : 0.2435
+A046110 : 0.2437
+A046120 : -0.5917
+A046140 : -0.5794
+A046210 : 0.2469
+A046310 : 0.2433
+A046390 : 0.2450
+A046440 : 0.2440
+A046890 : 0.2442
+A046940 : -0.5840
+A046970 : 0.2432
+A047040 : 0.2442
+A047050 : -0.6072
+A047080 : -0.5935
+A047310 : 0.2431
+A047400 : 0.2581
+A047440 : -0.5072
+A047560 : 0.2454
+A047770 : 0.2550
+A047810 : 0.2455
+A047820 : 0.2432
+A047920 : -0.5972
+A048260 : 0.2432
+A048410 : 0.2465
+A048430 : -0.5992
+A048470 : -0.5996
+A048530 : 0.2478
+A048550 : 0.2437
+A048770 : 0.2460
+A048830 : 0.2685
+A048870 : 0.2438
+A048910 : 0.2451
+A049070 : -0.5799
+A049080 : -0.5832
+A049120 : -0.5849
+A049180 : 0.2444
+A049430 : 0.2455
+A049470 : -0.5996
+A049480 : 0.2445
+A049520 : 0.2483
+A049550 : 0.2465
+A049630 : 0.2432
+A049720 : -0.5393
+A049770 : 0.2436
+A049800 : 0.2435
+A049830 : 0.2433
+A049950 : -0.5940
+A049960 : 0.2448
+A050090 : 0.2460
+A050110 : 0.2440
+A050120 : -0.5926
+A050320 : 0.2457
+A050540 : -0.5866
+A050760 : 0.2443
+A050860 : 1.3473
+A050890 : 0.2470
+A050960 : 0.2474
+A051160 : 0.2479
+A051170 : 0.2453
+A051360 : -0.5718
+A051370 : -0.6002
+A051380 : 0.2441
+A051390 : 0.2440
+A051490 : -0.5915
+A051500 : 0.2437
+A051600 : -0.5776
+A051630 : 0.2432
+A051780 : 0.2439
+A051900 : -0.5942
+A051910 : 0.2448
+A051980 : 0.2434
+A052020 : -0.6192
+A052190 : 0.2459
+A052220 : -0.5923
+A052260 : 0.2439
+A052290 : 0.2440
+A052300 : 0.2432
+A052330 : 0.2433
+A052400 : 0.2431
+A052420 : 0.2433
+A052460 : 0.2442
+A052600 : -0.6093
+A052670 : 0.2485
+A052690 : 0.2465
+A052710 : -0.5979
+A052770 : -0.6106
+A052790 : 0.2444
+A052860 : -0.5556
+A052900 : 0.2441
+A053030 : 0.2446
+A053050 : -0.5617
+A053060 : 0.2485
+A053080 : -0.5929
+A053110 : 0.2440
+A053160 : 0.2434
+A053210 : 0.2476
+A053260 : 0.2470
+A053270 : 0.2439
+A053280 : 0.2446
+A053290 : 0.2446
+A053300 : 0.2435
+A053350 : 0.2448
+A053450 : 0.2432
+A053580 : 0.2450
+A053590 : -0.5836
+A053610 : -0.5707
+A053620 : 0.2479
+A053660 : -0.5987
+A053690 : 0.2434
+A053700 : 0.2461
+A053800 : 0.2493
+A053950 : 1.3941
+A053980 : -0.5782
+A054040 : 0.2448
+A054050 : 0.2458
+A054090 : 0.2437
+A054180 : 0.2488
+A054210 : -0.6059
+A054220 : -0.5765
+A054300 : 0.2443
+A054340 : 0.2433
+A054410 : -0.5654
+A054450 : 0.2453
+A054540 : -0.5970
+A054620 : 0.2432
+A054630 : 0.2371
+A054670 : 0.2461
+A054780 : -0.5818
+A054800 : 0.2690
+A054920 : 0.2442
+A054930 : 1.2358
+A054940 : 0.2439
+A054950 : 0.2717
+A055490 : 0.2465
+A055550 : 0.2450
+A056000 : 0.2431
+A056080 : -0.5839
+A056090 : -0.5852
+A056190 : -0.6071
+A056360 : -0.5976
+A056700 : 0.2434
+A056730 : -0.5991
+A057030 : 0.2433
+A057050 : 0.2459
+A057500 : 0.2475
+A057540 : 0.2466
+A057680 : 0.2476
+A057880 : 0.2493
+A058110 : 0.2481
+A058220 : 0.2465
+A058400 : 0.2473
+A058420 : 0.2448
+A058430 : 0.2432
+A058450 : 0.2604
+A058470 : 0.2439
+A058530 : 0.2434
+A058610 : 0.2432
+A058630 : 1.3847
+A058650 : 0.2456
+A058730 : 0.2474
+A058820 : -0.4197
+A058850 : 0.2439
+A058860 : 0.2439
+A058970 : -0.6097
+A059090 : -0.5926
+A059100 : 0.2436
+A059120 : 0.2453
+A059210 : 0.2633
+A059270 : 0.2445
+A060150 : -0.5846
+A060230 : 0.2432
+A060240 : 0.2433
+A060250 : 0.2470
+A060260 : 0.2450
+A060280 : 0.2612
+A060300 : -0.5802
+A060310 : 0.2445
+A060370 : -0.6403
+A060380 : 0.2435
+A060480 : 0.2452
+A060540 : 0.2434
+A060560 : -0.5829
+A060570 : -0.5664
+A060590 : 0.2436
+A060720 : 0.2487
+A060850 : 0.2449
+A060900 : 0.2457
+A060980 : -0.5874
+A061040 : -0.5865
+A061250 : 0.2477
+A061970 : 0.2444
+A062860 : -0.4297
+A062970 : 0.2447
+A063080 : 0.2462
+A063160 : 0.2433
+A063170 : -0.5978
+A063440 : 0.2457
+A063570 : 0.2472
+A063760 : 0.2432
+A064090 : 0.2454
+A064240 : -0.5918
+A064260 : -0.5820
+A064290 : 0.2439
+A064350 : 0.2473
+A064480 : -0.5689
+A064510 : -0.5544
+A064520 : 0.2432
+A064550 : 0.2758
+A064760 : -0.5968
+A064800 : 0.2434
+A064820 : -0.5846
+A064850 : 0.2485
+A064960 : 0.2437
+A065060 : 0.2431
+A065130 : -0.5848
+A065150 : 0.2451
+A065160 : -0.5917
+A065170 : 0.2468
+A065350 : -0.5821
+A065370 : 0.2433
+A065420 : 0.2526
+A065440 : -0.6250
+A065450 : 0.2442
+A065500 : -0.6081
+A065510 : 0.2438
+A065530 : 0.3189
+A065560 : -0.5932
+A065570 : -0.5864
+A065620 : 0.2445
+A065650 : -0.5425
+A065660 : 0.2432
+A065680 : 0.2451
+A065690 : -0.5951
+A065710 : 0.2470
+A065770 : 0.2452
+A065940 : 0.2445
+A065950 : 0.2431
+A066110 : 0.2450
+A066130 : 0.2450
+A066310 : 0.2822
+A066360 : 0.2449
+A066410 : -0.5784
+A066430 : -0.5824
+A066570 : 0.2443
+A066590 : 0.2432
+A066620 : 0.2436
+A066670 : 0.2452
+A066700 : 0.2431
+A066790 : 0.2492
+A066900 : 0.2438
+A066910 : 0.2488
+A066970 : -0.6003
+A066980 : 0.2436
+A067000 : 0.2478
+A067010 : 0.2477
+A067080 : 0.2451
+A067160 : 0.2444
+A067170 : -0.5748
+A067280 : -0.6213
+A067290 : 0.2442
+A067310 : -0.5761
+A067370 : 0.2447
+A067390 : 0.2448
+A067570 : -0.6084
+A067630 : 0.2432
+A067730 : 0.2623
+A067770 : -0.5617
+A067830 : 0.2483
+A067900 : -0.6471
+A067920 : 0.2433
+A067990 : -0.5738
+A068050 : 0.2435
+A068240 : 0.2435
+A068270 : 0.2485
+A068290 : 0.2462
+A068330 : 0.2452
+A068400 : 0.2441
+A068760 : -0.5947
+A068790 : 0.2464
+A068930 : 0.2443
+A068940 : -0.5849
+A069080 : 0.2466
+A069110 : -0.6416
+A069140 : -0.6026
+A069260 : -0.5066
+A069330 : -0.5776
+A069410 : 0.2432
+A069460 : 0.2439
+A069510 : -0.5193
+A069540 : 0.2448
+A069620 : 0.2432
+A069640 : 0.2536
+A069730 : -0.5892
+A069920 : -0.5716
+A069960 : 0.2438
+A070300 : 0.2447
+A070590 : -0.5883
+A070960 : 0.2446
+A071050 : -0.5312
+A071090 : 0.2726
+A071200 : -0.5877
+A071280 : 0.2348
+A071320 : -0.5793
+A071460 : -0.5993
+A071670 : -0.5958
+A071840 : 0.2433
+A071850 : 0.2483
+A071950 : 0.2433
+A071970 : 0.2673
+A072020 : 0.2439
+A072130 : 0.2436
+A072470 : 0.2434
+A072520 : 0.2443
+A072710 : -0.6007
+A072770 : 0.2433
+A072870 : 0.2432
+A072950 : -0.5912
+A072990 : -0.5840
+A073010 : 0.2454
+A073070 : 0.2485
+A073110 : -0.5855
+A073190 : 0.2443
+A073240 : -0.5137
+A073490 : 0.2434
+A073540 : -0.6045
+A073560 : 0.2437
+A073570 : 0.2485
+A073640 : 0.2397
+A074430 : 0.2445
+A074600 : 0.2478
+A074610 : -0.5934
+A075130 : 0.2450
+A075180 : 0.2443
+A075580 : -0.5955
+A075970 : 0.2444
+A076080 : 0.2432
+A076610 : 0.2431
+A077280 : -0.5952
+A077360 : 0.2432
+A077500 : 0.2447
+A077970 : -0.6076
+A078000 : 0.2433
+A078020 : -0.6248
+A078070 : 0.2431
+A078130 : -0.5916
+A078140 : -0.6531
+A078150 : 0.2456
+A078160 : -0.5655
+A078340 : 0.2443
+A078350 : 0.2470
+A078520 : 0.2483
+A078590 : 0.2440
+A078600 : 0.2853
+A078650 : 0.2464
+A078860 : 0.2444
+A078890 : 0.2596
+A078930 : 0.2471
+A078940 : -0.5920
+A079000 : 0.2444
+A079160 : 0.2464
+A079170 : 0.2485
+A079190 : 0.2450
+A079370 : 0.2442
+A079430 : 0.2493
+A079440 : 0.2902
+A079550 : 0.2482
+A079650 : 0.2577
+A079660 : 0.2477
+A079810 : 0.2432
+A079940 : 0.2474
+A079950 : 0.2467
+A079960 : 0.2480
+A079970 : 0.2435
+A079980 : 0.2458
+A080000 : 0.2462
+A080010 : 0.2432
+A080160 : -0.5926
+A080220 : 0.2435
+A080420 : 0.2431
+A080440 : 0.2433
+A080470 : 0.2431
+A080520 : 0.2479
+A080530 : 0.2434
+A080580 : 0.2473
+A080720 : -0.5956
+A081000 : 0.2464
+A081150 : -0.6012
+A081580 : -0.5431
+A081660 : -0.5762
+A081970 : 1.1245
+A082210 : 0.2428
+A082270 : -0.5958
+A082640 : 0.2446
+A082660 : 0.2464
+A082740 : 0.2484
+A082800 : -0.5910
+A082850 : 0.2436
+A082920 : 0.2432
+A083310 : -0.5755
+A083420 : 0.2436
+A083450 : -0.5863
+A083470 : -0.5695
+A083500 : -0.5941
+A083550 : -0.5908
+A083640 : 0.2458
+A083650 : 0.2435
+A083660 : 0.2438
+A083790 : 0.2648
+A083930 : 0.2472
+A084010 : 0.2413
+A084110 : -0.5898
+A084180 : -0.4894
+A084370 : -0.5776
+A084440 : 0.2445
+A084650 : -0.7585
+A084670 : 0.2469
+A084680 : 0.2455
+A084690 : 0.2450
+A084730 : 0.2443
+A084850 : 0.2444
+A084870 : 0.2438
+A084990 : -0.5907
+A085310 : -0.5982
+A085370 : 0.2432
+A085620 : 0.2481
+A085660 : -0.6138
+A085670 : 0.2440
+A085810 : -0.5908
+A085910 : -0.4801
+A086040 : 0.2450
+A086060 : 0.2439
+A086250 : 0.2445
+A086280 : -0.6259
+A086390 : -0.6008
+A086450 : 0.2684
+A086520 : 0.2504
+A086670 : 0.2491
+A086710 : -0.5811
+A086790 : -0.5947
+A086820 : -0.5640
+A086890 : 0.2433
+A086900 : 0.2442
+A086960 : 0.2490
+A086980 : 0.2567
+A087010 : -0.6336
+A087220 : -0.5951
+A087260 : 0.2437
+A087600 : 0.2435
+A087730 : 0.2442
+A088130 : 0.2432
+A088290 : -0.6054
+A088350 : 0.2492
+A088390 : 0.2601
+A088790 : 0.2517
+A088800 : 0.2433
+A088910 : 0.2446
+A089010 : -0.5838
+A089030 : -0.5875
+A089140 : 0.2434
+A089150 : 0.2432
+A089230 : -0.5978
+A089470 : 0.2440
+A089530 : -0.6023
+A089590 : 0.2458
+A089600 : 0.2490
+A089790 : 0.2479
+A089850 : 0.2443
+A089860 : 0.2608
+A089890 : -0.5846
+A089970 : -0.5805
+A089980 : -0.5737
+A090080 : 0.2433
+A090150 : 0.2439
+A090350 : 0.2431
+A090360 : 0.2438
+A090370 : 0.2501
+A090410 : 0.2438
+A090430 : 0.2484
+A090460 : 0.2438
+A090470 : 0.2471
+A090710 : -0.5479
+A090730 : -0.5979
+A090740 : 0.2432
+A090850 : 0.2467
+A091090 : 0.2445
+A091120 : 0.2436
+A091340 : 0.2435
+A091440 : 0.2440
+A091580 : 0.2468
+A091590 : 0.2431
+A091700 : 0.2432
+A091810 : 0.2437
+A091970 : 0.2445
+A091990 : 0.2437
+A092040 : 0.2457
+A092070 : 0.2453
+A092130 : -0.5865
+A092190 : 0.2527
+A092200 : -0.5774
+A092220 : 0.2441
+A092230 : 0.2440
+A092300 : 0.2437
+A092440 : 0.2457
+A092460 : -0.5833
+A092600 : -0.6004
+A092730 : 0.2444
+A092780 : 0.2443
+A092870 : 0.2466
+A093050 : 0.2450
+A093190 : -0.6183
+A093230 : -0.5863
+A093240 : -0.5248
+A093320 : 0.2437
+A093370 : 0.2445
+A093380 : -0.5730
+A093520 : 0.2434
+A093640 : 0.2440
+A093920 : 0.2445
+A094170 : 0.2480
+A094190 : -0.6467
+A094280 : 0.2462
+A094360 : 0.2433
+A094480 : 0.2447
+A094820 : 0.2436
+A094840 : 0.2438
+A094850 : 0.2339
+A094860 : 1.1605
+A094940 : 0.2442
+A094970 : -0.7140
+A095190 : -0.6034
+A095270 : 0.2440
+A095340 : 0.2440
+A095500 : -0.5576
+A095570 : -0.6314
+A095610 : 0.2433
+A095660 : 0.2436
+A095700 : -0.5928
+A095720 : -0.6337
+A095910 : 0.2440
+A096040 : 0.2488
+A096240 : 0.2444
+A096350 : -0.5980
+A096530 : -0.6353
+A096610 : 0.2493
+A096630 : 0.2688
+A096640 : 0.2464
+A096690 : 0.2872
+A096760 : 0.2434
+A096770 : 0.2436
+A096870 : 0.2477
+A097230 : 0.2478
+A097520 : 0.2432
+A097780 : -0.5708
+A097800 : 0.2437
+A097870 : 0.2456
+A097950 : -0.4404
+A098120 : -0.5884
+A098460 : 0.2447
+A098660 : 0.2452
+A099190 : -0.5953
+A099220 : -0.6380
+A099320 : 0.2457
+A099390 : 0.2460
+A099410 : 0.2434
+A099430 : 0.2460
+A099440 : 1.1947
+A099520 : -0.5723
+A099660 : -0.6145
+A099750 : -0.5862
+A099830 : 0.2619
+A100030 : 0.2470
+A100090 : 0.2462
+A100120 : 0.2448
+A100130 : 0.2444
+A100220 : 0.2451
+A100250 : 0.2529
+A100590 : -0.5837
+A100660 : -0.5959
+A100700 : 0.2439
+A100790 : 0.2456
+A100840 : 1.1705
+A101000 : -0.5834
+A101060 : -0.5923
+A101140 : 0.2059
+A101160 : -0.5808
+A101170 : 0.2518
+A101240 : 0.2476
+A101330 : 0.2442
+A101360 : 0.2432
+A101390 : -0.5815
+A101400 : -0.5920
+A101490 : 0.2469
+A101530 : 0.2484
+A101670 : 0.3201
+A101680 : -0.5619
+A101730 : 0.2448
+A101930 : 0.2693
+A102120 : 0.2450
+A102210 : 0.2805
+A102260 : 0.2438
+A102280 : -0.5983
+A102370 : 0.2449
+A102460 : 0.2438
+A102710 : 0.2481
+A102940 : 0.2442
+A103130 : 0.2439
+A103140 : -0.5702
+A103230 : 0.2432
+A103590 : 0.2442
+A103840 : 0.2436
+A104040 : 0.2694
+A104200 : 0.2438
+A104460 : 0.2485
+A104480 : -0.6452
+A104540 : 0.2695
+A104620 : -0.5785
+A104700 : 0.2387
+A104830 : 0.2596
+A105330 : 0.2432
+A105550 : 0.2431
+A105560 : -0.5924
+A105630 : 0.2493
+A105740 : 0.2476
+A105840 : 0.2489
+A106080 : 0.2529
+A106190 : 0.2433
+A106240 : 0.2437
+A106520 : 0.2469
+A107590 : 0.2440
+A107600 : -0.5841
+A108230 : 0.2433
+A108320 : 0.2443
+A108380 : -0.5930
+A108490 : 0.2437
+A108670 : 0.2460
+A108790 : 0.2442
+A108860 : -0.6040
+A109070 : 0.2437
+A109080 : -0.6372
+A109610 : 0.2434
+A109740 : 0.2435
+A109820 : 0.2439
+A109860 : -0.5906
+A109960 : -0.5940
+A110020 : 0.2454
+A110790 : -0.5848
+A110990 : 0.2432
+A111110 : 0.2435
+A111710 : 0.2431
+A111770 : 0.2581
+A111820 : 0.2455
+A111870 : -0.5918
+A112040 : 0.2444
+A112240 : 0.2434
+A112290 : 0.2450
+A112610 : 0.2433
+A113810 : -0.5874
+A114090 : 0.2434
+A114120 : 0.2432
+A114190 : 0.2481
+A114450 : 0.2450
+A114570 : -0.5991
+A114630 : 0.2450
+A114810 : 0.2473
+A114840 : -0.6353
+A115160 : 0.2473
+A115180 : 0.2446
+A115310 : 0.2453
+A115390 : -0.5522
+A115440 : 0.2366
+A115450 : -0.6069
+A115480 : 0.2431
+A115500 : 0.2502
+A115530 : 0.2484
+A115570 : 0.2449
+A115610 : -0.5931
+A115960 : 0.2435
+A117580 : -0.6219
+A117670 : 0.2457
+A117730 : 0.2444
+A118000 : 0.2452
+A118990 : 0.2456
+A119500 : -0.6050
+A119610 : -0.3878
+A119650 : 0.2462
+A119830 : 0.2457
+A119850 : 0.2473
+A119860 : 0.2432
+A120030 : 0.2431
+A120110 : 0.2466
+A120240 : -0.5125
+A121440 : 0.2662
+A121600 : 0.2468
+A121800 : 0.2454
+A121850 : -0.6093
+A121890 : 0.2464
+A122310 : 0.2435
+A122350 : 0.2448
+A122450 : 0.2645
+A122640 : 0.2447
+A122690 : 0.2464
+A122800 : -0.5838
+A122870 : 0.2455
+A122900 : 0.2434
+A122990 : 0.2431
+A123010 : -0.5943
+A123040 : 0.2432
+A123100 : 0.2433
+A123260 : -0.5767
+A123330 : -0.5920
+A123410 : 0.2432
+A123420 : 0.2446
+A123570 : -0.5838
+A123690 : 0.2468
+A123700 : -0.5877
+A123750 : 1.1626
+A123840 : 0.2435
+A123860 : 0.2442
+A123890 : -0.5718
+A124500 : 0.2493
+A124560 : 0.2456
+A125210 : -0.5564
+A126340 : 0.2434
+A126560 : 0.2431
+A126600 : 0.2437
+A126640 : 0.2444
+A126700 : 0.2441
+A126720 : -0.5739
+A126870 : 0.2467
+A126880 : 0.2441
+A127120 : 1.1655
+A127160 : 0.2431
+A127710 : 0.2447
+A127980 : 0.2470
+A128540 : -0.5843
+A128660 : -0.6008
+A128820 : 0.2672
+A128940 : 0.2433
+A129260 : -0.5946
+A129890 : 0.2434
+A129920 : -0.5831
+A130500 : 0.2438
+A130580 : -0.6074
+A130660 : 0.2431
+A130740 : 0.2449
+A130960 : 0.2487
+A131030 : -0.6146
+A131090 : 0.2433
+A131100 : 0.2502
+A131180 : 0.2547
+A131220 : -0.5580
+A131290 : 0.2451
+A131370 : -0.5735
+A131390 : 0.2460
+A131400 : -0.5750
+A131760 : 0.2441
+A131970 : 0.2454
+A133750 : -0.5927
+A133820 : 0.2476
+A134060 : 0.2476
+A134380 : 0.2455
+A134580 : -0.5949
+A134780 : -0.5970
+A134790 : -0.6128
+A136410 : -0.5121
+A136480 : 0.2432
+A136490 : -0.6010
+A136510 : 0.2467
+A136540 : 0.2440
+A137080 : 0.2445
+A137310 : -0.5902
+A137400 : 0.2431
+A137940 : 0.2432
+A137950 : -0.5828
+A138040 : -0.5875
+A138070 : 0.2450
+A138080 : -0.5445
+A138250 : 0.2462
+A138360 : -0.6325
+A138490 : 0.2438
+A138580 : -0.5825
+A138610 : -0.5467
+A138690 : 0.2492
+A138930 : 0.2460
+A139050 : -0.6016
+A139130 : -0.6074
+A139480 : 0.2470
+A139670 : 0.2451
+A139990 : 0.2443
+A140070 : 0.2449
+A140410 : -0.5906
+A140520 : -0.5881
+A140670 : 0.2481
+A140860 : 0.2434
+A141000 : 0.2435
+A141020 : -0.5832
+A141070 : 0.2450
+A141080 : -0.6071
+A142210 : -0.6172
+A142280 : -0.5834
+A142760 : -0.5929
+A143160 : -0.6069
+A143210 : -0.5340
+A143240 : 0.2353
+A143540 : 0.2433
+A144510 : -0.5609
+A144620 : -0.5902
+A144960 : -0.5930
+A145020 : -0.6039
+A145210 : 0.2480
+A145720 : 0.2443
+A145990 : 0.2433
+A146320 : 0.2446
+A147760 : 0.2432
+A147830 : 0.2439
+A148140 : 0.2443
+A148150 : 0.2447
+A148250 : 0.2443
+A148780 : -0.5817
+A148930 : -0.6006
+A149940 : -0.5913
+A149950 : 0.2435
+A149980 : 0.2591
+A150840 : -0.6049
+A150900 : 0.2452
+A151860 : 0.2435
+A151910 : -0.6230
+A152330 : 0.2633
+A153460 : 0.2432
+A153490 : 0.2439
+A153710 : 0.2616
+A154030 : 0.2434
+A154040 : -0.5834
+A155650 : -0.6387
+A155660 : -0.5624
+A155960 : 0.2467
+A156100 : -0.5889
+A158310 : 0.2434
+A158430 : -0.5981
+A159010 : -0.5876
+A159580 : 0.2431
+A159910 : 0.2433
+A160550 : -0.5905
+A160600 : 0.2959
+A160980 : 0.2493
+A161000 : 0.2458
+A161390 : 0.2448
+A161570 : 0.2652
+A161580 : 0.2486
+A161890 : 0.2439
+A162300 : -0.6022
+A163560 : -0.5913
+A163730 : 0.2447
+A164060 : 0.3146
+A166090 : 0.2444
+A166480 : -0.6007
+A168330 : 0.2445
+A168360 : 0.2438
+A169330 : -0.6102
+A170030 : -0.5888
+A170790 : 0.2446
+A170900 : 0.2438
+A170920 : 0.2433
+A171010 : 0.2473
+A171090 : 0.2433
+A171120 : 2.7560
+A173130 : -0.5988
+A173940 : 0.2432
+A174880 : 0.2493
+A174900 : 0.2445
+A175140 : 0.2437
+A175250 : -0.6006
+A175330 : 0.2463
+A176440 : 0.2434
+A177350 : 0.2436
+A177830 : 0.2431
+A178320 : -0.5937
+A178780 : 0.2472
+A178920 : 0.2441
+A179290 : 0.2435
+A179530 : 0.2452
+A179900 : 0.2462
+A180400 : -0.5839
+A180640 : 0.2495
+A181340 : -0.4909
+A181710 : -0.5678
+A182360 : 0.2433
+A182400 : -0.4586
+A182690 : 0.2440
+A183190 : 0.2439
+A183300 : -0.5688
+A183490 : 0.2455
+A184230 : 0.2476
+A185490 : 0.2460
+A185750 : 0.2452
+A186230 : 0.2457
+A187220 : 0.2462
+A187270 : 1.1794
+A187420 : 0.2433
+A187660 : 0.2450
+A187790 : 0.2434
+A187870 : -0.5875
+A189300 : 0.2432
+A189330 : 0.2432
+A189690 : 0.2489
+A189860 : 0.2563
+A189980 : -0.5858
+A190510 : -0.5855
+A190650 : -0.5746
+A191410 : -0.5846
+A191420 : 0.2494
+A192080 : 0.2474
+A192250 : 0.2466
+A192390 : 0.2441
+A192400 : -0.5020
+A192410 : -0.5909
+A192440 : 0.2488
+A192530 : 0.2435
+A192650 : 0.2451
+A192820 : 0.2435
+A193250 : 0.2431
+A194370 : 0.2434
+A194480 : 0.2445
+A194510 : 0.2451
+A194610 : 0.2478
+A194700 : 0.2451
+A195440 : 0.2478
+A195500 : 0.2438
+A195870 : -0.6258
+A195940 : 0.2447
+A195990 : -0.6186
+A196170 : 0.2465
+A196300 : 0.2434
+A196450 : 0.2433
+A196490 : 0.2458
+A196700 : 0.2431
+A197140 : 0.2433
+A197210 : 0.2469
+A198080 : -0.5845
+A198440 : 0.2569
+A198940 : 0.2445
+A199730 : 0.2505
+A199800 : 0.2525
+A199820 : 0.2456
+A200130 : 0.2470
+A200230 : 0.2479
+A200350 : -0.5937
+A200470 : 0.2738
+A200670 : 0.2454
+A200710 : 0.2447
+A200780 : -0.6028
+A200880 : 0.2439
+A201490 : 0.2432
+A203400 : 0.2462
+A203450 : 0.2443
+A203650 : 0.2438
+A203690 : 0.2463
+A204020 : -0.5807
+A204270 : 0.2458
+A204320 : 0.2434
+A204610 : 0.2446
+A204620 : 0.2473
+A204630 : 0.2462
+A204840 : 0.2431
+A204990 : 0.2434
+A205100 : -0.5881
+A205470 : 0.2461
+A205500 : 0.2471
+A206400 : 0.2498
+A206560 : 0.2407
+A206640 : 0.2479
+A206650 : -0.5574
+A207760 : -0.5862
+A207940 : 0.2475
+A208140 : -0.5436
+A208340 : 0.2444
+A208350 : 0.2454
+A208370 : -0.5541
+A208640 : 0.2442
+A208710 : 0.2442
+A208860 : 0.2431
+A210540 : -0.6061
+A210980 : 0.2439
+A211050 : -0.6065
+A211270 : 0.2434
+A212560 : 0.2433
+A213090 : 0.2473
+A213420 : 0.2437
+A213500 : 0.2641
+A214150 : 0.2432
+A214180 : 0.2436
+A214260 : 0.2459
+A214270 : -0.5756
+A214310 : 0.2451
+A214320 : -0.5726
+A214330 : 0.2510
+A214370 : 0.2715
+A214390 : 0.2437
+A214420 : -0.6429
+A214430 : -0.6248
+A214450 : 0.2453
+A214610 : 0.2446
+A214680 : -0.5967
+A214870 : -0.5835
+A215000 : 0.2447
+A215090 : -0.5910
+A215100 : -0.5814
+A215200 : 1.1544
+A215360 : 0.2446
+A215380 : 0.2436
+A215480 : 0.2452
+A215600 : 1.5123
+A215790 : -0.6088
+A216050 : 0.2519
+A216080 : -0.6025
+A217190 : -0.5964
+A217270 : 0.2440
+A217330 : 0.2476
+A217480 : -0.5951
+A217500 : -0.6037
+A217600 : -0.5750
+A217620 : 0.2437
+A217730 : -0.5954
+A217820 : 0.2432
+A218150 : 0.2439
+A218410 : 0.2494
+A219130 : 0.2696
+A219420 : -0.5970
+A219550 : 0.2448
+A219750 : 0.2468
+A220100 : -0.5943
+A220180 : -0.5932
+A220260 : 0.2476
+A220630 : 0.2603
+A221610 : 0.2459
+A221840 : 0.2442
+A221980 : 0.2453
+A222040 : 0.2433
+A222080 : 0.2607
+A222110 : 0.2437
+A222160 : -0.5914
+A222420 : -0.5498
+A222800 : 0.2480
+A222810 : -0.5841
+A222980 : 0.2448
+A223250 : -0.5628
+A223310 : 0.2460
+A224060 : 0.2435
+A224110 : 0.2433
+A225190 : 0.2456
+A225220 : 0.2470
+A225330 : 0.2447
+A225430 : -0.5916
+A225530 : -0.5912
+A225570 : 0.2473
+A225590 : 0.2458
+A225650 : -0.5966
+A226320 : 0.2432
+A226330 : 0.2444
+A226340 : -0.5838
+A226350 : 0.2441
+A226360 : 0.2431
+A226400 : 0.2444
+A226440 : 0.2483
+A226950 : 0.2469
+A227100 : 0.2433
+A227610 : 0.2432
+A227840 : 0.2465
+A227950 : 0.2438
+A228340 : -0.6002
+A228670 : 0.2433
+A228760 : 0.2470
+A228850 : 0.2452
+A229000 : 0.2450
+A229640 : -0.5768
+A230240 : -0.5808
+A230360 : -0.5931
+A230980 : -0.6716
+A232140 : 0.2432
+A232680 : 0.2432
+A234080 : -0.5949
+A234100 : -0.5902
+A234300 : 0.2474
+A234340 : 0.2451
+A234690 : -0.6032
+A234920 : 0.2432
+A235980 : 0.2438
+A236200 : -0.5875
+A236810 : 0.2369
+A237690 : 0.2437
+A237750 : 0.2534
+A237820 : -0.5839
+A237880 : 0.2471
+A238090 : 0.2439
+A238120 : 0.2438
+A238200 : 0.2450
+A238490 : 0.2433
+A239340 : 0.2447
+A239610 : -0.5971
+A239890 : 0.2458
+A240810 : 0.2452
+A241520 : 0.2438
+A241560 : 0.2601
+A241590 : -0.6075
+A241690 : 0.2433
+A241710 : 0.2442
+A241770 : 0.2071
+A241790 : 0.2558
+A241820 : -0.5994
+A241840 : -0.5527
+A242040 : -0.5901
+A243070 : 0.2444
+A243840 : 0.2459
+A244460 : -0.5752
+A244920 : 0.2443
+A245620 : -0.5939
+A246690 : -0.5871
+A246710 : 0.2475
+A246720 : -0.6016
+A246960 : 0.2433
+A247540 : 0.2432
+A247660 : -0.6507
+A248070 : 0.2452
+A248170 : 0.2439
+A249420 : 0.2435
+A250000 : 1.2620
+A250060 : 0.2480
+A250930 : 0.2460
+A251120 : 0.2445
+A251270 : 0.5089
+A251370 : 0.2440
+A251630 : -0.6215
+A251970 : 0.2446
+A252500 : 0.2434
+A252990 : -0.5925
+A253450 : 0.2432
+A253590 : 1.2470
+A253840 : 0.2439
+A254120 : 0.2453
+A254490 : 0.2581
+A255220 : 0.2432
+A255440 : -0.5892
+A256150 : 0.2448
+A256630 : 0.2451
+A256840 : -0.5931
+A256940 : -0.5731
+A257370 : -0.5822
+A257720 : -0.6029
+A258610 : -0.5980
+A258790 : 0.2432
+A258830 : 0.2474
+A259630 : -0.5963
+A259960 : 0.2449
+A260660 : 0.2471
+A260930 : 0.2463
+A260970 : 0.2432
+A261200 : 0.2458
+A261780 : -0.5871
+A262260 : 0.2444
+A262840 : 0.2433
+A263020 : 0.2456
+A263050 : 0.2432
+A263540 : -0.6215
+A263600 : -0.5893
+A263690 : 0.2468
+A263700 : -0.5955
+A263720 : 0.2636
+A263750 : 0.2455
+A263770 : -0.6076
+A263800 : -0.6012
+A263810 : 0.2450
+A263860 : 0.2432
+A263920 : 0.2580
+A264450 : -0.6064
+A264660 : 0.2460
+A264850 : -0.5902
+A264900 : 1.1562
+A265520 : 0.2437
+A265560 : -0.5920
+A265740 : 0.2452
+A267250 : 0.2445
+A267260 : 0.2437
+A267270 : -0.6042
+A267290 : -0.6615
+A267320 : 1.1544
+A267790 : -0.5902
+A267850 : 0.2460
+A267980 : 0.2541
+A268280 : 0.2441
+A268600 : 0.2483
+A269620 : 0.2443
+A270520 : 1.3277
+A270660 : 0.2429
+A270870 : 0.2443
+A271560 : -0.5837
+A271940 : -0.6010
+A271980 : 0.2431
+A272110 : 0.2441
+A272210 : 0.2501
+A272290 : 0.2432
+A272450 : -0.5937
+A272550 : 0.2476
+A273060 : 1.1689
+A273640 : -0.6357
+A274090 : 0.2448
+A275630 : -0.5948
+A276040 : -0.5901
+A276730 : 0.2432
+A277070 : 0.2482
+A277410 : 0.2466
+A277810 : -0.6123
+A277880 : 0.2468
+A278280 : -0.5807
+A278650 : 0.2443
+A279600 : 0.2512
+A280360 : 0.2513
+A281740 : -0.4896
+A281820 : -0.5862
+A282330 : -0.6236
+A282690 : 0.2432
+A282720 : -0.5768
+A282880 : 0.2479
+A284620 : 0.2448
+A284740 : 0.2453
+A285130 : 0.2455
+A285490 : -0.5995
+A286750 : 0.2448
+A286940 : -0.6059
+A287410 : 0.2452
+A288330 : -0.5809
+A288620 : -0.6010
+A288980 : -0.5854
+A289010 : 0.2447
+A289080 : 0.2435
+A289220 : 0.2434
+A290090 : -0.6262
+A290120 : 0.2432
+A290270 : 0.2435
+A290380 : 0.2445
+A290510 : 0.2448
+A290520 : 0.2440
+A290550 : 0.2470
+A290650 : 0.2545
+A290660 : -0.5869
+A290670 : 0.2447
+A290690 : 0.2454
+A290720 : 0.2463
+A290740 : -0.6175
+A291230 : 0.2449
+A291650 : -0.6000
+A291810 : 0.2447
+A293480 : 0.2449
+A293490 : -0.5902
+A293580 : 0.2563
+A293780 : 0.2373
+A294090 : 0.2432
+A294140 : -0.5843
+A294570 : 0.2434
+A294630 : 0.2432
+A294870 : 0.2451
+A296640 : -0.6092
+A297090 : 0.2485
+A297570 : 0.2462
+A297890 : 0.2442
+A298000 : -0.5920
+A298020 : 0.2441
+A298040 : 0.2435
+A298050 : -0.5803
+A298060 : -0.6094
+A298380 : 0.2432
+A298540 : 0.2433
+A298690 : -0.5955
+A298870 : 1.2695
+A299030 : 0.2486
+A299170 : -0.5832
+A299660 : -0.5950
+A299900 : -0.5821
+A299910 : -0.5057
+A300080 : 0.2446
+A300120 : -0.5881
+A300720 : 0.2444
+A301300 : -0.5612
+A302430 : 0.2447
+A302440 : 0.2438
+A302550 : 0.2434
+A303030 : 0.2445
+A303530 : 0.2458
+A304100 : -0.5808
+A304840 : -0.6080
+A305090 : 0.2451
+A306040 : 0.2445
+A306200 : 0.2432
+A306620 : 0.2440
+A307180 : -0.5909
+A307280 : 0.2478
+A307750 : 0.2461
+A307870 : 0.2454
+A307930 : 0.2605
+A307950 : -0.5845
+A308080 : 0.2449
+A308100 : -0.5955
+A308170 : -0.6182
+A309930 : 0.2452
+A309960 : 0.2471
+A310200 : 0.2455
+A310210 : -0.5969
+A310870 : 0.2449
+A311320 : -0.5920
+A311390 : -0.5787
+A311690 : 0.2454
+A312610 : -0.5793
+A313760 : 0.2486
+A314130 : -0.5795
+A314140 : -0.6006
+A314930 : 0.2487
+A315640 : 0.2446
+A316140 : -0.5880
+A317120 : 0.2674
+A317240 : 0.2459
+A317330 : -0.5795
+A317400 : 0.2445
+A317530 : -0.5839
+A317690 : 0.2441
+A317770 : 0.2434
+A317830 : -0.3767
+A317850 : 0.2441
+A317870 : 0.2453
+A318000 : 0.2450
+A318010 : 0.2441
+A318020 : 1.3454
+A318160 : 0.2437
+A318410 : -0.5817
+A319400 : 0.2531
+A319660 : -0.5420
+A320000 : 0.2437
+A321260 : 0.2434
+A321550 : 0.2431
+A321820 : 0.2436
+A322000 : -0.5873
+A322180 : -0.6141
+A322310 : 0.2770
+A322510 : 0.2461
+A322780 : 0.2439
+A323230 : 0.2530
+A323280 : 0.2443
+A323410 : -0.5840
+A323990 : 0.2456
+A326030 : -0.5860
+A327260 : 0.2443
+A328130 : -0.5810
+A328380 : 0.2461
+A329180 : 0.2475
+A330350 : -0.5910
+A330730 : 0.2447
+A330860 : 0.2446
+A331380 : 0.2475
+A331520 : 0.2446
+A331920 : 0.2488
+A332290 : 0.2557
+A332370 : 0.2488
+A332570 : -0.5804
+A333050 : -0.5920
+A333430 : 0.2437
+A333620 : 0.2434
+A334970 : 0.2432
+A335810 : 0.2449
+A335870 : 0.2479
+A335890 : -0.5939
+A336060 : 0.2653
+A336260 : 0.2450
+A336370 : 0.2438
+A336570 : -0.3210
+A337930 : 0.2445
+A338220 : 0.2431
+A339770 : 1.3399
+A339950 : 0.2443
+A340360 : -0.5963
+A340440 : 0.2453
+A340570 : -0.5775
+A340930 : 0.2448
+A344820 : 0.2630
+A344860 : -0.5817
+A347000 : 0.2450
+A347700 : 0.2446
+A347740 : -0.5529
+A347770 : -0.5709
+A347860 : 0.2442
+A347890 : 0.2449
+A348030 : 0.2445
+A348150 : 0.2455
+A348210 : -0.5777
+A348340 : -0.5873
+A348350 : -0.5983
+A348370 : -0.5805
+A351320 : 0.2449
+A351330 : -0.5509
+A352480 : 0.2440
+A352700 : -0.8092
+A352770 : 0.2596
+A352820 : 0.2470
+A352910 : 0.2634
+A352940 : 0.2444
+A353190 : 0.2446
+A353200 : 0.2450
+A353590 : -0.6029
+A353810 : -0.6184
+A354200 : -0.5967
+A355150 : 0.2446
+A356680 : 0.2446
+A356860 : 0.2444
+A356890 : -0.5820
+A357230 : 0.2454
+A357550 : -0.5865
+A357580 : -0.4430
+A357780 : 0.2450
+A357880 : 0.2452
+A358570 : 0.2442
+A359090 : -0.5914
+A360070 : 0.2437
+A361390 : 0.2447
+A361570 : 0.2456
+A361610 : -0.6339
+A361670 : -0.5958
+A362320 : 0.2448
+A363250 : 0.2450
+A363260 : -0.5987
+A363280 : -0.5922
+A365270 : 0.2447
+A365340 : -0.5854
+A365590 : 0.2444
+A365900 : 0.2453
+A366030 : -0.5877
+A367000 : -0.5819
+A368600 : 0.2448
+A368770 : 0.2448
+A368970 : 0.2447
+A369370 : 0.2442
+A370090 : -0.5951
+A371950 : 0.2434
+A372170 : -0.5737
+A372800 : -0.5976
+A372910 : 0.2441
+A373200 : 0.2442
+A373220 : 0.2433
+A375500 : 0.2433
+A376180 : 0.2448
+A376190 : -0.5684
+A376290 : -0.5858
+A376300 : -0.5891
+A376930 : 0.2447
+A376980 : 0.2435
+A377030 : 0.5972
+A377220 : -0.6062
+A377300 : -0.6093
+A377330 : 0.2448
+A377450 : -0.5943
+A377460 : -0.6001
+A377480 : -0.5798
+A377740 : 0.2442
+A378800 : -0.5785
+A378850 : 0.2519
+A380540 : 0.2435
+A381970 : 0.2433
+A382480 : -0.4761
+A382800 : 0.2448
+A382840 : -0.5809
+A382900 : 0.2450
+A383220 : 0.2449
+A383310 : -0.5834
+A383800 : -0.6074
+A383930 : 0.2450
+A388050 : 0.2440
+A388720 : -0.5787
+A388790 : 0.2443
+A389020 : 0.2804
+A389030 : 0.1838
+A389140 : -0.6070
+A389260 : 0.2447
+A389470 : -0.5606
+A389500 : 0.2448
+A391710 : 0.2652
+A393210 : 0.2449
+A393890 : 0.2450
+A394280 : 0.2439
+A396270 : 0.2434
+A396300 : -0.6261
+A397030 : 0.2446
+A399720 : -0.5597
+A402030 : 0.2440
+A402340 : -0.5851
+A403550 : 0.2451
+A403870 : 0.2486
+A405000 : 0.2448
+A405100 : -0.6237
+A407400 : -0.5839
+A408900 : -0.5808
+A408920 : -0.5846
+A411080 : 0.2436
+A412350 : -0.6033
+A417010 : 0.2450
+A417180 : 0.2500
+A417500 : -0.6281
+A417840 : -0.5562
+A417860 : 0.2633
+A417970 : -0.6059
+A418420 : 0.2449
+A418550 : 0.2446
+A419050 : 0.2445
+A419080 : 0.2450
+A419120 : 0.2434
+A419530 : -0.5955
+A419540 : 0.2451
+A424760 : -0.5950
+A424980 : 0.2449
+A425040 : -0.5923
+A425420 : 0.2554
+A441270 : 0.2466
+A446070 : -0.5789
+A450140 : 0.2432
+A452260 : 0.2446
+A453340 : 0.2432
+A900040 : 0.2432
+A900070 : -0.5932
+A900080 : -0.6026
+A900090 : 0.2549
+A900100 : -0.5750
+A900110 : 0.2438
+A900120 : 0.2434
+A900140 : -0.5889
+A900180 : 0.2434
+A900250 : 0.2448
+A900260 : 0.2439
+A900270 : -0.6024
+A900280 : 0.2491
+A900290 : -0.5984
+A900300 : -0.5934
+A900310 : -0.5959
+A900340 : -0.6223
+A950110 : -0.5897
+A950130 : 0.2335
+A950140 : 0.2432
+A950160 : -0.7399
+A950170 : 0.2431
+A950180 : -0.5399
+A950190 : 0.2432
+A950200 : -0.5530
+A950210 : 1.1812
+A950220 : -0.5671
+(weight sum) = 1.598260530647086
+
+====================================
+evaluating portfolio...
+====================================
+
+checking constraint satisfaction...
+weights sum                  :  False
+Traceback (most recent call last):
+  File "/home/wooyeon/Index_tracking_with_cardinality/main.py", line 159, in <module>
+    main()
+  File "/home/wooyeon/Index_tracking_with_cardinality/main.py", line 125, in main
+    print_constraints_satisfication(args, new_portfolio, new_universe)
+  File "/home/wooyeon/Index_tracking_with_cardinality/prafe/utils.py", line 60, in print_constraints_satisfication
+    print("Cardinality constraint     : ", stocks_number_constraint(portfolio, universe))
+TypeError: stocks_number_constraint() missing 1 required positional argument: 'K'

@@ -8,6 +8,7 @@ from prafe.solution.lagrange import Lagrange
 from prafe.evaluation import Evaluator
 from prafe.constraint import *
 
+import yfinance as yf
 from pathlib import Path
 import argparse
 import time
@@ -23,44 +24,76 @@ def get_data_preprocessed(args, start_year, end_year):
 
     df_prices = []
     df_returns = []
-    df_multifactors = []
     
     current_year = start_year
-    for current_year in range(start_year, end_year+1):
-        df_prices.append(pd.read_csv(data_path + '/price_data_' + str(current_year) + '.csv', parse_dates=True, index_col="date").fillna(value=0.0))
-        df_returns.append(pd.read_csv(data_path + '/returns_data_' + str(current_year) + '.csv', parse_dates=True, index_col="date").fillna(value=0.0))
-        df_multifactors.append(pd.read_csv(data_path + '/multifactor_data_' + str(current_year) + '.csv', parse_dates=['date']).fillna(value=0.0))
-    df_index = pd.read_csv(data_path + '/2018_2023_index.csv', parse_dates=True)
+    index_type = args.index_type
     
-    df_price = pd.concat(df_prices)
-    df_return = pd.concat(df_returns)
-    df_multifactor = pd.concat(df_multifactors)
+    # for index data
+    df_index = pd.read_csv(data_path + '/2018_2023_index.csv')
+    df_index.set_index('Code', inplace=True)
+    df_index.drop(index='Name', inplace=True)
+    df_index.drop(index='D A T E', inplace=True)
+    df_index.index = pd.to_datetime(df_index.index)
+    df_index = df_index.replace(',', '', regex=True).astype(float)
+    # df_index = df_index.replace([np.inf, -np.inf], np.nan).fillna(0)
     
+    if index_type == 's&p500':
+        for current_year in range(start_year, end_year+1):
+            df_prices.append(pd.read_csv(data_path + '/SP500_price_data_' + str(current_year) + '.csv', parse_dates=True, index_col="Date").fillna(value=0.0))
+            df_returns.append(pd.read_csv(data_path + '/SP500_price_data_' + str(current_year) + '.csv', parse_dates=True, index_col="Date").fillna(value=0.0).pct_change().fillna(value=0.0))
+        df_price = pd.concat(df_prices)
+        df_return = pd.concat(df_returns)
+        df_return = df_return.replace([np.inf, -np.inf], np.nan).fillna(0)
     
-    os.makedirs(data_path + '/processed_' + str(start_year) + '_' + str(end_year), exist_ok=True)
-    df_price.to_pickle(data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/price_data.pkl')
-    df_return.to_pickle(data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl')
-    df_multifactor.to_pickle(data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/multifactor_data.pkl')  
-    df_index.to_pickle(data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/index_data.pkl')
+        os.makedirs(data_path + '/sp500_processed_' + str(start_year) + '_' + str(end_year), exist_ok=True)
+        df_price.to_pickle(data_path + '/sp500_processed_' + str(start_year) + '_' + str(end_year) + '/price_data.pkl')
+        df_return.to_pickle(data_path + '/sp500_processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl') 
+        df_index.to_pickle(data_path + '/sp500_processed_' + str(start_year) + '_' + str(end_year) + '/index_data.pkl')
+        
+    else:
+        for current_year in range(start_year, end_year+1):
+            df_prices.append(pd.read_csv(data_path + '/price_data_' + str(current_year) + '.csv', parse_dates=True, index_col="date").fillna(value=0.0))
+            df_returns.append(pd.read_csv(data_path + '/returns_data_' + str(current_year) + '.csv', parse_dates=True, index_col="date").fillna(value=0.0))
+        df_price = pd.concat(df_prices)
+        df_return = pd.concat(df_returns)
+        os.makedirs(data_path + '/processed_' + str(start_year) + '_' + str(end_year), exist_ok=True)
+        df_price.to_pickle(data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/price_data.pkl')
+        df_return.to_pickle(data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl')
+        df_index.to_pickle(data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/index_data.pkl')
 
-    return df_price, df_return, df_multifactor, df_index
+    return df_price, df_return, df_index
+
 
 
 def print_constraints_satisfication(args, portfolio, universe):
     print("weights sum                  : ", weights_sum_constraint(portfolio, universe))
-    if args.K is not None:
-        print("Cardinality constraint     : ", stocks_number_constraint(portfolio, universe))
+    if args.cardinality is not None:
+        print("Cardinality constraint     : ", stocks_number_constraint(portfolio, universe, args.cardinality))
 
 
-def print_portfolio(weights):
+def print_portfolio(weights, K):
     weight_sum = 0
-    eps = 1e-4 # 0.0001
+    eps = 1e-4 # 0.00001
+    count = 0
     print()
-    for stock in weights.keys():
-        weight_sum += weights[stock]
-        if weights[stock] >= eps :
-            print('{} : {:.4f}'.format(stock, weights[stock]))
-    print("(weight sum) = {}".format(weight_sum))
+    topK_weights = {}
+    topK_weight_sum = 0
+    
+    sorted_weights = sorted(weights.items(), key=lambda x: x[1], reverse=True)
+    
+    for stock, weight in sorted_weights[:K]:
+        topK_weight_sum += weight
+        topK_weights[stock] = weight
+        print('{} : {:.4f}'.format(stock, weight))
+    # for stock in weights.keys():
+    #     weight_sum += weights[stock]
+    #     if weights[stock] >= eps :
+    #         count += 1
+    #         print('{} : {:.4f}'.format(stock, weights[stock]))
+        
+    print("(weight sum) = {:.4f}".format(topK_weight_sum))
+    print("(weight sum) = {}".format(topK_weight_sum))
+    # print("(Number of Stocks) = {}".format(count))
     print()
     
     
@@ -101,7 +134,7 @@ def save_portfolio_csv(
         ## Constraint Satisfication
         satisfications = {}
         satisfications["Weight Sum"] = weights_sum_constraint(portfolio, universe)
-        satisfications["Stock Number constraint"] = stocks_number_constraint(portfolio, universe)
+        satisfications["Stock Number constraint"] = stocks_number_constraint(portfolio, universe, K=args.cardinality)
         
         portfolio_satisfication = [[],[]]
         for constraint, satisfied in satisfications.items():
@@ -223,16 +256,26 @@ def read_data(args):
     start_year = start_date.timetuple()[0]
     end_year = end_date.timetuple()[0]
     
-    try:
-        df_price = pd.read_pickle(args.data_path + '/processed_' + str(start_year) + '_' +str(end_year) + '/price_data.pkl').fillna(value=0.0)
-        df_return = pd.read_pickle(args.data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl').fillna(value=0.0)
-        df_multifactor = pd.read_pickle(args.data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/multifactor_data.pkl').fillna(value=0.0)
-        df_index = pd.read_pickle(args.data_path + '/processed_' + str(start_year) + '_' +str(end_year) + '/index_data.pkl').fillna(value=0.0)
-    except Exception as e:
-        print(e)    
-        df_price, df_return, df_multifactor, df_index = get_data_preprocessed(args, start_year, end_year)
+    index_type = args.index_type
     
-    return df_price, df_return, df_multifactor, df_index, start_date, end_date, start_year, end_year
+    if index_type == 's&p500':
+        # try:
+        #     df_price = pd.read_pickle(args.data_path + '/sp500_processed_' + str(start_year) + '_' +str(end_year) + '/price_data.pkl').fillna(value=0.0)
+        #     df_return = pd.read_pickle(args.data_path + '/sp500_processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl').fillna(value=0.0)
+        #     df_index = pd.read_pickle(args.data_path + '/sp500_processed_' + str(start_year) + '_' +str(end_year) + '/index_data.pkl').fillna(value=0.0)
+        # except Exception as e:
+            # print(e)    
+        df_price, df_return, df_index = get_data_preprocessed(args, start_year, end_year)
+    else:
+        try:
+            df_price = pd.read_pickle(args.data_path + '/processed_' + str(start_year) + '_' +str(end_year) + '/price_data.pkl').fillna(value=0.0)
+            df_return = pd.read_pickle(args.data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl').fillna(value=0.0)
+            df_index = pd.read_pickle(args.data_path + '/processed_' + str(start_year) + '_' +str(end_year) + '/index_data.pkl').fillna(value=0.0)
+        except Exception as e:
+            print(e)    
+            df_price, df_return, df_index = get_data_preprocessed(args, start_year, end_year)
+    
+    return df_price, df_return, df_index, start_date, end_date, start_year, end_year
         
 
 def print_result(my_evaluator):
