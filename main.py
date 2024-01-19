@@ -16,6 +16,7 @@ from prafe.solution.lagrange import Lagrange
 from prafe.utils import *
 
 warnings.filterwarnings("ignore")
+np.set_printoptions(suppress=True, precision=4)
 
 def main():
     # Set the logger
@@ -123,7 +124,7 @@ def main():
         my_evaluator = Evaluator(universe=new_universe, portfolio=new_portfolio)
         print("====================================")
         print("evaluating portfolio...")
-        # print_result(my_evaluator)
+        print_result(my_evaluator)
         print("====================================")
 
         # Constraint Satisfaction
@@ -139,20 +140,23 @@ def main():
         print("Done!")
 
         # specify the store path
-        store_path = os.path.join(args.result_path, f'{args.index_type}_{args.start_date}_{args.end_date}', args.solution_name)
+        if K is not None : 
+            store_path = os.path.join(args.result_path, f'{args.index_type}_{args.start_date}_{args.end_date}', str(K), f'{args.solution_name}_{args.method}')
+        else:
+            store_path = os.path.join(args.result_path, f'{args.index_type}_{args.start_date}_{args.end_date}', f'{args.solution_name}_{args.method}')
         os.makedirs(store_path, exist_ok=True)
         
         formatted_start_date = current_date.strftime('%Y-%m-%d')
         formatted_end_date = current_to_end.strftime('%Y-%m-%d')
         # Save the portfolio
-        # if args.backtesting:
-        #     new_portfolio.save_portfolio(store_path+f'/{idx+1}th_portfolio_{formatted_start_date}_{formatted_end_date}.csv')
-        #     save_portfolio_csv(store_path + f'/{idx+1}th_evaulation_{formatted_start_date}_{formatted_end_date}.csv', args, new_portfolio, new_universe, my_evaluator, weights, inference_time_sec, inference_time_min)
-        # else:
-        #     new_portfolio.save_portfolio(store_path+f'/portfolio.csv')
-        #     save_portfolio_csv(store_path + f'/evaulation.csv', args, new_portfolio, new_universe, my_evaluator, weights, inference_time_sec, inference_time_min)
+        if args.backtesting:
+            new_portfolio.save_portfolio(store_path+f'/{idx+1}th_portfolio_{formatted_start_date}_{formatted_end_date}.csv')
+            save_portfolio_csv(store_path + f'/{idx+1}th_evaulation_{formatted_start_date}_{formatted_end_date}.csv', args, new_portfolio, new_universe, my_evaluator, weights, inference_time_sec, inference_time_min)
+        else:
+            new_portfolio.save_portfolio(store_path+f'/portfolio.csv')
+            save_portfolio_csv(store_path + f'/evaulation.csv', args, new_portfolio, new_universe, my_evaluator, weights, inference_time_sec, inference_time_min)
 
-        ## Save the Single Stock Solution visualization
+        # Save the Single Stock Solution visualization
         # single_stock_visualization(store_path, idx, new_universe, new_portfolio, my_evaluator, args)
         
         if not args.backtesting: 

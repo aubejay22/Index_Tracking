@@ -18,7 +18,7 @@ class Universe():
         self.df_price = df_price
         self.df_return = df_return
         self.df_index = df_index
-        self.number_of_trading_days = len(df_price)
+        self.number_of_trading_days = len(df_return)
         #self.universe_start_date = self._get_universe_start_date(join = 'inner')
         self.stock_list = list(self.df_return.columns)
 

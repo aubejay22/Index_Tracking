@@ -43,6 +43,7 @@ def get_data_preprocessed(args, start_year, end_year):
             df_returns.append(pd.read_csv(data_path + '/SP500_price_data_' + str(current_year) + '.csv', parse_dates=True, index_col="Date").fillna(value=0.0).pct_change().fillna(value=0.0))
         df_price = pd.concat(df_prices)
         df_return = pd.concat(df_returns)
+        df_price = df_price.replace([np.inf, -np.inf], np.nan).fillna(0)
         df_return = df_return.replace([np.inf, -np.inf], np.nan).fillna(0)
     
         os.makedirs(data_path + '/sp500_processed_' + str(start_year) + '_' + str(end_year), exist_ok=True)
@@ -112,6 +113,7 @@ def save_portfolio_csv(
         CAGR = evaluator.calculate_CAGR()
         AAR = evaluator.calculate_AAR()
         Variance = evaluator.calculate_variance()
+        Volatility = evaluator.calculate_volatility()
         AV = evaluator.calculate_AV()
         SR = evaluator.calculate_sharpe_ratio()
         LPM = evaluator.calculate_LPM()
@@ -127,8 +129,8 @@ def save_portfolio_csv(
         # ]
         #! Except "Information Ratio"
         portfolio_evaluation = [
-            ["Cumulative Return", "CAGR", "AAR", "Variance", "AV", "Sharpe Ratio", "LPM", "VaR", "Expected Shortfall", "MDD", "Max Drawdown_Duration"],
-            [CR, CAGR, AAR, Variance, AV, SR, LPM, VaR, ES, MDD, Max_Drawdown_duration]
+            ["Cumulative Return", "CAGR", "AAR", "Variance", "Volatility", "AV", "Sharpe Ratio", "LPM", "VaR", "Expected Shortfall", "MDD", "Max Drawdown_Duration"],
+            [CR, CAGR, AAR, Variance, Volatility, AV, SR, LPM, VaR, ES, MDD, Max_Drawdown_duration]
         ]
         
         ## Constraint Satisfication
@@ -279,9 +281,11 @@ def read_data(args):
         
 
 def print_result(my_evaluator):
+    print("volatility       : {:.4f}".format(my_evaluator.calculate_volatility()))
     print("variance         : {:.4f}".format(my_evaluator.calculate_variance()))
     print("AV               : {:.4f}".format(my_evaluator.calculate_AV()))
     print("AAR              : {:.4f}".format(my_evaluator.calculate_AAR()))
+    print("CR               : {:.4f}".format(my_evaluator.calculate_cumulative_return()))
     print("CAGR             : {:.4f}".format(my_evaluator.calculate_CAGR()))
     print("cumulative_return: {:.4f}".format(my_evaluator.calculate_cumulative_return()))
     print("Expected_Shortfall: {:.4f}".format(my_evaluator.calculate_Expected_Shortfall()))

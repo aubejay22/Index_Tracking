@@ -33,6 +33,7 @@ class Evaluator():
         
         return evaluation
 
+
     def calculate_cumulative_return(self):
         """
         Cumulative Return: 투자기간 동안의 포트폴리오의 누적 수익률
@@ -115,26 +116,32 @@ class Evaluator():
         note: portfolio volatility와 Annualized Volatility는 서로 volatility를 계산하는 공식이 다름.
         """
         
-        # Fill NaN values with previous values(결측값은 전일 값 혹은 후일 값으로 대체)
-        while self.universe.df_return.isnull().sum().sum() != 0:
-            self.universe.df_return = self.universe.df_return.ffill().bfill()
+        # # Fill NaN values with previous values(결측값은 전일 값 혹은 후일 값으로 대체)
+        # while self.universe.df_return.isnull().sum().sum() != 0:
+        #     self.universe.df_return = self.universe.df_return.ffill().bfill()
         
-        # Get the list of stocks and their weights in the portfolio
-        investments = list(self.portfolio.investments.items())
+        # # Get the list of stocks and their weights in the portfolio
+        # investments = list(self.portfolio.investments.items())
         
-        # Creating an empty DataFrame to hold portfolio daily returns
-        portfolio_daily_returns = pd.Series(0, index=self.universe.df_return.index)
+        # # Creating an empty DataFrame to hold portfolio daily returns
+        # portfolio_daily_returns = pd.Series(0, index=self.universe.df_return.index)
         
-        # For each stock and its weight in the portfolio
-        for stock, weight in investments:
+        # # For each stock and its weight in the portfolio
+        # for stock, weight in investments:
             
-            # Add weighted daily return of each stock to portfolio daily return
-            each_stock_daily_returns = self.universe.df_return[stock] * weight
-            portfolio_daily_returns += each_stock_daily_returns
+        #     # Add weighted daily return of each stock to portfolio daily return
+        #     each_stock_daily_returns = self.universe.df_return[stock] * weight
+        #     portfolio_daily_returns += each_stock_daily_returns
             
-        variance = portfolio_daily_returns.var()
-        volatility = np.sqrt(variance)
-        AV = volatility*np.sqrt(252) 
+        # variance = portfolio_daily_returns.var()
+        # volatility = np.sqrt(variance)
+        # AV = volatility*np.sqrt(252) 
+        investments = self.portfolio.investments
+        weights = list(investments.values())
+        
+        portfolio_returns = np.dot(self.universe.df_return, weights)
+        daily_volatility = np.std(portfolio_returns)
+        AV = daily_volatility * np.sqrt(252)
         
         return AV
 
@@ -277,12 +284,17 @@ class Evaluator():
         weights = list(investments.values())
         weights = np.array(weights)
         
-        S = risk_models.sample_cov(self.universe.df_price[codes], frequency= self.universe.number_of_trading_days)
-        variance = objective_functions.portfolio_variance(weights, S)
-        # variance = (self.universe.df_return @ weights).std()
-        # variance = variance ** 2
+        cov_matrix = np.cov(self.universe.df_return, rowvar=False)
+        variance = np.dot(weights.T, np.dot(cov_matrix, weights))
 
         return variance
+    
+    
+    def calculate_volatility(self):
+        variance = self.calculate_variance()
+        volatility = np.sqrt(variance)
+        
+        return volatility
 
     def calculate_sharpe_ratio(self):
         '''
@@ -294,18 +306,19 @@ class Evaluator():
         weights = list(investments.values())
         weights = np.array(weights)
 
-        S = risk_models.sample_cov(self.universe.df_price[codes], frequency= self.universe.number_of_trading_days)
-        mu = expected_returns.mean_historical_return(self.universe.df_price[codes], frequency= self.universe.number_of_trading_days)
-        variance = objective_functions.portfolio_variance(weights, S)
+        expected_return = self.universe.df_return.mean()
+        cov_matrix = np.cov(self.universe.df_return, rowvar=False)
         
-        # mu = np.array(list(self.universe.get_mean_returns().values())) * self.universe.number_of_trading_days
-        # sigma = (self.universe.df_return @ weights).std()
-        sigma = np.sqrt(variance)
+        portfolio_return = np.dot(weights, expected_return)
+        portfolio_variance = np.dot(weights.T, np.dot(cov_matrix, weights))
+        portfolio_volatility = np.sqrt(portfolio_variance)
         
+        # print(weights@mu)
+        # print(sigma)
         sign = 1
-        risk_free_rate = 0.02
-        sharpe = (weights @ mu - risk_free_rate) / sigma
-        
+        risk_free_rate = 0
+        sharpe = (portfolio_return - risk_free_rate) / portfolio_volatility
+
         return sign * sharpe
         
 
