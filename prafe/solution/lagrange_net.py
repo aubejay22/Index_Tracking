@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 from sympy import symbols, Eq, solve
 from scipy.optimize import minimize
 
-from prafe.solution.lagrange_orig import Lagrange
+from prafe.solution.lagrange import Lagrange
 from prafe.utils import *
 
 warnings.filterwarnings("ignore")
@@ -54,8 +54,7 @@ def main():
 
     # price, return, index data
     df_price, df_return, df_index, start_date, end_date, start_year, end_year = read_data(args)
-    K = args.cardinality
-    
+
     # index type
     index_type = args.index_type
     if index_type == "kospi100":
@@ -66,6 +65,8 @@ def main():
         index_stocks_list = df_price.dropna(axis=1).columns.tolist()
 
     # print(index_stocks_list)
+    
+    K = args.cardinality
     
     
     # Get the universe
@@ -179,7 +180,7 @@ def main():
     
     # Tracking Graph
     plt.plot(end_date_list, tracking_indices, linestyle='-', color='b', label='tracking index')
-    # plt.plot(end_date_list, )
+    plt.plot(end_date_list, )
     
     ## rebalancing한 weight를 기준으로 홀드하는 동안에는 동일한 weight, return은 매일 바뀜, 당연히 benchmark index도 계속 바뀜. 그렇기 때문에 트래킹 그래프 그리려면
     ## 그래프 그리는 기간동안의 모든 daily를 그래프로 찍어야함 --> 반복하면서 weight 뿔려야댐

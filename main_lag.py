@@ -13,13 +13,14 @@ import matplotlib.pyplot as plt
 from sympy import symbols, Eq, solve
 from scipy.optimize import minimize
 
-from prafe.solution.lagrange_orig import Lagrange
+from prafe.solution.lagrange_mult import Solution
 from prafe.utils import *
 
 warnings.filterwarnings("ignore")
 np.set_printoptions(suppress=True, precision=4)
 
 def main():
+    
     # Set the logger
     logger = logging.getLogger(__name__)
     streamHandler = logging.StreamHandler()
@@ -31,7 +32,9 @@ def main():
     # Set the arguments
     parser = argparse.ArgumentParser()
     parser.add_argument('--data_path', type=str, 
-                        default=os.getcwd()+'/data_financial')
+                        default='../NCSOFT/financial_data')
+    # parser.add_argument('--data_path', type=str, 
+    #                     default=os.getcwd()+'/data_financial')
     parser.add_argument('--result_path', type=str, 
                         default=os.getcwd()+'/results')
     parser.add_argument('--solution_name', type=str,
@@ -109,7 +112,7 @@ def main():
         
         new_portfolio = Portfolio(new_universe)
         # Define Solution
-        solution = Lagrange(new_universe, new_portfolio, args.solution_name, args.method, len(index_stocks_list), K)
+        solution = Solution(new_universe, new_portfolio, args.solution_name, args.method, len(index_stocks_list), K)
         
         ## Update portfolio
         print()

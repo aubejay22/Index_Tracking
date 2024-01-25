@@ -14,6 +14,7 @@ from sympy import symbols, Eq, solve
 from scipy.optimize import minimize
 
 from prafe.solution.lagrange_orig import Lagrange
+from prafe.solution.lagr_nn import Lagrange_Neural_Net
 from prafe.utils import *
 
 warnings.filterwarnings("ignore")
@@ -35,7 +36,7 @@ def main():
     parser.add_argument('--result_path', type=str, 
                         default=os.getcwd()+'/results')
     parser.add_argument('--solution_name', type=str,
-                        default='lagrange_ours', choices=['lagrange_full', 'lagrange_ours', 'lagrange_forward', 'lagrange_backward', 'QP_full', 'QP_forward', 'QP_backward', 'SNN'])
+                        default='lagrange_ours', choices=['lagrange_full', 'lagrange_ours', 'lagrange_forward', 'lagrange_backward', 'QP_full', 'QP_forward', 'QP_backward', 'SNN', 'ANN'])
     parser.add_argument('--cardinality', type=int, default=None)
     parser.add_argument('--method', type=str)
     
@@ -109,7 +110,7 @@ def main():
         
         new_portfolio = Portfolio(new_universe)
         # Define Solution
-        solution = Lagrange(new_universe, new_portfolio, args.solution_name, args.method, len(index_stocks_list), K)
+        solution = Lagrange_Neural_Net(new_universe, new_portfolio, args.solution_name, args.method, len(index_stocks_list), K)
         
         ## Update portfolio
         print()

@@ -4,7 +4,7 @@ import json
 import datetime 
 from prafe.universe import Universe
 from prafe.portfolio import Portfolio
-from prafe.solution.lagrange import Lagrange
+from prafe.solution.lagrange_orig import Lagrange
 from prafe.evaluation import Evaluator
 from prafe.constraint import *
 

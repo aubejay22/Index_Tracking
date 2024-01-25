@@ -47,49 +47,38 @@ class Lagrange(Solution):
     
     def objective_function(
         self,
-        variable : list,
+        weight : list,
     ) -> list :
         # print(self.new_return @ weight)
         # print(self.new_index)
         # raise Exception("")
-        weight = variable[:-2]
-        lambda1 = variable[-2]
-        lambda2 = variable[-1]
-        
-        eps = 1e-4
-        coefficient = 99999999999
-        # print(weight.shape)
-        # print(self.new_return.shape)
         error = self.new_return @ weight - self.new_index
         error = np.sum(error**2)
         # print(error)
         # raise Exception("")
         
-        return error + lambda1 * (np.sum(weight) - 1) + lambda2 * (-np.sum(1 / ( 1 + np.e ** ( - (coefficient * ( weight - eps ))))) + self.K)
+        return error
     
     
     def weight_sum_constraint(
         self,
-        variable : list,
+        weight : list,
     ) -> list :
-        weight = variable[:-2]
         return np.sum(weight) - 1
     
     
     def weight_sum_jac(
         self,
-        variable : list,
+        weight : list,
     ) -> list :
         # print(np.ones)
-        weight = variable[:-2]
         return np.ones(len(weight))
     
     
     def cardinality_constraint(
         self,
-        variable : list,
+        weight : list,
     ) -> list :
-        weight = variable[:-2]
         eps = 1e-4
         coefficient = 99999999999
         weight = 1 - 1 / ( coefficient * weight + 1 )
@@ -100,9 +89,8 @@ class Lagrange(Solution):
     
     def cardinality_jac(
         self,
-        variable : list,
+        weight : list,
     ) -> list :
-        weight = variable[:-2]
         coefficient = 99999999999
         # print(coefficient/((coefficient*weight+1)**2))
         return coefficient/((coefficient*weight+1)**2)
@@ -111,9 +99,8 @@ class Lagrange(Solution):
     
     def cardinality_constraint2(
         self,
-        variable : list,
+        weight : list,
     ):
-        weight = variable[:-2]
         eps = 1e-4
         # Approximated extended cardinality constraint
         coefficient = 99999999999
@@ -162,34 +149,26 @@ class Lagrange(Solution):
         while(1):
             start_time = time.time()
             # Define initial weight
-            initial_variable = np.random.rand(self.num_assets)
-            initial_variable /= initial_variable.sum()  
-            print(initial_variable.shape)
-            initial_variable = np.append(initial_variable, 0)
-            initial_variable = np.append(initial_variable, 0)
-            print(initial_variable.shape)
-            
-            
-            bounds = [(0, 1) for _ in range(len(initial_variable))]
+            initial_weight = np.random.rand(self.num_assets)
+            initial_weight /= initial_weight.sum()  
+            bounds = [(0, 1) for _ in range(self.num_assets)]
 
             # Define Constraints
             # constraint = [{'type': 'eq', 'fun': self.weight_sum_constraint},
             #               {'type': 'ineq', 'fun': self.cardinality_constraint}]
-            constraint = [{'type': 'eq', 'fun': self.weight_sum_constraint},# 'jac': self.weight_sum_jac},
+            constraint = [{'type': 'eq', 'fun': self.weight_sum_constraint, 'jac': self.weight_sum_jac},
                         {'type': 'ineq', 'fun': self.cardinality_constraint}]#, 'jac': self.cardinality_jac}]
             
             # Optimization
-            result = minimize(self.objective_function, initial_variable, method = self.method, constraints=constraint, bounds=bounds)
-            self.optimal_weight = result.x[:-2]
-            self.lambda1 = result.x[-2]
-            self.lambda2 = result.x[-1]
+            result = minimize(self.objective_function, initial_weight, method = self.method, constraints=constraint, bounds=bounds)
+            self.optimal_weight = result.x
             self.stock2weight = {}
             for i in range(len(self.stock_list)):
                 self.stock2weight[self.stock_list[i]] = result.x[i]
                 
             # Update Portfolio & Calculate Error
             self.portfolio.update_portfolio(self.stock2weight)
-            self.optimal_error = self.objective_function(result.x)
+            self.optimal_error = self.objective_function(self.optimal_weight)
             print(f"Calculated error : {self.optimal_error}")
             
             # Calculate Top K weight sum
@@ -208,7 +187,6 @@ class Lagrange(Solution):
                 continue
             else:
                 print("trial : ", trial)
-                print(f"lambda1 : {self.lambda1}, lambda2 : {self.lambda2}")
                 print(f'sec : {time.time() - start_time}')
                 print(f'min : {(time.time() - start_time)/60}')
                 # print(result)
