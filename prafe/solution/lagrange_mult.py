@@ -94,8 +94,9 @@ class Solution(Solution):
         self,
         vars
     ):
-        weight = vars[:-2]
-        lambdas = vars[-2:]
+        num_lambdas = 2
+        weight = vars[:-num_lambdas]
+        lambdas = vars[-num_lambdas:]
         coefficient = 1000
         eps = 1e-4
         
@@ -106,43 +107,14 @@ class Solution(Solution):
             objective_der = 2 * (self.new_return[:,i] @ (self.new_return @ weight - self.new_index))
             const1_der = lambdas[0]
             const2_der = lambdas[1] * coefficient * (np.e ** (-(coefficient * (weight[i] - eps)))) / ((1 + np.e ** (-(coefficient * (weight[i] - eps)))) ** 2)
-            equations.append(objective_der - const1_der - const2_der)
+            equations.append(objective_der + const1_der + const2_der)
         # derivative for lambda1
-        equations.append(-np.sum(weight) + 1)
+        equations.append(np.sum(weight) - 1)
         
         # derivative for lambda2
         count = 1 / (1 + np.e ** (-(coefficient * (weight - eps)))) 
-        equations.append(-np.sum(count) + self.K)
+        equations.append(np.sum(count) - self.K)
         return equations
-    
-    
-    # def system_of_equations_slack(
-    #     self,
-    #     vars
-    # ):
-    #     weight = vars[:-3]
-    #     lambdas = vars[-3:-1]
-    #     slack = vars[-1] ** 2
-    #     coefficient = 99999999999
-    #     eps = 1e-4
-        
-        
-    #     equations = []
-    #     # derivative for weights
-    #     for i in range(self.num_assets):
-    #         objective_der = 2 * (self.new_return[:,i] @ (self.new_return @ weight))
-    #         const1_der = lambdas[0]
-    #         const2_der = lambdas[1] * coefficient * (np.e ** (-(coefficient * (weight[i] - eps)))) / ((1 + np.e ** (-(coefficient * (weight[i] - eps)))) ** 2)
-    #         equations.append(objective_der + const1_der + const2_der)
-    #     # derivative for lambda1
-    #     equations.append(np.sum(weight) - 1)
-    #     # derivative for lambda2
-    #     count = 1 / (1 + np.e ** (-(coefficient * (weight - eps)))) 
-    #     equations.append(np.sum(count) + slack - self.K)
-    #     # derivative for slack
-    #     equations.append(lambdas[1]*np.sqrt(slack))
-    #     return equations
-    
 
     
     def lagrange_partial_ours(
@@ -152,6 +124,7 @@ class Solution(Solution):
         np.random.seed(seed_value)
         coefficient = 1000
         eps = 1e-4
+        num_lambdas = 2
         
         print("lagrange function")
         
@@ -163,20 +136,21 @@ class Solution(Solution):
             start_time = time.time()
             # Define initial weight
             initial_variable = np.random.rand(self.num_assets)
-            # initial_variable /= initial_variable.sum()  
+            initial_variable /= initial_variable.sum()  
             # print(initial_variable)
             
-            lambda_guess = np.random.rand(2)
+            lambda_guess = np.random.rand(num_lambdas)
             slack_guess = np.random.rand(1)
             
             # Optimization
             result= root(self.system_of_equations, np.concatenate([initial_variable, lambda_guess]), method='lm')#, full_output=True)#, slack_guess]))
             
-            print(f'optimal solution: {result}')
-            print(f"objective: {self.objective_function(result.x[:-2])}")
-            print(f"weight sum: {np.sum(result.x[:-2])}")
+            print(f'Success: {result.success}')
+            print(f'optimal solution: {result.x}')
+            print(f"objective: {self.objective_function(result.x[:-num_lambdas])}")
+            print(f"weight sum: {np.sum(result.x[:-num_lambdas])}")
             topK_weight_sum = 0
-            sorted_weights = sorted(result.x[:-2],reverse=True)
+            sorted_weights = sorted(result.x[:-num_lambdas],reverse=True)
             for weight in sorted_weights[:self.K]:
                 topK_weight_sum += weight
             print(f"top K weight sum: {topK_weight_sum}")
@@ -193,7 +167,18 @@ class Solution(Solution):
             # print(f"top K weight sum: {topK_weight_sum}")
             # print(f"cardinality: {np.sum(1 / (1 + np.e ** (-(coefficient * (result[0][:-2] - eps)))))}")
             print(f"inference time: {time.time() - start_time}")
-            raise Exception("")
+            
+            self.optimal_weight = result.x[:-num_lambdas]
+            self.stock2weight = {}
+            for i in range(len(self.stock_list)):
+                self.stock2weight[self.stock_list[i]] = result.x[i]
+                
+            # Update Portfolio & Calculate Error
+            self.portfolio.update_portfolio(self.stock2weight)
+            self.optimal_error = self.objective_function(self.optimal_weight)
+            print(f"Calculated error : {self.optimal_error}")
+            break
+            # raise Exception("")
             
         return self.stock2weight, self.optimal_error
     

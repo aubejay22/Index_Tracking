@@ -39,7 +39,7 @@ def main():
                         default=os.getcwd()+'/results')
     parser.add_argument('--solution_name', type=str,
                         default='lagrange_ours', choices=['lagrange_full', 'lagrange_ours', 'lagrange_forward', 'lagrange_backward', 'QP_full', 'QP_forward', 'QP_backward', 'SNN'])
-    parser.add_argument('--cardinality', type=int, default=None)
+    parser.add_argument('--cardinality', type=int, default=50)
     parser.add_argument('--method', type=str)
     
     # Select the Data to Use
