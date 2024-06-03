@@ -69,7 +69,7 @@ class Solution(Solution):
     ):
         coefficient = 1000
         eps = 1e-4
-        return 2 * (self.new_return[:,i] @ (self.new_return @ weight)) + lambdas[0]#+ lambdas[i] + lambdas[self.num_assets]# + lambdas[1] * coefficient * (np.e ** (-(coefficient * (weight[i] - eps)))) / ((1 + np.e ** (-(coefficient * (weight[i] - eps)))) ** 2)
+        return 2 * (self.new_return[:,i] @ (self.new_return @ weight - self.new_index)) + lambdas[0]#+ lambdas[i] + lambdas[self.num_assets]# + lambdas[1] * coefficient * (np.e ** (-(coefficient * (weight[i] - eps)))) / ((1 + np.e ** (-(coefficient * (weight[i] - eps)))) ** 2)
     
     
     def derivative_lambda1(
@@ -90,7 +90,68 @@ class Solution(Solution):
         return np.sum(1 / (1 + np.e ** (-(coefficient * (weight - eps)))) ) - self.K
     
     
-    def system_of_equations(
+    def system_of_equations_full(
+        self,
+        vars
+    ):
+        num_lambdas = 1
+        weight = vars[:-num_lambdas]
+        lambdas = vars[-num_lambdas:]
+        coefficient = 1000
+        eps = 1e-4
+        
+        equations = []
+        
+        # derivative for weights
+        for i in range(self.num_assets):
+            objective_der = 2 * (self.new_return[:,i] @ (self.new_return @ weight - self.new_index))
+            const1_der = lambdas[0]
+            equations.append(objective_der + const1_der)
+        # derivative for lambda1
+        equations.append(np.sum(weight) - 1)
+        
+        return equations
+    
+    # new version~
+    def system_of_equations_version1(
+        self,
+        vars
+    ):
+        num_lambdas = self.num_assets + 2
+        # print(num_lambdas)
+        weight = vars[:-num_lambdas]
+        lambdas = vars[-num_lambdas:]
+        coefficient = 1000
+        eps = 1e-4
+        
+        # print(self.new_return[:,0].shape)
+        # print(self.new_return.shape)
+        # print(weight.shape)
+        # print(self.new_index.shape)
+        
+        equations = []
+        # derivative for weights
+        for i in range(self.num_assets):
+            objective_der = 2 * (self.new_return[:,i] @ (self.new_return @ weight - self.new_index))
+            const1_der = lambdas[i]
+            const2_der = lambdas[i+1]
+            const3_der = lambdas[i+2] * (- coefficient) * (np.e ** (-(coefficient * (weight[i] - eps)))) / ((1 + np.e ** (-(coefficient * (weight[i] - eps)))) ** 2)
+            equations.append(objective_der + const1_der + const2_der + const3_der)
+        
+            # derivative for lambda 1 to N
+            equations.append(weight[i])
+            
+        # derivative for lambda N+1
+        equations.append(np.sum(weight) - 1)
+        
+        # derivative for lambda N+2
+        count = 1 / (1 + np.e ** (-(coefficient * (weight - eps)))) 
+        equations.append(np.sum(count) - self.K)
+        
+        return equations
+    
+    
+    def system_of_equations_version3(
         self,
         vars
     ):
@@ -104,27 +165,28 @@ class Solution(Solution):
         
         # derivative for weights
         for i in range(self.num_assets):
-            objective_der = 2 * (self.new_return[:,i] @ (self.new_return @ weight - self.new_index))
-            const1_der = lambdas[0]
-            const2_der = lambdas[1] * coefficient * (np.e ** (-(coefficient * (weight[i] - eps)))) / ((1 + np.e ** (-(coefficient * (weight[i] - eps)))) ** 2)
+            objective_der = 4 * (self.new_return[:,i] @ (self.new_return @ (weight ** 2) - self.new_index))
+            const1_der = 2 * lambdas[0] * weight[i]
+            const2_der = lambdas[1] * coefficient * weight[i] * (np.e ** (-(coefficient * (weight[i]**2 - eps)))) / ((1 + np.e ** (-(coefficient * (weight[i]**2 - eps)))) ** 2)
             equations.append(objective_der + const1_der + const2_der)
         # derivative for lambda1
-        equations.append(np.sum(weight) - 1)
+        equations.append(np.sum(weight**2) - 1)
         
         # derivative for lambda2
-        count = 1 / (1 + np.e ** (-(coefficient * (weight - eps)))) 
+        count = 1 / (1 + np.e ** (-(coefficient * (weight**2 - eps)))) 
         equations.append(np.sum(count) - self.K)
         return equations
+
 
     
     def lagrange_partial_ours(
         self
     ) -> dict :
-        seed_value = 10
+        seed_value = 42
         np.random.seed(seed_value)
         coefficient = 1000
         eps = 1e-4
-        num_lambdas = 2
+        num_lambdas = self.num_assets + 2
         
         print("lagrange function")
         
@@ -143,7 +205,7 @@ class Solution(Solution):
             slack_guess = np.random.rand(1)
             
             # Optimization
-            result= root(self.system_of_equations, np.concatenate([initial_variable, lambda_guess]), method='lm')#, full_output=True)#, slack_guess]))
+            result= root(self.system_of_equations_version1, np.concatenate([initial_variable, lambda_guess]), method='lm')#, full_output=True)#, slack_guess]))
             
             print(f'Success: {result.success}')
             print(f'optimal solution: {result.x}')
@@ -154,6 +216,7 @@ class Solution(Solution):
             for weight in sorted_weights[:self.K]:
                 topK_weight_sum += weight
             print(f"top K weight sum: {topK_weight_sum}")
+            print(f"cardinality: {np.sum(1 / (1 + np.e ** (-(coefficient * (result.x[:-num_lambdas] - eps)))))}")
             
             # print(f"initial weight: {initial_variable}")
             # print(f'Success: {result[-2:]}')

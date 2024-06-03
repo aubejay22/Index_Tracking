@@ -13,7 +13,8 @@ import matplotlib.pyplot as plt
 from sympy import symbols, Eq, solve
 from scipy.optimize import minimize
 
-from prafe.solution.lagrange_mult import Solution
+from prafe.solution.lagrange_orig import Solution
+from prafe.solution.snn import SNN
 from prafe.utils import *
 
 warnings.filterwarnings("ignore")
@@ -87,9 +88,12 @@ def main():
         
     portfolio_duration = relativedelta(years=1)
 
+
+    print(f"This is {args.index_type} {args.solution_name} results with Cardinality {args.cardinality}")
     idx = 0
     tracking_errors = []
     tracking_indices = []
+    target_indices = []
     start_date_list = []
     end_date_list = []
     current_date = start_date
@@ -112,7 +116,10 @@ def main():
         
         new_portfolio = Portfolio(new_universe)
         # Define Solution
-        solution = Solution(new_universe, new_portfolio, args.solution_name, args.method, len(index_stocks_list), K)
+        if args.solution_name == 'SNN':
+            solution = SNN(new_universe, new_portfolio, args.solution_name, args.method, len(index_stocks_list), K)
+        else: 
+            solution = Solution(new_universe, new_portfolio, args.solution_name, args.method, len(index_stocks_list), K)
         
         ## Update portfolio
         print()
@@ -166,23 +173,48 @@ def main():
         # Save the Single Stock Solution visualization
         # single_stock_visualization(store_path, idx, new_universe, new_portfolio, my_evaluator, args)
         
+        
+        # For Tracking Graph
+        weight = list(weights.values())
+        tracking_index = (new_universe.df_return @ weight).cumsum()[-1]
+        tracking_error = new_universe.df_return @ weight - new_universe.df_index
+        tracking_errors.append(tracking_error)
+        tracking_indices.append(tracking_index)
+        target_indices.append(new_universe.df_index.cumsum()[-1])
+        start_date_list.append(formatted_start_date)
+        end_date_list.append(formatted_end_date)
+        
+        # print("cumsum")
+        # print(new_universe.df_index.cumsum())
+        # print("original")
+        # print(new_universe.df_index)
+        # print(tracking_index)
+        
         if not args.backtesting: 
             break
         current_date += time_increment 
         current_to_end = current_date + portfolio_duration - pd.Timedelta(days=1)
         idx += 1
-        
-        # For Tracking Graph
-        weight = list(weights.values())
-        tracking_index = universe.df_return @ weight - universe.df_index
-        tracking_errors.append(tracking_error)
-        tracking_indices.append(tracking_index)
-        start_date_list.append(formatted_start_date)
-        end_date_list.append(formatted_end_date)
     
-    # Tracking Graph
-    plt.plot(end_date_list, tracking_indices, linestyle='-', color='b', label='tracking index')
-    # plt.plot(end_date_list, )
+    import pickle
+
+    # pickle 파일로 리스트 저장
+    with open('end_date_list.pkl', 'wb') as f:
+        pickle.dump(end_date_list, f)
+    with open(f'tracking_indices_{args.index_type}_{args.solution_name}_{args.cardinality}.pkl', 'wb') as f:
+        pickle.dump(tracking_indices, f)
+    with open(f'target_indices_{args.index_type}.pkl', 'wb') as f:
+        pickle.dump(target_indices, f)
+    # # Tracking Graph
+    # plt.figure(figsize=(12,6))
+    # plt.plot(end_date_list, tracking_indices, linestyle='-', color='b', label='Tracking Index')
+    # plt.plot(end_date_list, target_indices, linestyle='-', color='r',label='Target Index')
+    # plt.xlabel('Date')
+    # plt.ylabel('Tracking Value')
+    # plt.title('Tracking Index over Time')
+    # plt.legend()
+    # plt.savefig("./tracking_graph.png")
+    # plt.show()
     
     ## rebalancing한 weight를 기준으로 홀드하는 동안에는 동일한 weight, return은 매일 바뀜, 당연히 benchmark index도 계속 바뀜. 그렇기 때문에 트래킹 그래프 그리려면
     ## 그래프 그리는 기간동안의 모든 daily를 그래프로 찍어야함 --> 반복하면서 weight 뿔려야댐

@@ -14,7 +14,7 @@ from sympy import symbols, Eq, solve
 from scipy.optimize import minimize
 
 from prafe.solution.lagrange_orig import Lagrange
-from prafe.solution.lagr_nn import Lagrange_Neural_Net
+from prafe.solution.snn import SNN
 from prafe.utils import *
 
 warnings.filterwarnings("ignore")
@@ -36,7 +36,7 @@ def main():
     parser.add_argument('--result_path', type=str, 
                         default=os.getcwd()+'/results')
     parser.add_argument('--solution_name', type=str,
-                        default='lagrange_ours', choices=['lagrange_full', 'lagrange_ours', 'lagrange_forward', 'lagrange_backward', 'QP_full', 'QP_forward', 'QP_backward', 'SNN', 'ANN'])
+                        default='lagrange_ours', choices=['lagrange_full', 'lagrange_ours', 'lagrange_forward', 'lagrange_backward', 'QP_full', 'QP_forward', 'QP_backward', 'SNN'])
     parser.add_argument('--cardinality', type=int, default=None)
     parser.add_argument('--method', type=str)
     
@@ -110,7 +110,7 @@ def main():
         
         new_portfolio = Portfolio(new_universe)
         # Define Solution
-        solution = Lagrange_Neural_Net(new_universe, new_portfolio, args.solution_name, args.method, len(index_stocks_list), K)
+        solution = SNN(new_universe, new_portfolio, args.solution_name, args.method, len(index_stocks_list), K)
         
         ## Update portfolio
         print()
@@ -154,12 +154,12 @@ def main():
         formatted_start_date = current_date.strftime('%Y-%m-%d')
         formatted_end_date = current_to_end.strftime('%Y-%m-%d')
         # Save the portfolio
-        if args.backtesting:
-            new_portfolio.save_portfolio(store_path+f'/{idx+1}th_portfolio_{formatted_start_date}_{formatted_end_date}.csv')
-            save_portfolio_csv(store_path + f'/{idx+1}th_evaulation_{formatted_start_date}_{formatted_end_date}.csv', args, new_portfolio, new_universe, my_evaluator, weights, inference_time_sec, inference_time_min)
-        else:
-            new_portfolio.save_portfolio(store_path+f'/portfolio.csv')
-            save_portfolio_csv(store_path + f'/evaulation.csv', args, new_portfolio, new_universe, my_evaluator, weights, inference_time_sec, inference_time_min)
+        # if args.backtesting:
+        #     new_portfolio.save_portfolio(store_path+f'/{idx+1}th_portfolio_{formatted_start_date}_{formatted_end_date}.csv')
+        #     save_portfolio_csv(store_path + f'/{idx+1}th_evaulation_{formatted_start_date}_{formatted_end_date}.csv', args, new_portfolio, new_universe, my_evaluator, weights, inference_time_sec, inference_time_min)
+        # else:
+        #     new_portfolio.save_portfolio(store_path+f'/portfolio.csv')
+        #     save_portfolio_csv(store_path + f'/evaulation.csv', args, new_portfolio, new_universe, my_evaluator, weights, inference_time_sec, inference_time_min)
 
         # Save the Single Stock Solution visualization
         # single_stock_visualization(store_path, idx, new_universe, new_portfolio, my_evaluator, args)

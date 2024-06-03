@@ -17,7 +17,7 @@ from scipy.optimize import minimize
 
 ## Add your Strategy Here!
 
-class Lagrange(Solution):
+class Solution(Solution):
     
     
     def __init__(
@@ -67,12 +67,12 @@ class Lagrange(Solution):
         return np.sum(weight) - 1
     
     
-    def weight_sum_jac(
-        self,
-        weight : list,
-    ) -> list :
-        # print(np.ones)
-        return np.ones(len(weight))
+    # def weight_sum_jac(
+    #     self,
+    #     weight : list,
+    # ) -> list :
+    #     # print(np.ones)
+    #     return np.ones(len(weight))
     
     
     def cardinality_constraint(
@@ -87,13 +87,13 @@ class Lagrange(Solution):
         return - np.sum(weight) + self.K - eps  # (number of stocks) >= (min number of stocks)
     
     
-    def cardinality_jac(
-        self,
-        weight : list,
-    ) -> list :
-        coefficient = 99999999999
-        # print(coefficient/((coefficient*weight+1)**2))
-        return coefficient/((coefficient*weight+1)**2)
+    # def cardinality_jac(
+    #     self,
+    #     weight : list,
+    # ) -> list :
+    #     coefficient = 99999999999
+    #     # print(coefficient/((coefficient*weight+1)**2))
+    #     return coefficient/((coefficient*weight+1)**2)
 
     
     
@@ -105,10 +105,11 @@ class Lagrange(Solution):
         # Approximated extended cardinality constraint
         coefficient = 99999999999
 
-        weight = 1 / ( 1 + np.e ** ( - (coefficient * ( weight - eps )) ) )
+        weight = 1 / ( 1 + np.e ** ( - coefficient * ( weight -1e-4) ) )
         # print("num of stocks :", np.sum(weight))
         # print("min num of stocks :", self.K)
         return - np.sum(weight) + self.K - eps 
+    
     
 
     def lagrange_full_replication(
@@ -120,7 +121,7 @@ class Lagrange(Solution):
         bounds = [(0, 1) for _ in range(self.num_assets)]
 
         # Define Constraints    
-        constraint = {'type': 'eq', 'fun': self.weight_sum_constraint, 'jac': self.weight_sum_jac}
+        constraint = {'type': 'eq', 'fun': self.weight_sum_constraint}#, 'jac': self.weight_sum_jac}
         # constraint = {'type': 'eq', 'fun': self.weight_sum_constraint}
         
         # Optimization
@@ -156,11 +157,11 @@ class Lagrange(Solution):
             # Define Constraints
             # constraint = [{'type': 'eq', 'fun': self.weight_sum_constraint},
             #               {'type': 'ineq', 'fun': self.cardinality_constraint}]
-            constraint = [{'type': 'eq', 'fun': self.weight_sum_constraint, 'jac': self.weight_sum_jac},
-                        {'type': 'ineq', 'fun': self.cardinality_constraint}]#, 'jac': self.cardinality_jac}]
+            constraint = [{'type': 'eq', 'fun': self.weight_sum_constraint},# 'jac': self.weight_sum_jac},
+                        {'type': 'ineq', 'fun': self.cardinality_constraint2}]#, 'jac': self.cardinality_jac}]
             
             # Optimization
-            result = minimize(self.objective_function, initial_weight, method = self.method, constraints=constraint, bounds=bounds)
+            result = minimize(self.objective_function, initial_weight, method = self.method, constraints=constraint, bounds=bounds, tol=1e-6)
             self.optimal_weight = result.x
             self.stock2weight = {}
             for i in range(len(self.stock_list)):
@@ -214,7 +215,7 @@ class Lagrange(Solution):
             
             # Define Objective & Constratins 
             objective = lambda weight: np.sum((new_return @ weight - new_index)**2)
-            constraint = {'type': 'eq', 'fun': self.weight_sum_constraint, 'jac': self.weight_sum_jac}
+            constraint = {'type': 'eq', 'fun': self.weight_sum_constraint} #'jac': self.weight_sum_jac}
             # constraint = {'type': 'eq', 'fun': self.weight_sum_constraint}
         
             # Optimization
@@ -243,13 +244,16 @@ class Lagrange(Solution):
         new_return = np.array(df_new_return)
         # Define Objective & Constratins & Problem
         objective = lambda weight: np.sum((new_return @ weight - new_index)**2)
-        constraint = {'type': 'eq', 'fun': self.weight_sum_constraint, 'jac': self.weight_sum_jac}
+        constraint = {'type': 'eq', 'fun': self.weight_sum_constraint}#, 'jac': self.weight_sum_jac}
         # Optimization
         result = minimize(objective, initial_weight, method = self.method, constraints=constraint, bounds=bounds)
         self.optimal_weight = result.x
         self.stock2weight = {}
         for i in range(len(largest_stocks)):
             self.stock2weight[largest_stocks[i]] = result.x[i]
+        for i in range(len(stock_list)):
+            if stock_list[i] not in self.stock2weight:
+                self.stock2weight[stock_list[i]] = 0
         
         # Update Portfolio & Calculate Error
         self.portfolio.update_portfolio(self.stock2weight)
@@ -270,6 +274,7 @@ class Lagrange(Solution):
         stock_list = self.stock_list
         K = self.K
         
+        new_stock_list = stock_list
         while num_assets >= K :  
             # Define initial weight 
             initial_weight = np.ones(num_assets)
@@ -278,7 +283,7 @@ class Lagrange(Solution):
             
             # Define Objective & Constratins 
             objective = lambda weight: np.sum((new_return @ weight - new_index)**2)
-            constraint = {'type': 'eq', 'fun': self.weight_sum_constraint, 'jac': self.weight_sum_jac}
+            constraint = {'type': 'eq', 'fun': self.weight_sum_constraint}#, 'jac': self.weight_sum_jac}
             # constraint = {'type': 'eq', 'fun': self.weight_sum_constraint}
         
             # Optimization
@@ -288,7 +293,7 @@ class Lagrange(Solution):
                 # Find Smallest Weight
                 min_idx = np.argmin(result.x)
                 min_weight = result.x[min_idx]
-                min_weight_stock = stock_list[min_idx]
+                min_weight_stock = new_stock_list[min_idx]
                 smallest_weight.append(min_weight)
                 smallest_stocks.append(min_weight_stock)
                 print("smallest weight:", min_weight)
@@ -296,15 +301,18 @@ class Lagrange(Solution):
                 
                 # Remove Smallest Weight
                 new_return = np.delete(new_return, min_idx, axis=1)
-                stock_list = np.delete(stock_list, min_idx)
+                new_stock_list = np.delete(new_stock_list, min_idx)
                 num_assets -= 1
             else:
                 break
         
         self.optimal_weight = result.x
         self.stock2weight = {}
+        for i in range(len(new_stock_list)):
+            self.stock2weight[new_stock_list[i]] = self.optimal_weight[i]
         for i in range(len(stock_list)):
-            self.stock2weight[stock_list[i]] = result.x[i]
+            if stock_list[i] not in self.stock2weight:
+                self.stock2weight[stock_list[i]] = 0
         
         # Update Portfolio & Calculate Error
         self.portfolio.update_portfolio(self.stock2weight)
@@ -327,7 +335,7 @@ class Lagrange(Solution):
         problem = cp.Problem(objective, constraint)
         
         # Optimization
-        problem.solve(solver='OSQP',verbose=True)
+        problem.solve(solver='OSQP',verbose=False)
         self.optimal_weight = initial_weight.value
         self.stock2weight = {}
         for i in range(len(self.stock_list)):
@@ -363,7 +371,7 @@ class Lagrange(Solution):
             problem = cp.Problem(objective, constraint)
             
             # Optimization
-            problem.solve(solver='OSQP',verbose=True)
+            problem.solve(solver='OSQP',verbose=False)
             
             # Find Largest Weight
             max_idx = np.argmax(initial_weight.value)
@@ -390,11 +398,14 @@ class Lagrange(Solution):
         constraints = [cp.sum(initial_weight) == 1, initial_weight >= 0]
         problem = cp.Problem(objective, constraints)
         # Optimization
-        problem.solve(solver='OSQP',verbose=True)
+        problem.solve(solver='OSQP',verbose=False)
         self.optimal_weight = initial_weight.value
         self.stock2weight = {}
         for i in range(len(largest_stocks)):
             self.stock2weight[largest_stocks[i]] = self.optimal_weight[i]
+        for i in range(len(stock_list)):
+            if stock_list[i] not in self.stock2weight:
+                self.stock2weight[stock_list[i]] = 0
         
         # Update Portfolio & Calculate Error
         self.portfolio.update_portfolio(self.stock2weight)
@@ -415,6 +426,7 @@ class Lagrange(Solution):
         stock_list = self.stock_list
         K = self.K
         
+        new_stock_list = stock_list
         while num_assets >= K :  
             # Define initial weight 
             initial_weight = cp.Variable(num_assets)
@@ -426,13 +438,13 @@ class Lagrange(Solution):
             problem = cp.Problem(objective, constraint)
         
             # Optimization
-            problem.solve(solver='OSQP',verbose=True)
+            problem.solve(solver='OSQP',verbose=False)
             
             if num_assets != K:
                 # Find Smallest Weight
                 min_idx = np.argmin(initial_weight.value)
                 min_weight = initial_weight.value[min_idx]
-                min_weight_stock = stock_list[min_idx]
+                min_weight_stock = new_stock_list[min_idx]
                 smallest_weight.append(min_weight)
                 smallest_stocks.append(min_weight_stock)
                 print("smallest weight:", min_weight)
@@ -440,15 +452,18 @@ class Lagrange(Solution):
                 
                 # Remove Smallest Weight
                 new_return = np.delete(new_return, min_idx, axis=1)
-                stock_list = np.delete(stock_list, min_idx)
+                new_stock_list = np.delete(new_stock_list, min_idx)
                 num_assets -= 1
             else:
                 break
         
         self.optimal_weight = initial_weight.value
         self.stock2weight = {}
+        for i in range(len(new_stock_list)):
+            self.stock2weight[new_stock_list[i]] = self.optimal_weight[i]
         for i in range(len(stock_list)):
-            self.stock2weight[stock_list[i]] = self.optimal_weight[i]
+            if stock_list[i] not in self.stock2weight:
+                self.stock2weight[stock_list[i]] = 0
         
         # Update Portfolio & Calculate Error
         self.portfolio.update_portfolio(self.stock2weight)
