@@ -63,11 +63,18 @@ def main():
     # index type
     index_type = args.index_type
     if index_type == "kospi100":
-        df_index = df_index['IKS100'].pct_change().fillna(value=0.0)
+        df_index = df_index['IKS100'].pct_change().fillna(value=0.0).apply(lambda x: x if x > -0.999999 else -0.999999)
+        df_index = np.log(1 + df_index)
         index_stocks_list = json.load(open(args.data_path + '/stock_list.json'))[index_type][args.start_date]
     elif index_type == "s&p500":
-        df_index = df_index['SPI@SPX'].pct_change()#.fillna(value=0.0)
+        df_index = df_index['SPI@SPX'].pct_change().fillna(value=0.0).apply(lambda x: x if x > -0.999999 else -0.999999)
+        df_index = np.log(1 + df_index)
         index_stocks_list = df_price.dropna(axis=1).columns.tolist()
+    elif index_type == "kosdaq150":
+        df_index = df_index['IKQ150'].pct_change().fillna(value=0.0).apply(lambda x: x if x > -0.999999 else -0.999999)
+        df_index = np.log(1 + df_index)
+        index_stocks_list = json.load(open(args.data_path + '/stock_list.json'))[index_type][args.start_date]
+
 
     # print(index_stocks_list)
     
@@ -80,15 +87,13 @@ def main():
     
     print(universe._get_universe_datetime_info()) # print the universe datetime info
 
-    # For Backtesting
+    # For Rebalancing
     if args.month_increment is not None:
         time_increment = relativedelta(months=args.month_increment)
     elif args.day_increment is not None:
         time_increment = datetime.timedelta(days=args.day_increment)
         
     portfolio_duration = relativedelta(years=1)
-
-
     print(f"This is {args.index_type} {args.solution_name} results with Cardinality {args.cardinality}")
     idx = 0
     tracking_errors = []
@@ -98,6 +103,8 @@ def main():
     end_date_list = []
     current_date = start_date
     current_to_end = current_date + portfolio_duration - pd.Timedelta(days=1)
+    rebalancing_date = current_date + time_increment
+    rebalancing = "Start"
     # backtesting
     while current_to_end <= end_date or args.backtesting is False:
         print("current_to_end:", current_to_end)
@@ -126,8 +133,17 @@ def main():
         print("updating portfolio...")
         start_time = time.time()
 
-        weights, tracking_error = solution.update_portfolio()
-            
+        if rebalancing == "Start" or rebalancing :
+            # Rebalancing
+            print()
+            print(f"{current_date} --> Rebalancing weight!")
+            print()
+            weights, tracking_error = solution.update_portfolio()
+            rebalancing = False
+        else:
+            # Not Rebalancing
+            new_portfolio.update_portfolio(weights)
+        
         print("{}-th".format(idx+1))
         print(current_date)
 
@@ -192,18 +208,23 @@ def main():
         
         if not args.backtesting: 
             break
-        current_date += time_increment 
+        
+        current_date += pd.Timedelta(days=1)
         current_to_end = current_date + portfolio_duration - pd.Timedelta(days=1)
         idx += 1
+        # If rebalancing day, then ** Define new rebalancing date & Define rebalancing as True **
+        if current_date == rebalancing_date:
+            rebalancing_date += time_increment
+            rebalancing = True
     
     import pickle
 
     # pickle 파일로 리스트 저장
-    with open('end_date_list.pkl', 'wb') as f:
+    with open('./backtesting_results/end_date_list.pkl', 'wb') as f:
         pickle.dump(end_date_list, f)
-    with open(f'tracking_indices_{args.index_type}_{args.solution_name}_{args.cardinality}.pkl', 'wb') as f:
+    with open(f'./backtesting_results/tracking_indices_{args.index_type}_{args.solution_name}_{args.cardinality}.pkl', 'wb') as f:
         pickle.dump(tracking_indices, f)
-    with open(f'target_indices_{args.index_type}.pkl', 'wb') as f:
+    with open(f'./backtesting_results/target_indices_{args.index_type}.pkl', 'wb') as f:
         pickle.dump(target_indices, f)
     # # Tracking Graph
     # plt.figure(figsize=(12,6))
@@ -215,12 +236,6 @@ def main():
     # plt.legend()
     # plt.savefig("./tracking_graph.png")
     # plt.show()
-    
-    ## rebalancing한 weight를 기준으로 홀드하는 동안에는 동일한 weight, return은 매일 바뀜, 당연히 benchmark index도 계속 바뀜. 그렇기 때문에 트래킹 그래프 그리려면
-    ## 그래프 그리는 기간동안의 모든 daily를 그래프로 찍어야함 --> 반복하면서 weight 뿔려야댐
-    ## Q1. 우리는 결측값있으면 하루씩 밀리는데, 그러지말고 특정 rebalance 날짜를 잡는게 좋을듯!
-    ## 현재 밀리는거 외에는, 1년 히스토리로 최적화하면, 그거는 결측값 신경안쓰고 걍 1년치 갖고오긴 함.
-    ## scipy말고 라그랑지 승수법 할 수 있도록! 찾아보자
     
     
     
