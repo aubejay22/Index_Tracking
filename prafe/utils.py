@@ -27,35 +27,46 @@ def get_data_preprocessed(args, start_year, end_year):
     current_year = start_year
     index_type = args.index_type
     
-    # for index data
-    df_index = pd.read_csv(data_path + '/2018_2023_index.csv')
-    df_index.set_index('Code', inplace=True)
-    df_index.drop(index='Name', inplace=True)
-    df_index.drop(index='D A T E', inplace=True)
-    df_index.index = pd.to_datetime(df_index.index)
-    df_index = df_index.replace(',', '', regex=True).astype(float)
-    # df_index = df_index.replace([np.inf, -np.inf], np.nan).fillna(0)
+    ## index data
+    if index_type == 's&p100' or index_type == 's&p500' or index_type == 'nasdaq100':
+        df_index = pd.read_csv(data_path + f'/2018_2023_index_{index_type}.csv')
+        df_index.set_index('Date', inplace=True)
+        df_index.index = pd.to_datetime(df_index.index)
+    else:
+        # for index data
+        df_index = pd.read_csv(data_path + '/2018_2023_index.csv')
+        df_index.set_index('Code', inplace=True)
+        df_index.drop(index='Name', inplace=True)
+        df_index.drop(index='D A T E', inplace=True)
+        df_index.index = pd.to_datetime(df_index.index)
+        df_index = df_index.replace(',', '', regex=True).astype(float)
+        # df_index = df_index.replace([np.inf, -np.inf], np.nan).fillna(0)
     
-    if index_type == 's&p500':
+    
+    ## price, return data
+    if index_type == 's&p100' or index_type == 's&p500' or index_type == 'nasdaq100':
         for current_year in range(start_year, end_year+1):
-            df_prices.append(pd.read_csv(data_path + '/SP500_price_data_' + str(current_year) + '.csv', parse_dates=True, index_col="Date").fillna(value=0.0))
-            df_returns.append(pd.read_csv(data_path + '/SP500_price_data_' + str(current_year) + '.csv', parse_dates=True, index_col="Date").fillna(value=0.0).pct_change().fillna(value=0.0))
+            df_prices.append(pd.read_csv(data_path + f'/{index_type}_price_data_' + str(current_year) + '.csv', parse_dates=True, index_col="Date").fillna(value=0.0))
+            df_returns.append(pd.read_csv(data_path + f'/{index_type}_price_data_' + str(current_year) + '.csv', parse_dates=True, index_col="Date").fillna(value=0.0).pct_change().iloc[1:].fillna(value=0.0))
         df_price = pd.concat(df_prices)
         df_return = pd.concat(df_returns)
+        
+        # print(df_return[:3])
         df_price = df_price.replace([np.inf, -np.inf], np.nan).fillna(0)
         df_return = df_return.replace([np.inf, -np.inf], np.nan).fillna(0)
-    
-        os.makedirs(data_path + '/sp500_processed_' + str(start_year) + '_' + str(end_year), exist_ok=True)
-        df_price.to_pickle(data_path + '/sp500_processed_' + str(start_year) + '_' + str(end_year) + '/price_data.pkl')
-        df_return.to_pickle(data_path + '/sp500_processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl') 
-        df_index.to_pickle(data_path + '/sp500_processed_' + str(start_year) + '_' + str(end_year) + '/index_data.pkl')
         
+
+        os.makedirs(data_path + f'/{index_type}_processed_' + str(start_year) + '_' + str(end_year), exist_ok=True)
+        df_price.to_pickle(data_path + f'/{index_type}_processed_' + str(start_year) + '_' + str(end_year) + '/price_data.pkl')
+        df_return.to_pickle(data_path + f'/{index_type}_processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl') 
+        df_index.to_pickle(data_path + f'/{index_type}_processed_' + str(start_year) + '_' + str(end_year) + '/index_data.pkl')
     else:
         for current_year in range(start_year, end_year+1):
             df_prices.append(pd.read_csv(data_path + '/price_data_' + str(current_year) + '.csv', parse_dates=True, index_col="date").fillna(value=0.0))
             df_returns.append(pd.read_csv(data_path + '/returns_data_' + str(current_year) + '.csv', parse_dates=True, index_col="date").fillna(value=0.0))
         df_price = pd.concat(df_prices)
         df_return = pd.concat(df_returns)
+        
         os.makedirs(data_path + '/processed_' + str(start_year) + '_' + str(end_year), exist_ok=True)
         df_price.to_pickle(data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/price_data.pkl')
         df_return.to_pickle(data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl')
@@ -91,8 +102,8 @@ def print_portfolio(weights, K):
     #         count += 1
     #         print('{} : {:.4f}'.format(stock, weights[stock]))
         
-    print("(weight sum) = {:.4f}".format(topK_weight_sum))
-    print("(weight sum) = {}".format(topK_weight_sum))
+    print("(top k weight sum) = {:.4f}".format(topK_weight_sum))
+    print("(weight sum) = {:.2f}".format(np.sum(list(weights.values()))))
     # print("(Number of Stocks) = {}".format(count))
     print()
     
@@ -259,7 +270,7 @@ def read_data(args):
     
     index_type = args.index_type
     
-    if index_type == 's&p500':
+    if index_type == 's&p500' or index_type == 's&p100' or index_type == 'nasdaq100':
         # try:
         #     df_price = pd.read_pickle(args.data_path + '/sp500_processed_' + str(start_year) + '_' +str(end_year) + '/price_data.pkl').fillna(value=0.0)
         #     df_return = pd.read_pickle(args.data_path + '/sp500_processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl').fillna(value=0.0)

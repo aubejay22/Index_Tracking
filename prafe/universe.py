@@ -16,9 +16,10 @@ class Universe():
     ) :
         self.args = args
         self.df_price = df_price
-        # Log-Return
-        self.df_return = df_return.applymap(lambda x: x if x > -0.999999 else -0.999999)
-        self.df_return = np.log(1 + self.df_return)
+        # # Log-Return
+        # self.df_return = df_return.applymap(lambda x: x if x > -0.999999 else -0.999999)
+        # self.df_return = np.log(1 + self.df_return)
+        self.df_return = df_return
         self.df_index = df_index
         self.number_of_trading_days = len(df_return)
         #self.universe_start_date = self._get_universe_start_date(join = 'inner')
@@ -103,6 +104,9 @@ class Universe():
         df_trimmed_price = df_trimmed_price.loc[common_index]
         df_trimmed_returns = df_trimmed_returns.loc[common_index]
         df_trimmed_index = df_trimmed_index.loc[common_index]
+        
+        df_trimmed_index = (1 + df_trimmed_index).cumprod() - 1
+        df_trimmed_returns = (1 + df_trimmed_returns).cumprod() - 1
         
         # print(df_trimmed_index)
         new_universe = Universe(args = self.args,

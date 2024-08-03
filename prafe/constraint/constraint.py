@@ -3,7 +3,7 @@ from prafe.portfolio import Portfolio
 from prafe.universe import Universe
 from prafe.objective import cumulative_return, variance, mdd, mdd_duration
 
-eps = 1e-4 # 0.0001
+error = 1e-4 # 0.0001
 
 def weights_sum(
         portfolio : Portfolio,
@@ -19,6 +19,7 @@ def weights_sum_constraint(
         portfolio : Portfolio,
         universe : Universe,
     ):
+    eps = 1e-2
     max_weight_sum = 1
     if max_weight_sum is not None:
         investments = portfolio.investments
@@ -38,13 +39,16 @@ def stocks_number_constraint(
     max_number_of_stocks = K
     investments = portfolio.investments
     
+    eps = 1e-4
     if max_number_of_stocks is not None :
         number_of_stocks = 0
         for stock in investments:
-            if investments[stock] > eps:
+            if investments[stock] >= eps:
                 number_of_stocks += 1
     else:
         return None
+    
+    print(f"actual the number of stocks : {number_of_stocks}")
 
     return number_of_stocks <= max_number_of_stocks 
 

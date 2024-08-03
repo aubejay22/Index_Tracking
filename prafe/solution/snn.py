@@ -21,6 +21,7 @@ from prafe.solution.solution import Solution
 
 class SNN(nn.Module, Solution):
 
+    
     def __init__(self, universe, portfolio, solution_name, method, N, K):
         '''
             universe: new_universe
@@ -68,6 +69,16 @@ class SNN(nn.Module, Solution):
         self.S_layer.add_module("S_encoding_1", nn.Linear(self.num_assets, self.K))
         self.S_layer.add_module("S_hidden_1", nn.Linear(self.K, self.K))
         self.S_layer.add_module("S_decoding_1", nn.Linear(self.K, self.num_assets))
+        
+    def objective_function(
+        self,
+        weight : list,
+    ) -> list :
+
+        error = self.new_return @ weight - self.new_index
+        error = np.sum(error**2)
+        
+        return error
         
         
     def QP(self):    
@@ -213,7 +224,9 @@ class SNN(nn.Module, Solution):
             # stock2weight[self.stock_list[i]] = np.array(weight[i])
             stock2weight[self.stock_list[i]] = weight[i]
                 
-            # Update Portfolio & Calculate Error
-            self.portfolio.update_portfolio(stock2weight)
+        # Update Portfolio & Calculate Error
+        self.portfolio.update_portfolio(stock2weight)
+        self.optimal_error = self.objective_function(weight)
+        print(f"Calculated error : {self.optimal_error}")
         
         return stock2weight, min_loss

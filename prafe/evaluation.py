@@ -38,7 +38,7 @@ class Evaluator():
         """
         Cumulative Return: 투자기간 동안의 포트폴리오의 누적 수익률
         """
-        
+        # print(self._calculate_cumulative_return())
         return self._calculate_cumulative_return()[-1]
 
     def _calculate_cumulative_return(self):
@@ -52,19 +52,23 @@ class Evaluator():
         
         # Get the list of stocks and their weights in the portfolio
         investments = list(self.portfolio.investments.items())
-        
+        weight = list(self.portfolio.investments.values())
         # Creating an empty DataFrame to hold portfolio daily returns
         portfolio_daily_returns = pd.Series(0, index=self.universe.df_return.index)
         
-        # For each stock and its weight in the portfolio
-        for stock, weight in investments:
+        # # For each stock and its weight in the portfolio
+        # for stock, weight in investments:
             
-            # Add weighted daily return of each stock to portfolio daily return
-            each_stock_daily_returns = self.universe.df_return[stock] * weight
-            portfolio_daily_returns += each_stock_daily_returns
+        #     # Add weighted daily return of each stock to portfolio daily return
+        #     each_stock_daily_returns = self.universe.df_return[stock] * weight
+        #     portfolio_daily_returns += each_stock_daily_returns
+        
+        each_stock_daily_returns = self.universe.df_return @ weight
+        
         
         # Calculate the cumulative return for portfolio
-        cumulative_returns = (1 + portfolio_daily_returns).cumprod() - 1
+        # cumulative_returns = (1 + portfolio_daily_returns).cumprod() - 1
+        cumulative_returns = each_stock_daily_returns
         
         return cumulative_returns
 

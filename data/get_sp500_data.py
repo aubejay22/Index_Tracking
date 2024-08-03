@@ -5,19 +5,11 @@ import pandas as pd
 
 #! Change Year
 year = '2018'
-data_path = '../NCSOFT/financial_data/'
-# sp500 = yf.Ticker('^KS100')
+data_path = '../../NCSOFT/financial_data/'
 
-# # get all stock info
-# print(sp500.info)
+index_type = "s&p500"
 
-# # get historical market data
-# # hist = sp500.history(period='1mo')
-# hist = sp500.history(start='2018-01-01', end='2018-12-31')
-# # print(sp500)
-# print(hist['Close'])
-# # print(sp500.history_metadata)
-
+print(year)
 
 import bs4 as bs
 import requests
@@ -48,6 +40,6 @@ print(tickers_list)
 data = yf.download(tickers_list, start=f'{year}-01-01', end=f'{year}-12-31',interval="1d",)
 df = pd.DataFrame(data)
 # print(df.columns)
-df = df['Close']
+df = df['Adj Close']
 print(df.dropna(axis=1).columns.tolist())
-# df.to_csv(f'{data_path}SP500_price_data_{year}.csv')
+df.to_csv(f'{data_path}{index_type}_price_data_{year}.csv')
