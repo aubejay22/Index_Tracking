@@ -87,7 +87,6 @@ def main():
     universe = Universe(args = args, df_price= df_price, df_return=df_return, df_index=df_index)
 
     universe = universe.get_trimmed_universe_by_stocks(list_of_stock_codes=index_stocks_list)
-    universe = universe.get_trimmed_universe_by_time(start_datetime=args.start_date, end_datetime=args.end_date)
     # universe = universe.get_trimmed_universe_by_time(start_datetime=start_date, end_datetime=end_date)
     
     print(universe._get_universe_datetime_info()) # print the universe datetime info

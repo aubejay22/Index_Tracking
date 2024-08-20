@@ -115,8 +115,8 @@ def save_portfolio_csv(
     universe : Universe, 
     evaluator : Evaluator,
     weights,
-    inference_time_sec,
-    inference_time_min
+    inference_time_sec = None,
+    inference_time_min = None
     ):
         ## Evaluating Values
         CR = evaluator.calculate_cumulative_return()
@@ -153,17 +153,19 @@ def save_portfolio_csv(
             portfolio_satisfication[0].append(constraint)
             portfolio_satisfication[1].append(satisfied)
         print(portfolio_satisfication)
-        
+    
         ## Inference Time
         inference_time = [["Seconds", "Minutes"], [inference_time_sec, inference_time_min]]
         
         total_result = [[], []]
         total_result[0].extend(portfolio_evaluation[0])
         total_result[0].extend(portfolio_satisfication[0])
-        total_result[0].extend(inference_time[0])
         total_result[1].extend(portfolio_evaluation[1])
         total_result[1].extend(portfolio_satisfication[1])
-        total_result[1].extend(inference_time[1])
+        
+        if inference_time_min != None:
+            total_result[0].extend(inference_time[0])
+            total_result[1].extend(inference_time[1])
         
         with open(path, 'w', newline="") as f :
             writer = csv.writer(f)
@@ -301,7 +303,7 @@ def print_result(my_evaluator):
     print("Expected_Shortfall: {:.4f}".format(my_evaluator.calculate_Expected_Shortfall()))
     # print("Information_Ratio: {:.4f}".format(my_evaluator.calculate_Information_Ratio()))
     print("LPM              : {:.4f}".format(my_evaluator.calculate_LPM()))
-    print("sharpe_ratio     : {:.4f}".format(my_evaluator.calculate_sharpe_ratio()))
+    # print("sharpe_ratio     : {:.4f}".format(my_evaluator.calculate_sharpe_ratio()))
     print("calculate_VaR    : {:.4f}".format(my_evaluator.calculate_VaR()))
     print("MDD              : {:.4f}".format(my_evaluator.calculate_mdd()))
     print("Max Drawdown_duration: {:.4f}".format(my_evaluator.calculate_recovery_time()))

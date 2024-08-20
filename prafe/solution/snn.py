@@ -51,7 +51,7 @@ class SNN(nn.Module, Solution):
         self.train_ratio = 1
         self.batch_size = len(self.new_return)
         self.learning_rate = 1e-04
-        self.criterion = MSELoss()
+        self.criterion = MSELoss(reduction='sum')
         self.softmax = Softmax()
         
         

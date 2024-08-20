@@ -39,13 +39,11 @@ class Solution(Solution):
         self.new_return = np.array(self.universe.df_return)
         self.new_index = np.array(self.universe.df_index)
         
-        # df_index = (1 + df_index).cumprod() - 1
-        # df_return = (1 + df_return).cumprod() - 1
         
         self.stock_list = self.universe.stock_list
         
         self.eps = 1e-4
-        self.coefficient = 1000000
+        self.coefficient = 10000
         self.penalty_ratio = 50
         
         # print(self.new_index)

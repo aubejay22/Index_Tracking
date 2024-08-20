@@ -310,13 +310,15 @@ class Evaluator():
         weights = list(investments.values())
         weights = np.array(weights)
 
-        expected_return = self.universe.df_return.mean()
+        portfolio_return =  weights @ expected_returns.mean_historical_return(self.universe.df_price[codes], frequency= self.universe.number_of_trading_days)
         cov_matrix = np.cov(self.universe.df_return, rowvar=False)
-        
-        portfolio_return = np.dot(weights, expected_return)
+            
+        print(portfolio_return)
         portfolio_variance = np.dot(weights.T, np.dot(cov_matrix, weights))
         portfolio_volatility = np.sqrt(portfolio_variance)
+        print(portfolio_volatility)
         
+        print(portfolio_return/portfolio_volatility)
         # print(weights@mu)
         # print(sigma)
         sign = 1

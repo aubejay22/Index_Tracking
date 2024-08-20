@@ -40,7 +40,7 @@ def main():
                         default=os.getcwd()+'/results')
     parser.add_argument('--solution_name', type=str,
                         default='lagrange_ours', choices=['lagrange_full', 'lagrange_ours', 'lagrange_ours2', 'lagrange_forward', 'lagrange_backward', 'QP_full', 'QP_forward', 'QP_backward', 'SNN'])
-    parser.add_argument('--cardinality', type=int, default=50)
+    parser.add_argument('--cardinality', type=int, default=None)
     parser.add_argument('--method', type=str)
     
     # Select the Data to Use
@@ -151,6 +151,7 @@ def main():
             print()
             weights, tracking_error = solution.update_portfolio()
             rebalancing = False
+            new_portfolio.update_portfolio(weights) #! 추가
         else:
             # Not Rebalancing
             new_portfolio.update_portfolio(weights)

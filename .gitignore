@@ -180,3 +180,12 @@ Single_Portfolio_Visualization/
 
 /img/
 /logs/
+/runs/
+/figures/
+/experiments/
+/backtesting_results_no_logReturn_copy/
+/data/
+/results_no_logReturn_copy/
+/school_safety/
+figures.py
+
