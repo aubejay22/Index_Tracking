@@ -5,8 +5,8 @@ from matplotlib.ticker import MaxNLocator
 import pandas as pd
 import numpy as np
 
-index_type = "s&p500"   # "s&p500", "kospi100", "kosdaq150", "s&p100"
-cardinality = "40"
+index_type = "kospi100"   # "s&p500", "kospi100", "kosdaq150", "s&p100"
+cardinality = "25"
 fontsize = 20
 
 # end dates
@@ -63,8 +63,10 @@ for i in range(len(tracking_indices)):
     fig, (ax1, ax2) = plt.subplots(nrows=2, ncols=1, figsize=(12, 8), sharex=True, gridspec_kw={'height_ratios': [3, 1], 'hspace': 0})
     # fig, ax = plt.subplots(nrows=2, ncols=1, figsize=(12,10), sharex=True)
         
+    
+    ax1.plot(end_date_list, target_indices, linestyle='-', color='#FFEF96',label='Target Index')
+    # ax1.plot(end_date_list, target_indices, linestyle='-', color='grey',label='Target Index')
     ax1.plot(end_date_list, tracking_indices[i], linestyle='-', color=colors[i], label=methods[i])
-    ax1.plot(end_date_list, target_indices, linestyle='-', color='grey',label='Target Index')
     ax1.set_ylabel('Index', fontsize=fontsize)
     ax1.set_xlabel('Date (YYYY-MM)', fontsize=fontsize)
     ax1.set_xlim([end_date_list.min(), end_date_list.max()])

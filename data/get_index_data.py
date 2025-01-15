@@ -7,9 +7,9 @@ start_year = start_date[:4]
 end_year = end_date[:4]
 
 #! change this
-index_type = "s&p100" # s&p100, sp500, nasdaq100
+index_type = "s&p600" # s&p100, sp500, nasdaq100, sp400, sp600
 #! change This
-ticker = "^NDX"  # S&P 100 : ^OEX, nasdaq 100 : ^NDX, S&P 500 : ^GSPC
+ticker = "^SP600"  # S&P 100 : ^OEX, nasdaq 100 : ^NDX, S&P 500 : ^GSPC, S&P 400 : ^SP400, S&P 600 : ^SP600
 
 data_path = '../../NCSOFT/financial_data/'
 

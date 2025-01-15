@@ -39,7 +39,7 @@ def main():
     parser.add_argument('--result_path', type=str, 
                         default=os.getcwd()+'/results')
     parser.add_argument('--solution_name', type=str,
-                        default='lagrange_ours', choices=['lagrange_full', 'lagrange_ours', 'lagrange_ours2', 'lagrange_forward', 'lagrange_backward', 'QP_full', 'QP_forward', 'QP_backward', 'SNN'])
+                        default='lagrange_ours')#, choices=['lagrange_full', 'lagrange_ours', 'lagrange_ours2', 'lagrange_forward', 'lagrange_backward', 'QP_full', 'QP_forward', 'QP_backward', 'SNN'])
     parser.add_argument('--cardinality', type=int, default=None)
     parser.add_argument('--method', type=str)
     
@@ -68,16 +68,16 @@ def main():
         df_index = df_index['IKS100'].pct_change().iloc[1:].fillna(value=0.0)
         # df_index = df_index['IKS100'].fillna(value=0.0)
         index_stocks_list = json.load(open(args.data_path + '/stock_list.json'))[index_type][args.start_date]
-    elif index_type == "s&p500" or index_type == "s&p100" or index_type == "nasdaq100":
-        df_index = df_index['Adj Close'].pct_change().iloc[1:].fillna(value=0.0)
-        # df_index = df_index['SPI@SPX'].fillna(value=0.0)
-        index_stocks_list = df_price.dropna(axis=1).columns.tolist()
     elif index_type == "kosdaq150":
         # df_index = df_index['IKQ150'].pct_change().fillna(value=0.0).apply(lambda x: x if x > -0.999999 else -0.999999)
         # df_index = np.log(1 + df_index)
         df_index = df_index['IKQ150'].pct_change().iloc[1:].fillna(value=0.0)
         # df_index = df_index['IKQ150'].fillna(value=0.0)
         index_stocks_list = json.load(open(args.data_path + '/stock_list.json'))[index_type][args.start_date]
+    else: # "s&p500", "s&p100", "nasdaq100", "s&p400", "s&p600"
+        df_index = df_index['Adj Close'].pct_change().iloc[1:].fillna(value=0.0)
+        # df_index = df_index['SPI@SPX'].fillna(value=0.0)
+        index_stocks_list = df_price.dropna(axis=1).columns.tolist()
     # print(df_index[:3])
 
     # print(index_stocks_list)

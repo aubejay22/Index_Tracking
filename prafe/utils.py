@@ -28,7 +28,7 @@ def get_data_preprocessed(args, start_year, end_year):
     index_type = args.index_type
     
     ## index data
-    if index_type == 's&p100' or index_type == 's&p500' or index_type == 'nasdaq100':
+    if index_type == 's&p100' or index_type == 's&p500' or index_type == 'nasdaq100' or index_type=='s&p400' or index_type=='s&p600':
         df_index = pd.read_csv(data_path + f'/2018_2023_index_{index_type}.csv')
         df_index.set_index('Date', inplace=True)
         df_index.index = pd.to_datetime(df_index.index)
@@ -44,7 +44,7 @@ def get_data_preprocessed(args, start_year, end_year):
     
     
     ## price, return data
-    if index_type == 's&p100' or index_type == 's&p500' or index_type == 'nasdaq100':
+    if index_type == 's&p100' or index_type == 's&p500' or index_type == 'nasdaq100' or index_type=='s&p400' or index_type=='s&p600':
         for current_year in range(start_year, end_year+1):
             df_prices.append(pd.read_csv(data_path + f'/{index_type}_price_data_' + str(current_year) + '.csv', parse_dates=True, index_col="Date").fillna(value=0.0))
             df_returns.append(pd.read_csv(data_path + f'/{index_type}_price_data_' + str(current_year) + '.csv', parse_dates=True, index_col="Date").fillna(value=0.0).pct_change().iloc[1:].fillna(value=0.0))
@@ -272,7 +272,7 @@ def read_data(args):
     
     index_type = args.index_type
     
-    if index_type == 's&p500' or index_type == 's&p100' or index_type == 'nasdaq100':
+    if index_type == 's&p500' or index_type == 's&p100' or index_type == 'nasdaq100' or index_type=='s&p400' or index_type=='s&p600':
         # try:
         #     df_price = pd.read_pickle(args.data_path + '/sp500_processed_' + str(start_year) + '_' +str(end_year) + '/price_data.pkl').fillna(value=0.0)
         #     df_return = pd.read_pickle(args.data_path + '/sp500_processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl').fillna(value=0.0)
