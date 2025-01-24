@@ -21,7 +21,7 @@ Index tracking is a popular portfolio optimization strategy aimed at mimicking a
 
 ### **Proposed Solutions**
    <div style="text-align: center;">
-      <img src="images/dcc.png" alt="DCC" width="400"/>
+      <img src="images/dcc.png" alt="DCC" width="600"/>
    </div>
 
 1. **Differentiable Cardinality Constraints ($DCC$)**:
@@ -140,18 +140,18 @@ The table below compares the Mean Absolute Error (MAE) for different methods:
 | **$DCC_{fpp}$**        | **3.91** | **3.53** | **2.39** |
 
 <div style="text-align: center;">
-      <img src="images/performance.png" alt="performance" width="500"/>
+      <img src="images/performance.png" alt="performance" width="600"/>
 </div>
 
 ### **Runtime Comparison**
 $DCC_{fpp}$ demonstrates significantly lower runtime compared to baselines, maintaining efficiency regardless of the cardinality size ($K$).
    <div style="text-align: center;">
-      <img src="images/runtime.png" alt="runtime" width="400"/>
+      <img src="images/runtime.png" alt="runtime" width="500"/>
    </div>
 
 ### **Hyperparameter Analysis**:
    <div style="text-align: center;">
-      <img src="images/hyperparameter.png" alt="hyperparameter" width="300"/>
+      <img src="images/hyperparameter.png" alt="hyperparameter" width="500"/>
    </div>
 
 ---
