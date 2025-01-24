@@ -8,7 +8,10 @@ Key highlights of this work include:
 - Achieving superior performance in index tracking while adhering to cardinality constraints.
 - Handling large datasets such as S&P 100, S&P 500, and KOSPI 100 efficiently.
 
+<br>
+
 **Note**: This work has been accepted as an Oral Presentation at the **AAAI Conference on Artificial Intelligence (AAAI), 2025**, one of the premier conferences in the field of Artificial Intelligence.
+
 ---
 
 ## **Research Summary**
@@ -17,6 +20,10 @@ Key highlights of this work include:
 Index tracking is a popular portfolio optimization strategy aimed at mimicking a market index's performance. However, full replication of an index leads to high transaction costs. Partial replication, which selects only a subset of stocks, introduces **cardinality constraints**, making the problem non-convex, non-differentiable, and NP-hard.
 
 ### **Proposed Solutions**
+   <div style="text-align: center;">
+      <img src="images/dcc.png" alt="DCC" width="400"/>
+   </div>
+
 1. **Differentiable Cardinality Constraints ($DCC$)**:
    - A method to approximate cardinality constraints with differentiable functions, enabling integration with mathematical optimization techniques.
 2. **$DCC_{fpp}$**:
@@ -132,20 +139,20 @@ The table below compares the Mean Absolute Error (MAE) for different methods:
 | SNN              | 5.80  | 4.04  | 4.90  |
 | **$DCC_{fpp}$**        | **3.91** | **3.53** | **2.39** |
 
+<div style="text-align: center;">
+      <img src="images/performance.png" alt="performance" width="500"/>
+</div>
+
 ### **Runtime Comparison**
 $DCC_{fpp}$ demonstrates significantly lower runtime compared to baselines, maintaining efficiency regardless of the cardinality size ($K$).
-![Runtime](images/runtime.png)
+   <div style="text-align: center;">
+      <img src="images/runtime.png" alt="runtime" width="400"/>
+   </div>
 
-### **Visualizations**
-Include images for:
-1. **Rational Function Approximation**:
-   - ![Rational Function](images/rational.png)
-2. **Sigmoid Function Approximation**:
-   - ![Sigmoid Function](images/sigmoid.png)
-3. **Performance Results**:
-   - ![Performance Results](images/performance_image.png)
-4. **Hyperparameter Analysis**:
-   - ![Hyperparameter Results](images/hyperparameter.png)
+### **Hyperparameter Analysis**:
+   <div style="text-align: center;">
+      <img src="images/hyperparameter.png" alt="hyperparameter" width="300"/>
+   </div>
 
 ---
 
