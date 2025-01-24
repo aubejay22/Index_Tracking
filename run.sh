@@ -1,0 +1,11 @@
+python main_lag.py \
+--data_path 'financial_data' \
+--result_path 'results' \
+--solution_name 'lagrange_ours' \
+--cardinality 30 \
+--method 'SLSQP' \
+--start_date '2018-01-02' \
+--end_date '2023-04-28' \
+--index_type 's&p100' \
+--backtesting True \
+--month_increment 3
