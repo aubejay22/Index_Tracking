@@ -107,6 +107,10 @@ class Universe():
         
         df_trimmed_index = (1 + df_trimmed_index).cumprod() - 1
         df_trimmed_returns = (1 + df_trimmed_returns).cumprod() - 1
+
+        #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        # ici je ne comprends pas pourquoi ils prennent le rendement cumulé!!!!
+        #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         
         # print(df_trimmed_index)
         new_universe = Universe(args = self.args,
