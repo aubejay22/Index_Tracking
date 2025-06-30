@@ -1,8 +1,5 @@
 import numpy as np
 import cvxpy as cp
-from pypfopt import EfficientFrontier
-from pypfopt import risk_models
-from pypfopt import expected_returns, objective_functions
 from prafe.evaluation import Evaluator
 from prafe.portfolio import Portfolio
 from prafe.universe import Universe

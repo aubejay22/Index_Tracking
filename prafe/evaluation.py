@@ -1,14 +1,8 @@
 from prafe.portfolio import Portfolio
 from prafe.universe import Universe
 from prafe.objective import cumulative_return, variance, mdd, mdd_duration
-from pypfopt import EfficientFrontier
-from pypfopt import risk_models
-from pypfopt import expected_returns
-from pypfopt import objective_functions
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import copy
 class Evaluator():
     
     def __init__(
@@ -310,22 +304,16 @@ class Evaluator():
         weights = list(investments.values())
         weights = np.array(weights)
 
-        portfolio_return =  weights @ expected_returns.mean_historical_return(self.universe.df_price[codes], frequency= self.universe.number_of_trading_days)
-        cov_matrix = np.cov(self.universe.df_return, rowvar=False)
-            
-        print(portfolio_return)
-        portfolio_variance = np.dot(weights.T, np.dot(cov_matrix, weights))
-        portfolio_volatility = np.sqrt(portfolio_variance)
-        print(portfolio_volatility)
-        
-        print(portfolio_return/portfolio_volatility)
-        # print(weights@mu)
-        # print(sigma)
-        sign = 1
+        portfolio_returns = self.universe.df_return[codes] @ weights
+        excess_return = portfolio_returns.mean() * self.universe.number_of_trading_days
+        volatility = portfolio_returns.std() * np.sqrt(self.universe.number_of_trading_days)
         risk_free_rate = 0
-        sharpe = (portfolio_return - risk_free_rate) / portfolio_volatility
 
-        return sign * sharpe
+        if volatility == 0:
+            return 0
+
+        sharpe = (excess_return - risk_free_rate) / volatility
+        return sharpe
         
 
     def calculate_mdd(self):
@@ -336,19 +324,12 @@ class Evaluator():
         weights = np.array(weights)
 
         # Step 1: Compute the daily portfolio value
-        portfolio_value = (self.universe.df_price[codes] * weights).sum(axis=1) 
- 
-        # Step 2: Compute the running maximum
-        running_max = np.maximum.accumulate(portfolio_value)
+        portfolio_returns = self.universe.df_return[codes] @ weights
+        cumulative = (1 + portfolio_returns).cumprod()
+        running_max = np.maximum.accumulate(cumulative)
+        drawdown = cumulative / running_max - 1
+        abs_MDD = abs(drawdown.min())
 
-        # Step 3: Compute the daily drawdown
-        drawdown = portfolio_value / running_max - 1
-
-        # Step 4: Compute the maximum drawdown
-        MDD = drawdown.min()
-        abs_MDD = abs(MDD)
-
-        # print(f"The Maximum Drawdown is: {MDD}")
         return abs_MDD
     
     def calculate_recovery_time(self):
@@ -365,8 +346,9 @@ class Evaluator():
         weights = np.array(list(investments.values()))
         
         # Step 1: Compute the daily portfolio value
-        portfolio_value = (self.universe.df_price[codes] * weights).sum(axis=1) 
-        index_list = list(portfolio_value.index)
+        portfolio_returns = self.universe.df_return[codes] @ weights
+        cumulative = (1 + portfolio_returns).cumprod()
+        index_list = list(cumulative.index)
         
 
         # Plotting the portfolio value
@@ -380,21 +362,20 @@ class Evaluator():
         # plt.show()
         # plt.savefig('portfolio_value.png')
         
-        peak = portfolio_value.iloc[0]
+        peak = cumulative.iloc[0]
         peak_index = 0
         max_drawdown_recovery_time = RecoveryTime(0, 0)
         
         # Iterate through the portfolio values to calculate drawdown and recovery time
-        for i in range(1, len(portfolio_value)):
-            # Check if current value has recovered to the previous peak value
-            if portfolio_value.iloc[i] >= peak and i > peak_index:
+        for i in range(1, len(cumulative)):
+            if cumulative.iloc[i] >= peak and i > peak_index:
                 # Calculate recovery time
                 recovery_time = i - peak_index
                 
                 # Check if this is the longest recovery so far
                 if recovery_time > max_drawdown_recovery_time.duration:
                     max_drawdown_recovery_time = RecoveryTime(recovery_time, peak_index)
-                peak = portfolio_value.iloc[i]
+                peak = cumulative.iloc[i]
                 peak_index = i
 
         # print("start_date: ", index_list[max_drawdown_recovery_time.start_index])

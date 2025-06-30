@@ -4,8 +4,7 @@ import pandas as pd
 import numpy as np
 import cvxpy as cp
 from datetime import datetime
-from pypfopt import expected_returns
-from dateutil.relativedelta import relativedelta 
+from dateutil.relativedelta import relativedelta
 import time
 import math
 from sklearn.metrics import mean_squared_error
@@ -56,8 +55,8 @@ def main():
 
     args = parser.parse_args()
 
-    # price, return, index data
-    df_price, df_return, df_index, start_date, end_date, start_year, end_year = read_data(args)
+    # return and index data
+    df_return, df_index, start_date, end_date, start_year, end_year = read_data(args)
     K = args.cardinality
     
     # index type
@@ -77,14 +76,14 @@ def main():
     else: # "s&p500", "s&p100", "nasdaq100", "s&p400", "s&p600"
         df_index = df_index['Adj Close'].pct_change().iloc[1:].fillna(value=0.0)
         # df_index = df_index['SPI@SPX'].fillna(value=0.0)
-        index_stocks_list = df_price.dropna(axis=1).columns.tolist()
+        index_stocks_list = df_return.dropna(axis=1).columns.tolist()
     # print(df_index[:3])
 
     # print(index_stocks_list)
     
     
     # Get the universe
-    universe = Universe(args = args, df_price= df_price, df_return=df_return, df_index=df_index)
+    universe = Universe(args=args, df_return=df_return, df_index=df_index)
 
     universe = universe.get_trimmed_universe_by_stocks(list_of_stock_codes=index_stocks_list)
     # universe = universe.get_trimmed_universe_by_time(start_datetime=start_date, end_datetime=end_date)
@@ -113,7 +112,7 @@ def main():
     print(f"rebalacing_date : {rebalancing_date}")
     rebalancing = "Start"
     # backtesting
-    while current_to_end <= end_date or args.backtesting is False: #! backtesting false는 뭐징
+    while current_to_end <= end_date or args.backtesting is False:
         print(f"rebalancing date: {rebalancing_date}")
         print("current_to_end:", current_to_end)
         print("end_date:", end_date)
@@ -151,7 +150,7 @@ def main():
             print()
             weights, tracking_error = solution.update_portfolio()
             rebalancing = False
-            new_portfolio.update_portfolio(weights) #! 추가
+            new_portfolio.update_portfolio(weights)
         else:
             # Not Rebalancing
             new_portfolio.update_portfolio(weights)
@@ -204,7 +203,6 @@ def main():
         
         # For Tracking Graph
         weight = list(weights.values())
-        #! here
         # tracking_index = (new_universe.df_return @ weight).cumprod()[-1]
         tracking_index = (new_universe.df_return @ weight)#.cumsum()[-1]
         tracking_error = new_universe.df_return @ weight - new_universe.df_index
@@ -250,4 +248,3 @@ def main():
     
 if __name__ == "__main__":
     main()
-    
