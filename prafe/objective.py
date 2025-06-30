@@ -1,9 +1,5 @@
 from prafe.portfolio import Portfolio
 from prafe.universe import Universe
-from pypfopt import objective_functions
-from pypfopt import risk_models
-from pypfopt import expected_returns
-import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
@@ -53,12 +49,11 @@ def variance(
     ):
     investments = portfolio.investments
     codes = list(investments.keys())
-    weights = list(investments.values())
-    weights = np.array(weights)
+    weights = np.array(list(investments.values()))
 
-    S = risk_models.sample_cov(universe.df_price[codes], frequency= universe.number_of_trading_days)
-    variance = objective_functions.portfolio_variance(weights, S)
-    
+    cov_matrix = np.cov(universe.df_return[codes], rowvar=False)
+    variance = np.dot(weights.T, np.dot(cov_matrix, weights))
+
     return variance
 
 def mdd(
@@ -68,21 +63,13 @@ def mdd(
     
     investments = portfolio.investments
     codes = list(investments.keys())
-    weights = list(investments.values())
-    weights = np.array(weights)
-    
-    # Step 1: Compute the daily portfolio value
-    portfolio_value = (universe.df_price[codes] * weights).sum(axis=1) 
-    
-    # Step 2: Compute the running maximum
-    running_max = np.maximum.accumulate(portfolio_value)
+    weights = np.array(list(investments.values()))
 
-    # Step 3: Compute the daily drawdown
-    drawdown = portfolio_value / running_max - 1.0
-
-    # Step 4: Compute the maximum drawdown
-    MDD = drawdown.min()
-    abs_MDD = abs(MDD)
+    portfolio_returns = universe.df_return[codes] @ weights
+    cumulative = (1 + portfolio_returns).cumprod()
+    running_max = np.maximum.accumulate(cumulative)
+    drawdown = cumulative / running_max - 1.0
+    abs_MDD = abs(drawdown.min())
 
     # print(f"The Maximum Drawdown is: {MDD}")
     return abs_MDD
@@ -103,26 +90,24 @@ def mdd_duration(
     investments = portfolio.investments
     codes = list(investments.keys())
     weights = np.array(list(investments.values()))
-    
-    # Step 1: Compute the daily portfolio value
-    portfolio_value = (universe.df_price[codes] * weights).sum(axis=1) 
-    index_list = list(portfolio_value.index)
-    
-    peak = portfolio_value.iloc[0]
+
+    portfolio_returns = universe.df_return[codes] @ weights
+    cumulative = (1 + portfolio_returns).cumprod()
+    index_list = list(cumulative.index)
+    peak = cumulative.iloc[0]
     peak_index = 0
     max_drawdown_recovery_time = RecoveryTime(0, 0)
     
     # Iterate through the portfolio values to calculate drawdown and recovery time
-    for i in range(1, len(portfolio_value)):
-        # Check if current value has recovered to the previous peak value
-        if portfolio_value.iloc[i] >= peak and i > peak_index:
+    for i in range(1, len(cumulative)):
+        if cumulative.iloc[i] >= peak and i > peak_index:
             # Calculate recovery time
             recovery_time = i - peak_index
             
             # Check if this is the longest recovery so far
             if recovery_time > max_drawdown_recovery_time.duration:
                 max_drawdown_recovery_time = RecoveryTime(recovery_time, peak_index)
-            peak = portfolio_value.iloc[i]
+            peak = cumulative.iloc[i]
             peak_index = i
 
     # print("start_date: ", index_list[max_drawdown_recovery_time.start_index])
@@ -139,16 +124,15 @@ def sharpe_ratio(
     '''
     investments = portfolio.investments
     codes = list(investments.keys())
-    weights = list(investments.values())
-    weights = np.array(weights)
+    weights = np.array(list(investments.values()))
 
-    S = risk_models.sample_cov(universe.df_price[codes], frequency= universe.number_of_trading_days)
-    mu = expected_returns.mean_historical_return(universe.df_price[codes], frequency= universe.number_of_trading_days)
-    variance = objective_functions.portfolio_variance(weights, S)
-    sigma = np.sqrt(variance)
-    
-    sign = 1
-    risk_free_rate = 0.2
-    sharpe = (weights @ mu - risk_free_rate) / sigma
-    
-    return sign * sharpe
+    portfolio_returns = universe.df_return[codes] @ weights
+    excess_return = portfolio_returns.mean() * universe.number_of_trading_days
+    volatility = portfolio_returns.std() * np.sqrt(universe.number_of_trading_days)
+    risk_free_rate = 0
+
+    if volatility == 0:
+        return 0
+
+    sharpe = (excess_return - risk_free_rate) / volatility
+    return sharpe

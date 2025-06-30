@@ -51,11 +51,9 @@ This repository includes:
 ## **Folder Structure**
 ```
 .
-├── data
-│   ├── get_index_data.py
-│   ├── get_sp100_data.py
-│   ├── get_sp500_data.py
-│
+├── financial_data
+│   ├── index_returns.csv
+│   └── stock_returns.csv
 ├── prafe
 │   ├── universe.py
 │   ├── utils.py
@@ -106,12 +104,12 @@ python main_lag.py \
 ```
 
 ### **3. Dataset Preparation**
-Download historical stock data using the dataset scripts:
-```bash
-python get_index_data.py
-python get_sp100_data.py 
-python get_sp500_data.py
-```
+Provide two CSV files inside the directory specified by `--data_path` (default `financial_data`):
+
+- `index_returns.csv` containing the daily returns of the benchmark index. It must have a `Date` column used as the index.
+- `stock_returns.csv` containing the daily returns for all index constituents with the same `Date` index.
+
+No price information is required and the previous data download scripts have been removed.
 
 ---
 
@@ -120,7 +118,7 @@ python get_sp500_data.py
 
 - **`main_lag.py`**: Main script for running optimization and backtesting.
 - **`prafe/lagrange_orig.py`**: Implements $DCC_{fpp}$ using the Lagrangian multiplier method.
-- **`data/get_index_data.py`**, **`data/get_sp100_data.py`**, **`data/get_sp500_data.py`**: Scripts to fetch and preprocess financial datasets.
+- **`financial_data/index_returns.csv`** and **`financial_data/stock_returns.csv`**: Input files containing index and stock returns.
 - **`prafe/evaluation.py`**: Computes performance metrics such as tracking error, Sharpe ratio, and volatility.
 - **`prafe/portfolio.py`**: Handles portfolio operations, including weight allocation and rebalancing.
 - **`prafe/utils.py`**: Utility functions for data handling and visualization.

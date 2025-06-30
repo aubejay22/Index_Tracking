@@ -7,8 +7,6 @@ from prafe.portfolio import Portfolio
 from prafe.evaluation import Evaluator
 from prafe.constraint import *
 
-import yfinance as yf
-from pathlib import Path
 import argparse
 import time
 import matplotlib.pyplot as plt
@@ -17,62 +15,24 @@ import logging
 import csv
 
 
-def get_data_preprocessed(args, start_year, end_year):
+def get_data_preprocessed(args):
+    """Load index and stock return data from CSV files."""
 
     data_path = args.data_path
 
-    df_prices = []
-    df_returns = []
-    
-    current_year = start_year
-    index_type = args.index_type
-    
-    ## index data
-    if index_type == 's&p100' or index_type == 's&p500' or index_type == 'nasdaq100' or index_type=='s&p400' or index_type=='s&p600':
-        df_index = pd.read_csv(data_path + f'/2018_2023_index_{index_type}.csv')
-        df_index.set_index('Date', inplace=True)
-        df_index.index = pd.to_datetime(df_index.index)
-    else:
-        # for index data
-        df_index = pd.read_csv(data_path + '/2018_2023_index.csv')
-        df_index.set_index('Code', inplace=True)
-        df_index.drop(index='Name', inplace=True)
-        df_index.drop(index='D A T E', inplace=True)
-        df_index.index = pd.to_datetime(df_index.index)
-        df_index = df_index.replace(',', '', regex=True).astype(float)
-        # df_index = df_index.replace([np.inf, -np.inf], np.nan).fillna(0)
-    
-    
-    ## price, return data
-    if index_type == 's&p100' or index_type == 's&p500' or index_type == 'nasdaq100' or index_type=='s&p400' or index_type=='s&p600':
-        for current_year in range(start_year, end_year+1):
-            df_prices.append(pd.read_csv(data_path + f'/{index_type}_price_data_' + str(current_year) + '.csv', parse_dates=True, index_col="Date").fillna(value=0.0))
-            df_returns.append(pd.read_csv(data_path + f'/{index_type}_price_data_' + str(current_year) + '.csv', parse_dates=True, index_col="Date").fillna(value=0.0).pct_change().iloc[1:].fillna(value=0.0))
-        df_price = pd.concat(df_prices)
-        df_return = pd.concat(df_returns)
-        
-        # print(df_return[:3])
-        df_price = df_price.replace([np.inf, -np.inf], np.nan).fillna(0)
-        df_return = df_return.replace([np.inf, -np.inf], np.nan).fillna(0)
-        
+    index_path = os.path.join(data_path, "index_returns.csv")
+    stock_path = os.path.join(data_path, "stock_returns.csv")
 
-        os.makedirs(data_path + f'/{index_type}_processed_' + str(start_year) + '_' + str(end_year), exist_ok=True)
-        df_price.to_pickle(data_path + f'/{index_type}_processed_' + str(start_year) + '_' + str(end_year) + '/price_data.pkl')
-        df_return.to_pickle(data_path + f'/{index_type}_processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl') 
-        df_index.to_pickle(data_path + f'/{index_type}_processed_' + str(start_year) + '_' + str(end_year) + '/index_data.pkl')
-    else:
-        for current_year in range(start_year, end_year+1):
-            df_prices.append(pd.read_csv(data_path + '/price_data_' + str(current_year) + '.csv', parse_dates=True, index_col="date").fillna(value=0.0))
-            df_returns.append(pd.read_csv(data_path + '/returns_data_' + str(current_year) + '.csv', parse_dates=True, index_col="date").fillna(value=0.0))
-        df_price = pd.concat(df_prices)
-        df_return = pd.concat(df_returns)
-        
-        os.makedirs(data_path + '/processed_' + str(start_year) + '_' + str(end_year), exist_ok=True)
-        df_price.to_pickle(data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/price_data.pkl')
-        df_return.to_pickle(data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl')
-        df_index.to_pickle(data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/index_data.pkl')
+    df_index = pd.read_csv(index_path, parse_dates=True, index_col="Date")
+    df_index.index = pd.to_datetime(df_index.index)
 
-    return df_price, df_return, df_index
+    df_return = pd.read_csv(stock_path, parse_dates=True, index_col="Date")
+    df_return.index = pd.to_datetime(df_return.index)
+
+    df_index = df_index.fillna(0.0)
+    df_return = df_return.fillna(0.0)
+
+    return df_return, df_index
 
 
 
@@ -267,29 +227,12 @@ def str2bool(value):
 def read_data(args):
     start_date = datetime.datetime.strptime(args.start_date, '%Y-%m-%d')
     end_date = datetime.datetime.strptime(args.end_date, '%Y-%m-%d')
-    start_year = start_date.timetuple()[0]
-    end_year = end_date.timetuple()[0]
-    
-    index_type = args.index_type
-    
-    if index_type == 's&p500' or index_type == 's&p100' or index_type == 'nasdaq100' or index_type=='s&p400' or index_type=='s&p600':
-        # try:
-        #     df_price = pd.read_pickle(args.data_path + '/sp500_processed_' + str(start_year) + '_' +str(end_year) + '/price_data.pkl').fillna(value=0.0)
-        #     df_return = pd.read_pickle(args.data_path + '/sp500_processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl').fillna(value=0.0)
-        #     df_index = pd.read_pickle(args.data_path + '/sp500_processed_' + str(start_year) + '_' +str(end_year) + '/index_data.pkl').fillna(value=0.0)
-        # except Exception as e:
-            # print(e)    
-        df_price, df_return, df_index = get_data_preprocessed(args, start_year, end_year)
-    else:
-        try:
-            df_price = pd.read_pickle(args.data_path + '/processed_' + str(start_year) + '_' +str(end_year) + '/price_data.pkl').fillna(value=0.0)
-            df_return = pd.read_pickle(args.data_path + '/processed_' + str(start_year) + '_' + str(end_year) + '/return_data.pkl').fillna(value=0.0)
-            df_index = pd.read_pickle(args.data_path + '/processed_' + str(start_year) + '_' +str(end_year) + '/index_data.pkl').fillna(value=0.0)
-        except Exception as e:
-            print(e)    
-            df_price, df_return, df_index = get_data_preprocessed(args, start_year, end_year)
-    
-    return df_price, df_return, df_index, start_date, end_date, start_year, end_year
+    start_year = start_date.year
+    end_year = end_date.year
+
+    df_return, df_index = get_data_preprocessed(args)
+
+    return df_return, df_index, start_date, end_date, start_year, end_year
         
 
 def print_result(my_evaluator):

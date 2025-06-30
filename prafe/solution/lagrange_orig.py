@@ -5,9 +5,6 @@ from prafe.objective import cumulative_return, variance, mdd, mdd_duration
 from prafe.constraint.constraint import weights_sum_constraint, stocks_number_constraint
 
 from prafe.solution.solution import Solution
-from pypfopt import EfficientFrontier
-from pypfopt import risk_models
-from pypfopt import expected_returns
 import cvxpy as cp
 import numpy as np
 import pandas as pd

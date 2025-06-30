@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 import cvxpy as cp
 from datetime import datetime
-from pypfopt import expected_returns
 from dateutil.relativedelta import relativedelta 
 import time
 import math
@@ -52,17 +51,17 @@ def main():
 
     args = parser.parse_args()
 
-    # price, return, index data
-    df_price, df_return, df_index, start_date, end_date, start_year, end_year = read_data(args)
+    # return and index data
+    df_return, df_index, start_date, end_date, start_year, end_year = read_data(args)
 
     # index type
     index_type = args.index_type
     if index_type == "kospi100":
-        df_index = df_index['IKS100'].pct_change().fillna(value=0.0)
+        df_index = df_index.iloc[:,0]
         index_stocks_list = json.load(open(args.data_path + '/stock_list.json'))[index_type][args.start_date]
-    elif index_type == "s&p500":
-        df_index = df_index['SPI@SPX'].pct_change()#.fillna(value=0.0)
-        index_stocks_list = df_price.dropna(axis=1).columns.tolist()
+    else:
+        df_index = df_index.iloc[:,0]
+        index_stocks_list = df_return.dropna(axis=1).columns.tolist()
 
     # print(index_stocks_list)
     
@@ -70,7 +69,7 @@ def main():
     
     
     # Get the universe
-    universe = Universe(args = args, df_price= df_price, df_return=df_return, df_index=df_index)
+    universe = Universe(args=args, df_return=df_return, df_index=df_index)
 
     universe = universe.get_trimmed_universe_by_stocks(list_of_stock_codes=index_stocks_list)
     universe = universe.get_trimmed_universe_by_time(start_datetime=start_date, end_datetime=end_date)
