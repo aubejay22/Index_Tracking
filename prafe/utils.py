@@ -19,7 +19,7 @@ def get_data_preprocessed(args):
     """Load index and stock return data from CSV files."""
 
     data_path = args.data_path
-
+    """
     index_path = os.path.join(data_path, "index_returns.csv")
     stock_path = os.path.join(data_path, "stock_returns.csv")
 
@@ -28,9 +28,15 @@ def get_data_preprocessed(args):
 
     df_return = pd.read_csv(stock_path, parse_dates=True, index_col="Date")
     df_return.index = pd.to_datetime(df_return.index)
+    """
+    df_index = pd.read_csv("financial_data/index_returns.csv",  index_col="Date")
+    df_index.index = pd.to_datetime(df_index.index)
 
-    df_index = df_index.fillna(0.0)
-    df_return = df_return.fillna(0.0)
+    df_return = pd.read_csv("financial_data/stock_returns.csv", index_col="date")
+    df_return.index = pd.to_datetime(df_return.index)
+
+    df_index = df_index.fillna(method='ffill')
+    df_return = df_return.fillna(method='ffill')
 
     return df_return, df_index
 

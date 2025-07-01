@@ -57,30 +57,10 @@ def main():
 
     # return and index data
     df_return, df_index, start_date, end_date, start_year, end_year = read_data(args)
+    index_stocks_list = df_return.columns.tolist()
     K = args.cardinality
     
-    # index type
-    index_type = args.index_type
-    if index_type == "kospi100":
-        # df_index = df_index['IKS100'].pct_change().fillna(value=0.0).apply(lambda x: x if x > -0.999999 else -0.999999)
-        # df_index = np.log(1 + df_index)
-        df_index = df_index['IKS100'].pct_change().iloc[1:].fillna(value=0.0)
-        # df_index = df_index['IKS100'].fillna(value=0.0)
-        index_stocks_list = json.load(open(args.data_path + '/stock_list.json'))[index_type][args.start_date]
-    elif index_type == "kosdaq150":
-        # df_index = df_index['IKQ150'].pct_change().fillna(value=0.0).apply(lambda x: x if x > -0.999999 else -0.999999)
-        # df_index = np.log(1 + df_index)
-        df_index = df_index['IKQ150'].pct_change().iloc[1:].fillna(value=0.0)
-        # df_index = df_index['IKQ150'].fillna(value=0.0)
-        index_stocks_list = json.load(open(args.data_path + '/stock_list.json'))[index_type][args.start_date]
-    else: # "s&p500", "s&p100", "nasdaq100", "s&p400", "s&p600"
-        df_index = df_index['Adj Close'].pct_change().iloc[1:].fillna(value=0.0)
-        # df_index = df_index['SPI@SPX'].fillna(value=0.0)
-        index_stocks_list = df_return.dropna(axis=1).columns.tolist()
-    # print(df_index[:3])
-
-    # print(index_stocks_list)
-    
+  
     
     # Get the universe
     universe = Universe(args=args, df_return=df_return, df_index=df_index)
@@ -229,7 +209,7 @@ def main():
             print("IN!!!!!!!!!!!!!!!!!!!!!!!!!")
             rebalancing_date += time_increment
             rebalancing = True
-    
+    """
     import pickle
 
     # pickle 파일로 리스트 저장
@@ -243,7 +223,28 @@ def main():
         pickle.dump(target_indices, f)
     with open(f'./backtesting_' + args.result_path + f'/tracking_errors_{args.index_type}_{args.solution_name}_{args.cardinality}.pkl', 'wb') as f:
         pickle.dump(tracking_errors, f)
-    
+    """
+    import pickle
+    # Créer le dossier final pour stocker les fichiers .pkl de backtesting
+    backtesting_dir = f'./backtesting_{args.result_path}'
+    os.makedirs(backtesting_dir, exist_ok=True)
+
+    with open(os.path.join(backtesting_dir, f'start_date_list_{args.index_type}.pkl'), 'wb') as f:
+        pickle.dump(start_date_list, f)
+
+    with open(os.path.join(backtesting_dir, f'end_date_list_{args.index_type}.pkl'), 'wb') as f:
+        pickle.dump(end_date_list, f)
+
+    with open(os.path.join(backtesting_dir, f'tracking_indices_{args.index_type}_{args.solution_name}_{args.cardinality}.pkl'), 'wb') as f:
+        pickle.dump(tracking_indices, f)
+
+    with open(os.path.join(backtesting_dir, f'target_indices_{args.index_type}.pkl'), 'wb') as f:
+        pickle.dump(target_indices, f)
+
+    with open(os.path.join(backtesting_dir, f'tracking_errors_{args.index_type}_{args.solution_name}_{args.cardinality}.pkl'), 'wb') as f:
+        pickle.dump(tracking_errors, f)
+
+
     
 if __name__ == "__main__":
     main()

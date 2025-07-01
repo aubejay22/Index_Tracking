@@ -5,8 +5,8 @@ from matplotlib.ticker import MaxNLocator
 import pandas as pd
 import numpy as np
 
-index_type = "kospi100"   # "s&p500", "kospi100", "kosdaq150", "s&p100"
-cardinality = "25"
+index_type = "s&p500"   # "s&p500", "kospi100", "kosdaq150", "s&p100"
+cardinality = "30"
 fontsize = 20
 
 # end dates

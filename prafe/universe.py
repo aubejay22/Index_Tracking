@@ -20,22 +20,7 @@ class Universe():
         self.number_of_trading_days = len(df_return)
         self.stock_list = list(self.df_return.columns)
 
-        # Code name and type
-        self.code_name = {}
-        self.code_type = {}
-        with open(args.data_path+'/code_name_type.tsv', 'r') as f:
-            for line in f:
-                code, name, type = line.split('\t')
-                self.code_name[code] = name
-                self.code_type[code] = type
-                
-        
-        # Industry Type
-        self.code_industry = {}
-        industry_df = pd.read_excel(args.data_path+'/industry_information_by_NC.xlsx')
-        trimmed_industry_df = industry_df[industry_df['Code'].isin(self.stock_list)]
-        self.code_industry.update(trimmed_industry_df.set_index('Code')['WICS업종명(대)'].to_dict())
-
+     
 
     def is_valid_date(self, date):
         if isinstance(date, datetime):
@@ -124,27 +109,6 @@ class Universe():
 
         return new_universe
     
-
-    def get_name_type(
-        self,
-        stock_code : str = ''
-    ):
-        return self.code_name[stock_code], self.code_type[stock_code]
-    
-    
-    def get_industry(
-        self,
-        stock_code : str = ''
-    ):
-        return self.code_industry[stock_code]
-    
-    
-    def get_stocks_of_industry(
-        self,
-        industry_name : str,
-    ):
-        stocks_of_industry = [key for key, value in self.code_industry.items() if value == industry_name]
-        return stocks_of_industry
 
     
     def get_mean_returns(
