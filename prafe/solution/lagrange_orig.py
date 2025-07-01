@@ -4,9 +4,7 @@ from prafe.universe import Universe
 from prafe.objective import cumulative_return, variance, mdd, mdd_duration
 from prafe.constraint.constraint import weights_sum_constraint, stocks_number_constraint
 
-from prafe.solution.solution import Solution
 import cvxpy as cp
-import numpy as np
 import pandas as pd
 import time
 from sympy import symbols, Eq, solve
@@ -14,7 +12,7 @@ from scipy.optimize import minimize
 
 ## Add your Strategy Here!
 
-class Solution(Solution):
+class Solution:
     
     
     def __init__(

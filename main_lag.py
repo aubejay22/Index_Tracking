@@ -132,10 +132,9 @@ def main():
 
         
         new_portfolio = Portfolio(new_universe)
-        # Define Solution
         if args.solution_name == 'SNN':
             solution = SNN(new_universe, new_portfolio, args.solution_name, args.method, len(index_stocks_list), K)
-        else: 
+        else:
             solution = Solution(new_universe, new_portfolio, args.solution_name, args.method, len(index_stocks_list), K)
         
         ## Update portfolio
