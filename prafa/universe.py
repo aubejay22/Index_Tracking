@@ -105,12 +105,7 @@ class Universe():
             print(f"⚠️ Les actions suivantes ne sont pas dans les données de rendement : {missing_stocks}")
         self.stock_list = valid_stocks
         
-        print(f"Stock list used: {self.stock_list}")
-        print(f"Window: {start_datetime} to {end_datetime}")
-        print(f"Available stock columns: {self.df_return_all.columns.tolist()[:5]} ...")
-        print(f"Shape of extracted returns: {self.df_return.shape}")
-        print(f"Shape of extracted index returns: {self.df_index.shape}")
-
+    
         #retourne les stocks de l'univers au bonne periode de temps
         stocks_returns = self.df_return_all.loc[start_datetime:end_datetime, self.stock_list]
         index_returns = self.df_index_all.loc[start_datetime:end_datetime]
