@@ -1,0 +1,504 @@
+Ticker,Name
+TPL UN Equity,Texas Pacific Land Corp
+CVX UN Equity,Chevron Corp
+CPAY UN Equity,Corpay Inc
+EXR UN Equity,Extra Space Storage Inc
+PSX UN Equity,Phillips 66
+IBM UN Equity,International Business Machines Corp
+MCD UN Equity,McDonald's Corp
+MRK UN Equity,Merck & Co Inc
+AWK UN Equity,American Water Works Co Inc
+PFE UN Equity,Pfizer Inc
+MO UN Equity,Altria Group Inc
+ABT UN Equity,Abbott Laboratories
+SMCI UW Equity,Super Micro Computer Inc
+HES UN Equity,Hess Corp
+VRSK UW Equity,Verisk Analytics Inc
+LIN UW Equity,Linde PLC
+AVY UN Equity,Avery Dennison Corp
+BALL UN Equity,Ball Corp
+AXON UW Equity,Axon Enterprise Inc
+BAX UN Equity,Baxter International Inc
+BRK/B UN Equity,Berkshire Hathaway Inc
+BSX UN Equity,Boston Scientific Corp
+BLDR UN Equity,Builders FirstSource Inc
+EPAM UN Equity,EPAM Systems Inc
+ABNB UW Equity,Airbnb Inc
+CZR UW Equity,Caesars Entertainment Inc
+D UN Equity,Dominion Energy Inc
+LNT UW Equity,Alliant Energy Corp
+STLD UW Equity,Steel Dynamics Inc
+ETN UN Equity,Eaton Corp PLC
+ECL UN Equity,Ecolab Inc
+RVTY UN Equity,Revvity Inc
+EOG UN Equity,EOG Resources Inc
+AON UN Equity,Aon PLC
+ETR UN Equity,Entergy Corp
+EQT UN Equity,EQT Corp
+NEE UN Equity,NextEra Energy Inc
+GRMN UN Equity,Garmin Ltd
+GPC UN Equity,Genuine Parts Co
+GWW UN Equity,WW Grainger Inc
+PODD UW Equity,Insulet Corp
+HSY UN Equity,Hershey Co/The
+CNP UN Equity,CenterPoint Energy Inc
+CDW UW Equity,CDW Corp/DE
+IFF UN Equity,International Flavors & Fragrances Inc
+NXPI UW Equity,NXP Semiconductors NV
+K UN Equity,Kellanova
+LLY UN Equity,Eli Lilly & Co
+IEX UN Equity,IDEX Corp
+VTRS UW Equity,Viatris Inc
+MSI UN Equity,Motorola Solutions Inc
+CBOE UF Equity,Cboe Global Markets Inc
+NEM UN Equity,Newmont Corp
+PFG UW Equity,Principal Financial Group Inc
+NUE UN Equity,Nucor Corp
+OXY UN Equity,Occidental Petroleum Corp
+PNW UN Equity,Pinnacle West Capital Corp
+PPG UN Equity,PPG Industries Inc
+PGR UN Equity,Progressive Corp/The
+VLTO UN Equity,Veralto Corp
+PEG UN Equity,Public Service Enterprise Group Inc
+EIX UN Equity,Edison International
+SHW UN Equity,Sherwin-Williams Co/The
+WST UN Equity,West Pharmaceutical Services Inc
+AME UN Equity,AMETEK Inc
+SO UN Equity,Southern Co/The
+SWK UN Equity,Stanley Black & Decker Inc
+PSA UN Equity,Public Storage
+ANET UN Equity,Arista Networks Inc
+TMO UN Equity,Thermo Fisher Scientific Inc
+GL UN Equity,Globe Life Inc
+UNH UN Equity,UnitedHealth Group Inc
+VMC UN Equity,Vulcan Materials Co
+VST UN Equity,Vistra Corp
+AES UN Equity,AES Corp/The
+EXPD UN Equity,Expeditors International of Washington Inc
+ADSK UW Equity,Autodesk Inc
+FI UN Equity,Fiserv Inc
+PARA UW Equity,Paramount Global
+ERIE UW Equity,Erie Indemnity Co
+MTB UN Equity,M&T Bank Corp
+XEL UW Equity,Xcel Energy Inc
+GILD UW Equity,Gilead Sciences Inc
+HAS UW Equity,Hasbro Inc
+PKG UN Equity,Packaging Corp of America
+IDXX UW Equity,IDEXX Laboratories Inc
+FOX UW Equity,Fox Corp
+NCLH UN Equity,Norwegian Cruise Line Holdings Ltd
+WM UN Equity,Waste Management Inc
+HST UW Equity,Host Hotels & Resorts Inc
+SPG UN Equity,Simon Property Group Inc
+UPS UN Equity,United Parcel Service Inc
+WAT UN Equity,Waters Corp
+EVRG UW Equity,Evergy Inc
+MTCH UW Equity,Match Group Inc
+ODFL UW Equity,Old Dominion Freight Line Inc
+CDNS UW Equity,Cadence Design Systems Inc
+TYL UN Equity,Tyler Technologies Inc
+UHS UN Equity,Universal Health Services Inc
+AMT UN Equity,American Tower Corp
+VLO UN Equity,Valero Energy Corp
+YUM UN Equity,Yum! Brands Inc
+FE UN Equity,FirstEnergy Corp
+PWR UN Equity,Quanta Services Inc
+HSIC UW Equity,Henry Schein Inc
+ANSS UW Equity,ANSYS Inc
+EBAY UW Equity,eBay Inc
+SBAC UW Equity,SBA Communications Corp
+SRE UN Equity,Sempra
+BKNG UW Equity,Booking Holdings Inc
+AKAM UW Equity,Akamai Technologies Inc
+CRL UN Equity,Charles River Laboratories International Inc
+MKTX UW Equity,MarketAxess Holdings Inc
+DVN UN Equity,Devon Energy Corp
+ALLE UN Equity,Allegion plc
+WBD UW Equity,Warner Bros Discovery Inc
+ELV UN Equity,Elevance Health Inc
+CME UW Equity,CME Group Inc
+JNPR UN Equity,Juniper Networks Inc
+NDAQ UW Equity,Nasdaq Inc
+ROP UW Equity,Roper Technologies Inc
+CSX UW Equity,CSX Corp
+EW UN Equity,Edwards Lifesciences Corp
+ZBH UN Equity,Zimmer Biomet Holdings Inc
+CPT UN Equity,Camden Property Trust
+LYV UN Equity,Live Nation Entertainment Inc
+AIZ UN Equity,Assurant Inc
+NRG UN Equity,NRG Energy Inc
+MNST UW Equity,Monster Beverage Corp
+MOS UN Equity,Mosaic Co/The
+CF UN Equity,CF Industries Holdings Inc
+APA UW Equity,APA Corp
+FSLR UW Equity,First Solar Inc
+XYL UN Equity,Xylem Inc/NY
+TSCO UW Equity,Tractor Supply Co
+VICI UN Equity,VICI Properties Inc
+FTNT UW Equity,Fortinet Inc
+MRNA UW Equity,Moderna Inc
+ESS UN Equity,Essex Property Trust Inc
+O UN Equity,Realty Income Corp
+PLTR UW Equity,Palantir Technologies Inc
+POOL UW Equity,Pool Corp
+FANG UW Equity,Diamondback Energy Inc
+NOW UN Equity,ServiceNow Inc
+INVH UN Equity,Invitation Homes Inc
+MHK UN Equity,Mohawk Industries Inc
+PNR UN Equity,Pentair PLC
+HON UW Equity,Honeywell International Inc
+UAL UW Equity,United Airlines Holdings Inc
+MLM UN Equity,Martin Marietta Materials Inc
+APO UN Equity,Apollo Global Management Inc
+TER UW Equity,Teradyne Inc
+BLK UN Equity,Blackrock Inc
+KKR UN Equity,KKR & Co Inc
+EG UN Equity,Everest Group Ltd
+TDY UN Equity,Teledyne Technologies Inc
+CCI UN Equity,Crown Castle Inc
+ALGN UW Equity,Align Technology Inc
+KVUE UN Equity,Kenvue Inc
+TRGP UN Equity,Targa Resources Corp
+LKQ UW Equity,LKQ Corp
+LYB UN Equity,LyondellBasell Industries NV
+AXP UN Equity,American Express Co
+VZ UN Equity,Verizon Communications Inc
+AVGO UW Equity,Broadcom Inc
+BA UN Equity,Boeing Co/The
+SOLV UN Equity,Solventum Corp
+CAT UN Equity,Caterpillar Inc
+JPM UN Equity,JPMorgan Chase & Co
+KO UN Equity,Coca-Cola Co/The
+ABBV UN Equity,AbbVie Inc
+DIS UN Equity,Walt Disney Co/The
+XOM UN Equity,Exxon Mobil Corp
+GE UN Equity,General Electric Co
+HPQ UN Equity,HP Inc
+HD UN Equity,Home Depot Inc/The
+MPWR UW Equity,Monolithic Power Systems Inc
+JNJ UN Equity,Johnson & Johnson
+LULU UW Equity,Lululemon Athletica Inc
+MMM UN Equity,3M Co
+BAC UN Equity,Bank of America Corp
+PG UN Equity,Procter & Gamble Co/The
+T UN Equity,AT&T Inc
+TRV UN Equity,Travelers Cos Inc/The
+RTX UN Equity,RTX Corp
+ADI UW Equity,Analog Devices Inc
+WMT UN Equity,Walmart Inc
+CSCO UW Equity,Cisco Systems Inc
+INTC UW Equity,Intel Corp
+GM UN Equity,General Motors Co
+MSFT UW Equity,Microsoft Corp
+DG UN Equity,Dollar General Corp
+CI UN Equity,Cigna Group/The
+KMI UN Equity,Kinder Morgan Inc
+C UN Equity,Citigroup Inc
+AIG UN Equity,American International Group Inc
+HCA UN Equity,HCA Healthcare Inc
+IP UN Equity,International Paper Co
+HPE UN Equity,Hewlett Packard Enterprise Co
+AFL UN Equity,Aflac Inc
+APD UN Equity,Air Products and Chemicals Inc
+RCL UN Equity,Royal Caribbean Cruises Ltd
+LII UN Equity,Lennox International Inc
+ADM UN Equity,Archer-Daniels-Midland Co
+ADP UW Equity,Automatic Data Processing Inc
+AZO UN Equity,AutoZone Inc
+ENPH UQ Equity,Enphase Energy Inc
+MSCI UN Equity,MSCI Inc
+DAY UN Equity,Dayforce Inc
+CARR UN Equity,Carrier Global Corp
+BK UN Equity,Bank of New York Mellon Corp/The
+OTIS UN Equity,Otis Worldwide Corp
+BDX UN Equity,Becton Dickinson & Co
+BBY UN Equity,Best Buy Co Inc
+BMY UN Equity,Bristol-Myers Squibb Co
+BF/B UN Equity,Brown-Forman Corp
+CTRA UN Equity,Coterra Energy Inc
+HLT UN Equity,Hilton Worldwide Holdings Inc
+CCL UN Equity,Carnival Corp
+UDR UN Equity,UDR Inc
+CLX UN Equity,Clorox Co/The
+PAYC UN Equity,Paycom Software Inc
+CMS UN Equity,CMS Energy Corp
+CL UN Equity,Colgate-Palmolive Co
+CAG UN Equity,Conagra Brands Inc
+ED UN Equity,Consolidated Edison Inc
+GLW UN Equity,Corning Inc
+GDDY UN Equity,GoDaddy Inc
+CMI UN Equity,Cummins Inc
+DHR UN Equity,Danaher Corp
+TGT UN Equity,Target Corp
+DE UN Equity,Deere & Co
+DOV UN Equity,Dover Corp
+DUK UN Equity,Duke Energy Corp
+REG UW Equity,Regency Centers Corp
+DELL UN Equity,Dell Technologies Inc
+EMR UN Equity,Emerson Electric Co
+EFX UN Equity,Equifax Inc
+IQV UN Equity,IQVIA Holdings Inc
+IT UN Equity,Gartner Inc
+FDX UN Equity,FedEx Corp
+FMC UN Equity,FMC Corp
+BRO UN Equity,Brown & Brown Inc
+F UN Equity,Ford Motor Co
+BEN UN Equity,Franklin Resources Inc
+FCX UN Equity,Freeport-McMoRan Inc
+DXCM UW Equity,Dexcom Inc
+GD UN Equity,General Dynamics Corp
+GIS UN Equity,General Mills Inc
+ATO UN Equity,Atmos Energy Corp
+HAL UN Equity,Halliburton Co
+LHX UN Equity,L3Harris Technologies Inc
+DOC UN Equity,Healthpeak Properties Inc
+FTV UN Equity,Fortive Corp
+SYF UN Equity,Synchrony Financial
+HRL UN Equity,Hormel Foods Corp
+AJG UN Equity,Arthur J Gallagher & Co
+MDLZ UW Equity,Mondelez International Inc
+HUM UN Equity,Humana Inc
+WTW UW Equity,Willis Towers Watson PLC
+ITW UN Equity,Illinois Tool Works Inc
+TT UN Equity,Trane Technologies PLC
+IPG UN Equity,Interpublic Group of Cos Inc/The
+GNRC UN Equity,Generac Holdings Inc
+BR UN Equity,Broadridge Financial Solutions Inc
+KMB UN Equity,Kimberly-Clark Corp
+KIM UN Equity,Kimco Realty Corp
+ORCL UN Equity,Oracle Corp
+KR UN Equity,Kroger Co/The
+LEN UN Equity,Lennar Corp
+CHTR UW Equity,Charter Communications Inc
+L UN Equity,Loews Corp
+LOW UN Equity,Lowe's Cos Inc
+HUBB UN Equity,Hubbell Inc
+MMC UN Equity,Marsh & McLennan Cos Inc
+MAS UN Equity,Masco Corp
+SPGI UN Equity,S&P Global Inc
+MDT UN Equity,Medtronic PLC
+CVS UN Equity,CVS Health Corp
+DD UN Equity,DuPont de Nemours Inc
+MU UW Equity,Micron Technology Inc
+NKE UN Equity,NIKE Inc
+NI UN Equity,NiSource Inc
+NSC UN Equity,Norfolk Southern Corp
+ES UN Equity,Eversource Energy
+NOC UN Equity,Northrop Grumman Corp
+WFC UN Equity,Wells Fargo & Co
+OMC UN Equity,Omnicom Group Inc
+OKE UN Equity,ONEOK Inc
+RJF UN Equity,Raymond James Financial Inc
+PCG UN Equity,PG&E Corp
+PH UN Equity,Parker-Hannifin Corp
+ROL UN Equity,Rollins Inc
+PPL UN Equity,PPL Corp
+APTV UN Equity,Aptiv PLC
+COP UN Equity,ConocoPhillips
+PHM UN Equity,PulteGroup Inc
+PNC UN Equity,PNC Financial Services Group Inc/The
+COO UW Equity,Cooper Cos Inc/The
+SLB UN Equity,Schlumberger NV
+SCHW UN Equity,Charles Schwab Corp/The
+SJM UN Equity,J M Smucker Co/The
+SNA UN Equity,Snap-on Inc
+UBER UN Equity,Uber Technologies Inc
+TFC UN Equity,Truist Financial Corp
+LUV UN Equity,Southwest Airlines Co
+WRB UN Equity,W R Berkley Corp
+SYY UN Equity,Sysco Corp
+CTVA UN Equity,Corteva Inc
+TXN UW Equity,Texas Instruments Inc
+TXT UN Equity,Textron Inc
+TJX UN Equity,TJX Cos Inc/The
+JCI UN Equity,Johnson Controls International plc
+ULTA UW Equity,Ulta Beauty Inc
+UNP UN Equity,Union Pacific Corp
+KEYS UN Equity,Keysight Technologies Inc
+BX UN Equity,Blackstone Inc
+VTR UN Equity,Ventas Inc
+LH UN Equity,Labcorp Holdings Inc
+WY UN Equity,Weyerhaeuser Co
+WMB UN Equity,Williams Cos Inc/The
+CEG UW Equity,Constellation Energy Corp
+WEC UN Equity,WEC Energy Group Inc
+ADBE UW Equity,Adobe Inc
+AMGN UW Equity,Amgen Inc
+AAPL UW Equity,Apple Inc
+CTAS UW Equity,Cintas Corp
+CMCSA UW Equity,Comcast Corp
+TAP UN Equity,Molson Coors Beverage Co
+KLAC UW Equity,KLA Corp
+MAR UW Equity,Marriott International Inc/MD
+MKC UN Equity,McCormick & Co Inc/MD
+PCAR UW Equity,PACCAR Inc
+COST UW Equity,Costco Wholesale Corp
+SYK UN Equity,Stryker Corp
+TSN UN Equity,Tyson Foods Inc
+LW UN Equity,Lamb Weston Holdings Inc
+AMAT UW Equity,Applied Materials Inc
+CAH UN Equity,Cardinal Health Inc
+CINF UW Equity,Cincinnati Financial Corp
+DHI UN Equity,DR Horton Inc
+EA UW Equity,Electronic Arts Inc
+FICO UN Equity,Fair Isaac Corp
+FAST UW Equity,Fastenal Co
+FITB UW Equity,Fifth Third Bancorp
+HBAN UW Equity,Huntington Bancshares Inc/OH
+WELL UN Equity,Welltower Inc
+BIIB UW Equity,Biogen Inc
+NTRS UW Equity,Northern Trust Corp
+PAYX UW Equity,Paychex Inc
+QCOM UW Equity,QUALCOMM Inc
+ROST UW Equity,Ross Stores Inc
+SBUX UW Equity,Starbucks Corp
+KEY UN Equity,KeyCorp
+FOXA UW Equity,Fox Corp
+STT UN Equity,State Street Corp
+USB UN Equity,US Bancorp
+AOS UN Equity,A O Smith Corp
+GEN UW Equity,Gen Digital Inc
+TROW UW Equity,T Rowe Price Group Inc
+STZ UN Equity,Constellation Brands Inc
+IVZ UN Equity,Invesco Ltd
+INTU UW Equity,Intuit Inc
+MS UN Equity,Morgan Stanley
+MCHP UW Equity,Microchip Technology Inc
+CRWD UW Equity,Crowdstrike Holdings Inc
+CB UN Equity,Chubb Ltd
+HOLX UW Equity,Hologic Inc
+CFG UN Equity,Citizens Financial Group Inc
+JBL UN Equity,Jabil Inc
+ORLY UW Equity,O'Reilly Automotive Inc
+ALL UN Equity,Allstate Corp/The
+EQR UN Equity,Equity Residential
+BWA UN Equity,BorgWarner Inc
+KDP UW Equity,Keurig Dr Pepper Inc
+INCY UW Equity,Incyte Corp
+EMN UN Equity,Eastman Chemical Co
+AVB UN Equity,AvalonBay Communities Inc
+PRU UN Equity,Prudential Financial Inc
+WBA UW Equity,Walgreens Boots Alliance Inc
+STE UN Equity,STERIS PLC
+MCK UN Equity,McKesson Corp
+LMT UN Equity,Lockheed Martin Corp
+COR UN Equity,Cencora Inc
+COF UN Equity,Capital One Financial Corp
+CPB UW Equity,The Campbell's Company
+NDSN UW Equity,Nordson Corp
+DLTR UW Equity,Dollar Tree Inc
+DRI UN Equity,Darden Restaurants Inc
+DPZ UN Equity,Domino's Pizza Inc
+NVR UN Equity,NVR Inc
+NTAP UW Equity,NetApp Inc
+DVA UN Equity,DaVita Inc
+HIG UN Equity,Hartford Insurance Group Inc/The
+IRM UN Equity,Iron Mountain Inc
+EL UN Equity,Estee Lauder Cos Inc/The
+SWKS UW Equity,Skyworks Solutions Inc
+DGX UN Equity,Quest Diagnostics Inc
+ROK UN Equity,Rockwell Automation Inc
+KHC UW Equity,Kraft Heinz Co/The
+REGN UW Equity,Regeneron Pharmaceuticals Inc
+AMZN UW Equity,Amazon.com Inc
+JKHY UW Equity,Jack Henry & Associates Inc
+RL UN Equity,Ralph Lauren Corp
+BXP UN Equity,BXP Inc
+APH UN Equity,Amphenol Corp
+HWM UN Equity,Howmet Aerospace Inc
+SNPS UW Equity,Synopsys Inc
+CHRW UW Equity,CH Robinson Worldwide Inc
+ACN UN Equity,Accenture PLC
+TDG UN Equity,TransDigm Group Inc
+PLD UN Equity,Prologis Inc
+VRSN UW Equity,VeriSign Inc
+AEE UN Equity,Ameren Corp
+FDS UN Equity,FactSet Research Systems Inc
+NVDA UW Equity,NVIDIA Corp
+CTSH UW Equity,Cognizant Technology Solutions Corp
+ISRG UW Equity,Intuitive Surgical Inc
+TTWO UW Equity,Take-Two Interactive Software Inc
+RSG UN Equity,Republic Services Inc
+GS UN Equity,Goldman Sachs Group Inc/The
+MCO UN Equity,Moody's Corp
+ON UW Equity,ON Semiconductor Corp
+FFIV UW Equity,F5 Inc
+TECH UW Equity,Bio-Techne Corp
+GOOGL UW Equity,Alphabet Inc
+TFX UN Equity,Teleflex Inc
+NFLX UW Equity,Netflix Inc
+A UN Equity,Agilent Technologies Inc
+TRMB UW Equity,Trimble Inc
+DTE UN Equity,DTE Energy Co
+CE UN Equity,Celanese Corp
+PM UN Equity,Philip Morris International Inc
+CRM UN Equity,Salesforce Inc
+IR UN Equity,Ingersoll Rand Inc
+HII UN Equity,Huntington Ingalls Industries Inc
+MET UN Equity,MetLife Inc
+TPR UN Equity,Tapestry Inc
+AMP UN Equity,Ameriprise Financial Inc
+ZBRA UW Equity,Zebra Technologies Corp
+CBRE UN Equity,CBRE Group Inc
+MA UN Equity,Mastercard Inc
+KMX UN Equity,CarMax Inc
+ICE UN Equity,Intercontinental Exchange Inc
+SW UN Equity,Smurfit WestRock PLC
+FIS UN Equity,Fidelity National Information Services Inc
+CMG UN Equity,Chipotle Mexican Grill Inc
+WYNN UW Equity,Wynn Resorts Ltd
+RF UN Equity,Regions Financial Corp
+BKR UW Equity,Baker Hughes Co
+EXPE UW Equity,Expedia Group Inc
+LDOS UN Equity,Leidos Holdings Inc
+GOOG UW Equity,Alphabet Inc
+DFS UN Equity,Discover Financial Services
+V UN Equity,Visa Inc
+MAA UN Equity,Mid-America Apartment Communities Inc
+MPC UN Equity,Marathon Petroleum Corp
+AMD UW Equity,Advanced Micro Devices Inc
+RMD UN Equity,ResMed Inc
+MTD UN Equity,Mettler-Toledo International Inc
+J UN Equity,Jacobs Solutions Inc
+CPRT UW Equity,Copart Inc
+ALB UN Equity,Albemarle Corp
+CSGP UW Equity,CoStar Group Inc
+WAB UN Equity,Westinghouse Air Brake Technologies Corp
+WDC UW Equity,Western Digital Corp
+PEP UW Equity,PepsiCo Inc
+TEL UN Equity,TE Connectivity PLC
+PANW UW Equity,Palo Alto Networks Inc
+CHD UN Equity,Church & Dwight Co Inc
+FRT UN Equity,Federal Realty Investment Trust
+MGM UN Equity,MGM Resorts International
+AEP UW Equity,American Electric Power Co Inc
+PTC UW Equity,PTC Inc
+JBHT UW Equity,JB Hunt Transport Services Inc
+LRCX UW Equity,Lam Research Corp
+GEHC UW Equity,GE HealthCare Technologies Inc
+VRTX UW Equity,Vertex Pharmaceuticals Inc
+AMCR UN Equity,Amcor PLC
+META UW Equity,Meta Platforms Inc
+TMUS UW Equity,T-Mobile US Inc
+URI UN Equity,United Rentals Inc
+ARE UN Equity,Alexandria Real Estate Equities Inc
+DAL UN Equity,Delta Air Lines Inc
+STX UW Equity,Seagate Technology Holdings PLC
+NWS UW Equity,News Corp
+CNC UN Equity,Centene Corp
+PYPL UW Equity,PayPal Holdings Inc
+TSLA UW Equity,Tesla Inc
+ACGL UW Equity,Arch Capital Group Ltd
+DOW UN Equity,Dow Inc
+GEV UN Equity,GE Vernova Inc
+NWSA UW Equity,News Corp
+EXC UW Equity,Exelon Corp
+GPN UN Equity,Global Payments Inc
+BG UN Equity,Bunge Global SA
+DECK UN Equity,Deckers Outdoor Corp
+WDAY UW Equity,Workday Inc
+ZTS UN Equity,Zoetis Inc
+DLR UN Equity,Digital Realty Trust Inc
+EQIX UW Equity,Equinix Inc
+LVS UN Equity,Las Vegas Sands Corp
+MOH UN Equity,Molina Healthcare Inc

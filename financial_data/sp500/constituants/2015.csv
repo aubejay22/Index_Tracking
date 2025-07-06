@@ -1,0 +1,504 @@
+Ticker,Name,"ISIN
+"
+EIX UN Equity,Edison International,US2810201077
+AEE UN Equity,Ameren Corp,US0236081024
+EA UW Equity,Electronic Arts Inc,US2855121099
+AA UN Equity,Alcoa Corp,US0138721065
+LYB UN Equity,LyondellBasell Industries NV,NL0009434992
+AXP UN Equity,American Express Co,US0258161092
+VZ UN Equity,Verizon Communications Inc,US92343V1044
+AVGO UW Equity,Broadcom Inc,US11135F1012
+BA UN Equity,Boeing Co/The,US0970231058
+CAT UN Equity,Caterpillar Inc,US1491231015
+JPM UN Equity,JPMorgan Chase & Co,US46625H1005
+CVX UN Equity,Chevron Corp,US1667641005
+KO UN Equity,Coca-Cola Co/The,US1912161007
+ABBV UN Equity,AbbVie Inc,US00287Y1091
+DIS UN Equity,Walt Disney Co/The,US2546871060
+1715651D UN Equity,EIDP Inc,US2635341090
+XOM UN Equity,Exxon Mobil Corp,US30231G1022
+PSX UN Equity,Phillips 66,US7185461040
+GE UN Equity,General Electric Co,US3696043013
+HPQ UN Equity,HP Inc,US40434L1052
+HD UN Equity,Home Depot Inc/The,US4370761029
+IBM UN Equity,International Business Machines Corp,US4592001014
+JNJ UN Equity,Johnson & Johnson,US4781601046
+MCD UN Equity,McDonald's Corp,US5801351017
+MRK UN Equity,Merck & Co Inc,US58933Y1055
+MMM UN Equity,3M Co,US88579Y1010
+BAC UN Equity,Bank of America Corp,US0605051046
+PFE UN Equity,Pfizer Inc,US7170811035
+PG UN Equity,Procter & Gamble Co/The,US7427181091
+T UN Equity,AT&T Inc,US00206R1023
+TRV UN Equity,Travelers Cos Inc/The,US89417E1091
+RTX UN Equity,RTX Corp,US75513E1010
+ADI UW Equity,Analog Devices Inc,US0326541051
+WMT UN Equity,Walmart Inc,US9311421039
+CSCO UW Equity,Cisco Systems Inc,US17275R1023
+INTC UW Equity,Intel Corp,US4581401001
+GM UN Equity,General Motors Co,US37045V1008
+MSFT UW Equity,Microsoft Corp,US5949181045
+DG UN Equity,Dollar General Corp,US2566771059
+CI UN Equity,Cigna Group/The,US1255231003
+KMI UN Equity,Kinder Morgan Inc,US49456B1017
+C UN Equity,Citigroup Inc,US1729674242
+9876549D UN Equity,Nielsen NV,NL0009538479
+AIG UN Equity,American International Group Inc,US0268747849
+HON UN Equity,Honeywell International Inc,US4385161066
+MO UN Equity,Altria Group Inc,US02209S1033
+UAA UN Equity,Under Armour Inc,US9043111072
+IP UN Equity,International Paper Co,US4601461035
+ABT UN Equity,Abbott Laboratories,US0028241000
+AFL UN Equity,Aflac Inc,US0010551028
+APD UN Equity,Air Products and Chemicals Inc,US0091581068
+ARG UN Equity,Airgas Inc,US0093631028
+1284849D UN Equity,Allergan Inc/United States,US0184901025
+RCL UN Equity,Royal Caribbean Cruises Ltd,LR0008862868
+AEP UN Equity,American Electric Power Co Inc,US0255371017
+HES UN Equity,Hess Corp,US42809H1077
+APC UN Equity,Anadarko Petroleum Corp,US0325111070
+ADM UN Equity,Archer-Daniels-Midland Co,US0394831020
+GAS UN Equity,Southern Co Gas,US0012041069
+ADP UW Equity,Automatic Data Processing Inc,US0530151036
+AZO UN Equity,AutoZone Inc,US0533321024
+APA UN Equity,APA Corp,US03743Q1085
+AVY UN Equity,Avery Dennison Corp,US0536111091
+AVP UN Equity,Avon Products Inc,US0543031027
+BHI UN Equity,Baker Hughes Holdings LLC,US0572241075
+BALL UN Equity,Ball Corp,US0584981064
+BK UN Equity,Bank of New York Mellon Corp/The,US0640581007
+BCR UN Equity,CR Bard Inc,US0673831097
+BAX UN Equity,Baxter International Inc,US0718131099
+BRK/B UN Equity,Berkshire Hathaway Inc,US0846707026
+BBY UN Equity,Best Buy Co Inc,US0865161014
+HRB UN Equity,H&R Block Inc,US0936711052
+BSX UN Equity,Boston Scientific Corp,US1011371077
+BMY UN Equity,Bristol-Myers Squibb Co,US1101221083
+BF/B UN Equity,Brown-Forman Corp,US1156372096
+CTRA UN Equity,Coterra Energy Inc,US1270971039
+KSU UN Equity,Kansas City Southern/Old,US4851703029
+CPB UN Equity,The Campbell's Company,US1344291091
+CCL UN Equity,Carnival Corp,PA1436583006
+LUMN UN Equity,Lumen Technologies Inc,US5502411037
+9876566D UN Equity,Chubb Corp/The,US1712321017
+FTRCQ UW Equity,Frontier Communications Corp,US35906A3068
+CLX UN Equity,Clorox Co/The,US1890541097
+CMS UN Equity,CMS Energy Corp,US1258961002
+CCEP UN Equity,Coca-Cola Europacific Partners PLC,GB00BDCPN049
+CL UN Equity,Colgate-Palmolive Co,US1941621039
+CMA UN Equity,Comerica Inc,US2003401070
+2326248D UW Equity,CA Inc,US12673P1057
+CSC UN Equity,Computer Sciences Corp,US2053631048
+CAG UN Equity,Conagra Brands Inc,US2058871029
+ED UN Equity,Consolidated Edison Inc,US2091151041
+GLW UN Equity,Corning Inc,US2193501051
+CSX UN Equity,CSX Corp,US1264081035
+CMI UN Equity,Cummins Inc,US2310211063
+DHR UN Equity,Danaher Corp,US2358511028
+TGT UN Equity,Target Corp,US87612E1064
+DE UN Equity,Deere & Co,US2441991054
+D UN Equity,Dominion Energy Inc,US25746U1097
+DOV UN Equity,Dover Corp,US2600031080
+1697067D UN Equity,Dow Chemical Co/The,US2605431038
+DUK UN Equity,Duke Energy Corp,US26441C2044
+ETN UN Equity,Eaton Corp PLC,IE00B8KQN827
+ECL UN Equity,Ecolab Inc,US2788651006
+RVTY UN Equity,Revvity Inc,US7140461093
+2258717D UN Equity,EMC Corp,US2686481027
+EMR UN Equity,Emerson Electric Co,US2910111044
+EOG UN Equity,EOG Resources Inc,US26875P1012
+AON UN Equity,Aon PLC,IE00BLP1HW54
+ETR UN Equity,Entergy Corp,US29364G1031
+EFX UN Equity,Equifax Inc,US2944291051
+EQT UN Equity,EQT Corp,US26884L1098
+1831877D UN Equity,XL Group Ltd,BMG982941046
+FDO UN Equity,Family Dollar Stores LLC,US3070001090
+FDX UN Equity,FedEx Corp,US31428X1063
+M UN Equity,Macy's Inc,US55616P1049
+FMC UN Equity,FMC Corp,US3024913036
+F UN Equity,Ford Motor Co,US3453708600
+NEE UN Equity,NextEra Energy Inc,US65339F1012
+BEN UN Equity,Franklin Resources Inc,US3546131018
+FCX UN Equity,Freeport-McMoRan Inc,US35671D8570
+TGNA UN Equity,TEGNA Inc,US87901J1051
+GAP UN Equity,Gap Inc/The,US3647601083
+GD UN Equity,General Dynamics Corp,US3695501086
+GIS UN Equity,General Mills Inc,US3703341046
+GPC UN Equity,Genuine Parts Co,US3724601055
+GWW UN Equity,WW Grainger Inc,US3848021040
+HAL UN Equity,Halliburton Co,US4062161017
+HOG UN Equity,Harley-Davidson Inc,US4128221086
+HAR UN Equity,Harman International Industries Inc,US4130861093
+JOY UN Equity,Komatsu Mining Corp,US4811651086
+LHX UN Equity,L3Harris Technologies Inc,US5024311095
+DOC UN Equity,Healthpeak Properties Inc,US42250P1030
+HP UN Equity,Helmerich & Payne Inc,US4234521015
+HSY UN Equity,Hershey Co/The,US4278661081
+HRL UN Equity,Hormel Foods Corp,US4404521001
+HOT UN Equity,Starwood Hotels & Resorts Worldwide LLC,US85590A4013
+MDLZ UW Equity,Mondelez International Inc,US6092071058
+CNP UN Equity,CenterPoint Energy Inc,US15189T1079
+HUM UN Equity,Humana Inc,US4448591028
+ITW UN Equity,Illinois Tool Works Inc,US4523081093
+TT UN Equity,Trane Technologies PLC,IE00BK9ZQ967
+IPG UN Equity,Interpublic Group of Cos Inc/The,US4606901001
+IFF UN Equity,International Flavors & Fragrances Inc,US4595061015
+9990213D UN Equity,Jacobs Engineering Group Inc,US4698141078
+1436513D UN Equity,Johnson Controls Inc,US4783661071
+K UN Equity,Kellanova,US4878361082
+PRGO UN Equity,Perrigo Co PLC,IE00BGH1M568
+KMB UN Equity,Kimberly-Clark Corp,US4943681035
+KIM UN Equity,Kimco Realty Corp,US49446R1095
+KSS UN Equity,Kohl's Corp,US5002551043
+ORCL UN Equity,Oracle Corp,US68389X1054
+KR UN Equity,Kroger Co/The,US5010441013
+LM UN Equity,Legg Mason Inc,US5249011058
+LEG UN Equity,Leggett & Platt Inc,US5246601075
+LEN UN Equity,Lennar Corp,US5260571048
+JEF UN Equity,Jefferies Financial Group Inc,US47233W1099
+LLY UN Equity,Eli Lilly & Co,US5324571083
+BBWI UN Equity,Bath & Body Works Inc,US0708301041
+LNC UN Equity,Lincoln National Corp,US5341871094
+L UN Equity,Loews Corp,US5404241086
+LOW UN Equity,Lowe's Cos Inc,US5486611073
+XRX UN Equity,Xerox Holdings Corp,US98421M1062
+HST UN Equity,Host Hotels & Resorts Inc,US44107P1049
+MMC UN Equity,Marsh & McLennan Cos Inc,US5717481023
+MAS UN Equity,Masco Corp,US5745991068
+MAT UW Equity,Mattel Inc,US5770811025
+SPGI UN Equity,S&P Global Inc,US78409V1044
+CVS UN Equity,CVS Health Corp,US1266501006
+MU UW Equity,Micron Technology Inc,US5951121038
+MUR UN Equity,Murphy Oil Corp,US6267171022
+THC UN Equity,Tenet Healthcare Corp,US88033G4073
+NWL UN Equity,Newell Brands Inc,US6512291062
+NEM UN Equity,Newmont Corp,US6516391066
+TFCFA UW Equity,TFCF Corp,US90130A3095
+NKE UN Equity,NIKE Inc,US6541061031
+NI UN Equity,NiSource Inc,US65473P1057
+NSC UN Equity,Norfolk Southern Corp,US6558441084
+ES UN Equity,Eversource Energy,US30040W1080
+NOC UN Equity,Northrop Grumman Corp,US6668071029
+WFC UN Equity,Wells Fargo & Co,US9497461015
+NUE UN Equity,Nucor Corp,US6703461052
+PVH UN Equity,PVH Corp,US6936561009
+OXY UN Equity,Occidental Petroleum Corp,US6745991058
+OMC UN Equity,Omnicom Group Inc,US6819191064
+OKE UN Equity,ONEOK Inc,US6826801036
+PCG UN Equity,PG&E Corp,US69331C1080
+PH UN Equity,Parker-Hannifin Corp,US7010941042
+PPL UN Equity,PPL Corp,US69351T1060
+PEP UN Equity,PepsiCo Inc,US7134481081
+EXC UN Equity,Exelon Corp,US30161N1019
+COP UN Equity,ConocoPhillips,US20825C1045
+PHM UN Equity,PulteGroup Inc,US7458671010
+PNW UN Equity,Pinnacle West Capital Corp,US7234841010
+PBI UN Equity,Pitney Bowes Inc,US7244791007
+PCL UN Equity,Plum Creek Timber Co Inc,US7292511083
+PNC UN Equity,PNC Financial Services Group Inc/The,US6934751057
+PPG UN Equity,PPG Industries Inc,US6935061076
+1922150D UN Equity,Linde Inc/CT,US74005P1049
+PCP UN Equity,Precision Castparts Corp,US7401891053
+PGR UN Equity,Progressive Corp/The,US7433151039
+PEG UN Equity,Public Service Enterprise Group Inc,US7445731067
+RTN UN Equity,Raytheon Co,US7551115071
+RHI UN Equity,Robert Half Inc,US7703231032
+R UN Equity,Ryder System Inc,US7835491082
+SCG UN Equity,SCANA Corp,US80589M1027
+SLB UN Equity,Schlumberger NV,AN8068571086
+SCHW UN Equity,Charles Schwab Corp/The,US8085131055
+SHW UN Equity,Sherwin-Williams Co/The,US8243481061
+SJM UN Equity,J M Smucker Co/The,US8326964058
+AME UN Equity,AMETEK Inc,US0311001004
+SNA UN Equity,Snap-on Inc,US8330341012
+SO UN Equity,Southern Co/The,US8425871071
+TFC UN Equity,Truist Financial Corp,US89832Q1094
+LUV UN Equity,Southwest Airlines Co,US8447411088
+SWK UN Equity,Stanley Black & Decker Inc,US8545021011
+PSA UN Equity,Public Storage,US74460D1090
+2370058D UN Equity,SunTrust Banks Inc,US8679141031
+SYY UN Equity,Sysco Corp,US8718291078
+1500785D UN Equity,TECO Energy Inc,US8723751009
+ANDV UN Equity,Andeavor,US03349M1053
+TXN UW Equity,Texas Instruments Inc,US8825081040
+TXT UN Equity,Textron Inc,US8832031012
+TMO UN Equity,Thermo Fisher Scientific Inc,US8835561023
+2078185D UN Equity,Tiffany & Co,US8865471085
+TJX UN Equity,TJX Cos Inc/The,US8725401090
+GL UN Equity,Globe Life Inc,US37959E1029
+TSS UN Equity,Total System Services Inc,US8919061098
+JCI UN Equity,Johnson Controls International plc,IE00BY7QL619
+UNP UN Equity,Union Pacific Corp,US9078181081
+UNH UN Equity,UnitedHealth Group Inc,US91324P1021
+UNM UN Equity,Unum Group,US91529Y1064
+MRO UN Equity,Marathon Oil Corp,US5658491064
+VAR UN Equity,Varian Medical Systems Inc,US92220P1057
+VFC UN Equity,VF Corp,US9182041080
+VNO UN Equity,Vornado Realty Trust,US9290421091
+1566019D UN Equity,ADT Security Corp/The,US00101J1060
+VMC UN Equity,Vulcan Materials Co,US9291601097
+WY UN Equity,Weyerhaeuser Co,US9621661043
+WHR UN Equity,Whirlpool Corp,US9633201069
+WMB UN Equity,Williams Cos Inc/The,US9694571004
+TEG UN Equity,Integrys Energy Group Inc,US45822P1057
+WEC UN Equity,WEC Energy Group Inc,US92939U1060
+ADBE UW Equity,Adobe Inc,US00724F1012
+AES UN Equity,AES Corp/The,US00130H1059
+AMGN UW Equity,Amgen Inc,US0311621009
+AAPL UW Equity,Apple Inc,US0378331005
+ADSK UW Equity,Autodesk Inc,US0527691069
+CTAS UW Equity,Cintas Corp,US1729081059
+CMCSA UW Equity,Comcast Corp,US20030N1019
+TAP UN Equity,Molson Coors Beverage Co,US60871R2094
+MAR UW Equity,Marriott International Inc/MD,US5719032022
+KLAC UW Equity,KLA Corp,US4824801009
+MKC UN Equity,McCormick & Co Inc/MD,US5797802064
+JWN UN Equity,Nordstrom Inc,US6556641008
+PCAR UW Equity,PACCAR Inc,US6937181088
+COST UW Equity,Costco Wholesale Corp,US22160K1051
+SIAL UW Equity,Sigma-Aldrich Corp,US8265521018
+STJ UN Equity,St Jude Medical Inc,US7908491035
+SYK UN Equity,Stryker Corp,US8636671013
+TSN UN Equity,Tyson Foods Inc,US9024941034
+1541931D UW Equity,Altera Corp,US0214411003
+AMAT UW Equity,Applied Materials Inc,US0382221051
+TWX UN Equity,Time Warner Inc,US8873173038
+BBBYQ UW Equity,20230930-DK-Butterfly-1 Inc,US0758961009
+CAH UN Equity,Cardinal Health Inc,US14149Y1082
+CELG UW Equity,Celgene Corp,US1510201049
+CERN UW Equity,Cerner Corp,US1567821046
+CINF UW Equity,Cincinnati Financial Corp,US1720621010
+CVC UN Equity,Cablevision Systems Corp,US12686C1099
+DHI UN Equity,DR Horton Inc,US23331A1097
+FLS UN Equity,Flowserve Corp,US34354P1057
+ESRX UW Equity,Evernorth Health Inc,US30219G1085
+EXPD UW Equity,Expeditors International of Washington Inc,US3021301094
+FAST UW Equity,Fastenal Co,US3119001044
+MTB UN Equity,M&T Bank Corp,US55261F1049
+FI UW Equity,Fiserv Inc,US3377381088
+FITB UW Equity,Fifth Third Bancorp,US3167731005
+GILD UW Equity,Gilead Sciences Inc,US3755581036
+HAS UW Equity,Hasbro Inc,US4180561072
+HBAN UW Equity,Huntington Bancshares Inc/OH,US4461501045
+BIIB UW Equity,Biogen Inc,US09062X1037
+LLTC UW Equity,Linear Technology Corp,US5356781063
+RRC UN Equity,Range Resources Corp,US75281A1097
+NBR UN Equity,Nabors Industries Ltd,BMG6359F1370
+NEBLQ UN Equity,Noble Holding Corp PLC,GB00BFG3KF26
+NTRS UW Equity,Northern Trust Corp,US6658591044
+PAYX UW Equity,Paychex Inc,US7043261079
+PBCT UW Equity,People's United Financial Inc,US7127041058
+PDCO UW Equity,Patterson Cos Inc,US7033951036
+1684442D UN Equity,Pall Corp,US6964293079
+QCOM UW Equity,QUALCOMM Inc,US7475251036
+ROP UN Equity,Roper Technologies Inc,US7766961061
+ROST UW Equity,Ross Stores Inc,US7782961038
+AN UN Equity,AutoNation Inc,US05329W1027
+SBUX UW Equity,Starbucks Corp,US8552441094
+KEY UN Equity,KeyCorp,US4932671088
+SPLS UW Equity,Staples Inc,US8550301027
+STT UN Equity,State Street Corp,US8574771031
+USB UN Equity,US Bancorp,US9029733048
+GEN UW Equity,Gen Digital Inc,US6687711084
+KRFT UW Equity,Kraft Foods Group Inc,US50076Q1067
+TROW UW Equity,T Rowe Price Group Inc,US74144T1088
+WM UN Equity,Waste Management Inc,US94106L1098
+PARA UN Equity,Paramount Global,US92556H2067
+AGN UN Equity,Allergan UnLtd Co,IE00BY9D5467
+WFM UW Equity,Whole Foods Market Inc,US9668371068
+STZ UN Equity,Constellation Brands Inc,US21036P1084
+XLNX UW Equity,Xilinx Inc,US9839191015
+XRAY UW Equity,DENTSPLY SIRONA Inc,US24906P1093
+ZION UW Equity,Zions Bancorp NA,US9897011071
+DNRCQ UN Equity,Denbury Inc,US2479162081
+IVZ UN Equity,Invesco Ltd,BMG491BT1088
+INTU UW Equity,Intuit Inc,US4612021034
+MS UN Equity,Morgan Stanley,US6174464486
+MCHP UW Equity,Microchip Technology Inc,US5950171042
+CB UN Equity,Chubb Ltd,CH0044328745
+CHKAQ UN Equity,Expand Energy Corp,US1651677437
+ORLY UW Equity,O'Reilly Automotive Inc,US67103H1077
+ALL UN Equity,Allstate Corp/The,US0200021014
+FLIR UW Equity,FLIR Systems Inc,US3024451011
+EQR UN Equity,Equity Residential,US29476L1070
+BWA UN Equity,BorgWarner Inc,US0997241064
+URBN UW Equity,Urban Outfitters Inc,US9170471026
+SPG UN Equity,Simon Property Group Inc,US8288061091
+EMN UN Equity,Eastman Chemical Co,US2774321002
+AVB UN Equity,AvalonBay Communities Inc,US0534841012
+PRU UN Equity,Prudential Financial Inc,US7443201022
+UPS UN Equity,United Parcel Service Inc,US9113121068
+MCK UN Equity,McKesson Corp,US58155Q1031
+LMT UN Equity,Lockheed Martin Corp,US5398301094
+COR UN Equity,Cencora Inc,US03073E1055
+CAM UN Equity,Cameron International Corp,US13342B1052
+COF UN Equity,Capital One Financial Corp,US14040H1059
+WAT UN Equity,Waters Corp,US9418481035
+DLTR UW Equity,Dollar Tree Inc,US2567461080
+2544554D UW Equity,SanDisk LLC,US80004C1018
+DOFSQ UN Equity,Diamond Offshore Drilling Inc,US25271C1027
+NTAP UW Equity,NetApp Inc,US64110D1046
+GT UW Equity,Goodyear Tire & Rubber Co/The,US3825501014
+CTXS UW Equity,Citrix Systems Inc,US1773761002
+DVA UN Equity,DaVita Inc,US23918K1088
+HIG UN Equity,Hartford Insurance Group Inc/The,US4165151048
+IRM UN Equity,Iron Mountain Inc,US46284V1017
+EL UN Equity,Estee Lauder Cos Inc/The,US5184391044
+LO UN Equity,Lorillard LLC,US5441471019
+1518855D US Equity,Yahoo! Inc - Set up for Fundamental Purposes,
+PFG UN Equity,Principal Financial Group Inc,US74251V1026
+ATI UN Equity,ATI Inc,US01741R1023
+SRCL UW Equity,Stericycle Inc,US8589121081
+UHS UN Equity,Universal Health Services Inc,US9139031002
+ETFC UW Equity,E*TRADE Financial Corp,US2692464017
+NOV UN Equity,NOV Inc,US62955J1034
+DGX UN Equity,Quest Diagnostics Inc,US74834L1008
+ROK UN Equity,Rockwell Automation Inc,US7739031091
+REGN UW Equity,Regeneron Pharmaceuticals Inc,US75886F1075
+AMZN UW Equity,Amazon.com Inc,US0231351067
+RL UN Equity,Ralph Lauren Corp,US7512121010
+BXP UN Equity,BXP Inc,US1011211018
+APH UN Equity,Amphenol Corp,US0320951017
+PXD UN Equity,Pioneer Natural Resources Co,US7237871071
+VLO UN Equity,Valero Energy Corp,US91913Y1001
+1927294D UN Equity,L3 Technologies Inc,US5024131071
+WU UN Equity,Western Union Co/The,US9598021098
+CHRW UW Equity,CH Robinson Worldwide Inc,US12541W2098
+ACN UN Equity,Accenture PLC,IE00B4BNMY34
+YUM UN Equity,Yum! Brands Inc,US9884981013
+PLD UN Equity,Prologis Inc,US74340W1036
+FE UN Equity,FirstEnergy Corp,US3379321074
+VRSN UW Equity,VeriSign Inc,US92343E1029
+PWR UN Equity,Quanta Services Inc,US74762E1029
+BRCM UW Equity,Broadcom Corp,US1113201073
+NVDA UW Equity,NVIDIA Corp,US67066G1040
+SEE UN Equity,Sealed Air Corp,US81211K1007
+CTSH UW Equity,Cognizant Technology Solutions Corp,US1924461023
+ISRG UW Equity,Intuitive Surgical Inc,US46120E6023
+CNX UN Equity,CNX Resources Corp,US12653C1080
+AMG UN Equity,Affiliated Managers Group Inc,US0082521081
+AET UN Equity,Aetna Inc,US00817Y1082
+RSG UN Equity,Republic Services Inc,US7607591002
+EBAY UW Equity,eBay Inc,US2786421030
+GS UN Equity,Goldman Sachs Group Inc/The,US38141G1040
+SRE UN Equity,Sempra,US8168511090
+MCO UN Equity,Moody's Corp,US6153691059
+BKNG UW Equity,Booking Holdings Inc,US09857L1089
+FFIV UW Equity,F5 Inc,US3156161024
+AKAM UW Equity,Akamai Technologies Inc,US00971T1016
+QEP UN Equity,QEP Resources Inc,US74733V1008
+RAI UN Equity,Reynolds American Inc,US7617131062
+DVN UN Equity,Devon Energy Corp,US25179M1036
+GOOGL UW Equity,Alphabet Inc,US02079K3059
+RHT UN Equity,Red Hat Inc,US7565771026
+HCBK UW Equity,Hudson City Bancorp Inc,US4436831071
+ALLE UN Equity,Allegion plc,IE00BFRT3W74
+NFLX UW Equity,Netflix Inc,US64110L1061
+A UN Equity,Agilent Technologies Inc,US00846U1016
+ELV UN Equity,Elevance Health Inc,US0367521038
+CME UW Equity,CME Group Inc,US12572Q1058
+9903115D UN Equity,Blackrock Finance Inc,US09247X1019
+DTE UN Equity,DTE Energy Co,US2333311072
+NDAQ UW Equity,Nasdaq Inc,US6311031081
+PM UN Equity,Philip Morris International Inc,US7181721090
+TWC UN Equity,Time Warner Cable Inc,US88732J2078
+CRM UN Equity,Salesforce Inc,US79466L3024
+WINMQ UW Equity,Windstream Holdings Inc,US97382A3095
+MET UN Equity,MetLife Inc,US59156R1086
+1856613D UN Equity,Monsanto Co,US61166W1018
+TPR UN Equity,Tapestry Inc,US8760301072
+1806854D UN Equity,Dun & Bradstreet Corp/The,US26483E1001
+EW UN Equity,Edwards Lifesciences Corp,US28176E1082
+AMP UN Equity,Ameriprise Financial Inc,US03076C1062
+XEL UN Equity,Xcel Energy Inc,US98389B1008
+COL UN Equity,Rockwell Collins Inc,US7743411016
+FTI UN Equity,TechnipFMC PLC,GB00BDSFG982
+ZBH UN Equity,Zimmer Biomet Holdings Inc,US98956P1021
+CBRE UN Equity,CBRE Group Inc,US12504L1098
+MA UN Equity,Mastercard Inc,US57636Q1040
+GME UN Equity,GameStop Corp,US36467W1099
+KMX UN Equity,CarMax Inc,US1431301027
+ICE UN Equity,Intercontinental Exchange Inc,US45866F1049
+FIS UN Equity,Fidelity National Information Services Inc,US31620M1062
+CMG UN Equity,Chipotle Mexican Grill Inc,US1696561059
+MWV UN Equity,WestRock MWV LLC,US5833341077
+2557974D UN Equity,Pepco Holdings LLC,US7132911022
+WYNN UW Equity,Wynn Resorts Ltd,US9831341071
+1448062D UW Equity,DIRECTV,US25490A3095
+HSP UN Equity,Hospira Inc,US4410601003
+AIZ UN Equity,Assurant Inc,US04621X1081
+NRG UN Equity,NRG Energy Inc,US6293775085
+GNW UN Equity,Genworth Financial Inc,US37247D1063
+RF UN Equity,Regions Financial Corp,US7591EP1005
+TDC UN Equity,Teradata Corp,US88076W1036
+MOS UN Equity,Mosaic Co/The,US61945C1036
+EXPE UW Equity,Expedia Group Inc,US30212P3038
+DISCA UW Equity,Warner Bros Discovery Inc,US25470F1049
+CF UN Equity,CF Industries Holdings Inc,US1252691001
+VIAB UW Equity,Viacom Inc,US92553P2011
+GOOG UW Equity,Alphabet Inc,US02079K1079
+TNL UN Equity,Travel + Leisure Co,US8941641024
+1539941D UN Equity,Spectra Energy LLC,US8475601097
+FSLR UW Equity,First Solar Inc,US3364331070
+VALPQ UN Equity,Valaris plc,GB00BJVJZD68
+MJN UN Equity,Mead Johnson Nutrition Co,US5828391061
+9983490D UN Equity,TE Connectivity Ltd,CH0102993182
+DFS UN Equity,Discover Financial Services,US2547091080
+TRIP UW Equity,TripAdvisor Inc,US8969452015
+KDP UN Equity,Keurig Dr Pepper Inc,US49271V1008
+2558202D UN Equity,Scripps Networks Interactive Inc,US8110651010
+XYL UN Equity,Xylem Inc/NY,US98419M1009
+MPC UN Equity,Marathon Petroleum Corp,US56585A1025
+TSCO UW Equity,Tractor Supply Co,US8923561067
+LVLT UN Equity,Level 3 Communications Inc,US52729N3089
+RIG UN Equity,Transocean Ltd,CH0048265513
+ESS UN Equity,Essex Property Trust Inc,US2971781057
+GGP UN Equity,Brookfield Properties Retail Holding LLC,US36174X1019
+WDC UW Equity,Western Digital Corp,US9581021055
+OI UN Equity,O-I Glass Inc,US67098H1041
+FOSL UW Equity,Fossil Group Inc,US34988V1061
+LRCX UW Equity,Lam Research Corp,US5128073062
+MHK UN Equity,Mohawk Industries Inc,US6081901042
+PNR UN Equity,Pentair PLC,IE00BLS09M33
+1288453D UW Equity,Monster Beverage 1990 Corp,US6117401017
+VRTX UW Equity,Vertex Pharmaceuticals Inc,US92532F1003
+META UW Equity,Meta Platforms Inc,US30303M1027
+URI UN Equity,United Rentals Inc,US9113631090
+DAL UN Equity,Delta Air Lines Inc,US2473617023
+NAVI UW Equity,Navient Corp,US63938C1080
+MNKKQ UN Equity,Mallinckrodt PLC,IE00BBGT3753
+STX UW Equity,Seagate Technology Holdings PLC,IE00BKVD2N49
+GMCR UW Equity,Keurig Green Mountain Inc,US49271M1009
+MLM UN Equity,Martin Marietta Materials Inc,US5732841060
+ALXN UW Equity,Alexion Pharmaceuticals Inc/MA,US0153511094
+NWSA UW Equity,News Corp,US65249B1098
+CCI UN Equity,Crown Castle Inc,US22822V1017
+9991429D UN Equity,Aptiv Irish Holdings Ltd,JE00B783TY65
+CPRI UN Equity,Capri Holdings Ltd,VGG1890L1076
+BFH UN Equity,Bread Financial Holdings Inc,US0185811082
+GRMN UW Equity,Garmin Ltd,CH0114405324
+XEC UN Equity,Coterra Energy Operating Co,US1717981013
+ZTS UN Equity,Zoetis Inc,US98978V1035
+DISCK UW Equity,Warner Bros Discovery Inc,US25470F3029
+BDX UN Equity,Becton Dickinson & Co,US0758871091
+MDT UN Equity,Medtronic PLC,IE00BTN1Y115
+MSI UN Equity,Motorola Solutions Inc,US6200763075
+MYL UW Equity,Mylan NV,NL0011031208
+9980328D UN Equity,Laboratory Corp of America Holdings,US50540R4092
+NBL UN Equity,Noble Energy Inc,US6550441058
+SWY UN Equity,Safeway Inc,US7865142084
+SWN UN Equity,Southwestern Energy Co,US8454671095
+VTR UN Equity,Ventas Inc,US92276F1003
+WELL UN Equity,Welltower Inc,US95040Q1040
+NFX UN Equity,Ovintiv Exploration Inc,US6512901082
+AIV UN Equity,Apartment Investment and Management Co,US03748R7474
+WBA UW Equity,Walgreens Boots Alliance Inc,US9314271084
+DRI UN Equity,Darden Restaurants Inc,US2371941053
+AMT UN Equity,American Tower Corp,US03027X1000
+JNPR UN Equity,Juniper Networks Inc,US48203R1041
+COV UN Equity,Covidien Ltd,IE00B68SQD29
+FLR UN Equity,Fluor Corp,US3434121022
+V UN Equity,Visa Inc,US92826C8394
+CFN UN Equity,CareFusion Corp,US14170T1016
+PETM UW Equity,PetSmart LLC,US7167681060
+MAC UN Equity,Macerich Co/The,US5543821012
