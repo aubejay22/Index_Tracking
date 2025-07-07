@@ -16,7 +16,7 @@ def Main():
     parser.add_argument('--result_path', type=str, 
                     default='results') # default=os.getcwd()+'/results'
     parser.add_argument('--solution_name', type=str,
-                    default='lagrange_full')#,] choices=['lagrange_full', 'lagrange_ours',  'lagrange_forward', 'lagrange_backward'])
+                    default='lagrange_ours')#,] choices=['lagrange_full', 'lagrange_ours',  'lagrange_forward', 'lagrange_backward'])
 
     parser.add_argument('--cardinality', type=int, default=30)
 
@@ -63,9 +63,11 @@ def Main():
     
     return None
 
-"""
+
 if __name__ == "__main__":
     Main()
+
+
 """
 
 import pickle
@@ -135,3 +137,4 @@ ax.set_ylabel("Rendement cumulé")
 ax.legend()
 plt.grid(True)
 plt.show()
+"""

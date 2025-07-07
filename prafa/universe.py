@@ -4,8 +4,9 @@ import numpy as np
 
 #_________________________________________________________________
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#             va me rester a traiter les Nan dans new_universe!!!!
-
+#          Lorsque je vais avoir des données bloombergs , faire attention 
+#          les stocks dans stocks_list sont sensé etre tous dans le df_all
+#          on ne devrait pas changer les tickers bloomberg toujours les meme en theorie 
 #-----------------------------------------------------------------
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -35,16 +36,12 @@ class Universe():
         #données sur toutes l'historique
         self.df_return_all = pd.read_csv(f"financial_data/{self.args.index}/returns_stocks.csv")  #return des stocks 
         self.df_return_all.columns = [col.split()[0].replace('/', '.') for col in self.df_return_all.columns]
-        self.df_return_all.index = pd.to_datetime(self.df_return_all.index)
-        
-        self.df_index_all = pd.read_csv(f"financial_data/{self.args.index}/returns_index.csv")   #return de l'indice
+        self.df_return_all['date'] = pd.to_datetime(self.df_return_all['date'])
+        self.df_return_all.set_index('date', inplace=True)
 
-        #self.df_return_all['Date'] = pd.to_datetime(self.df_return_all['Date'])
-        #self.df_return_all.set_index('Date', inplace=True)
-        
+        self.df_index_all = pd.read_csv(f"financial_data/{self.args.index}/returns_index.csv")   #return de l'indice
         self.df_index_all['Date'] = pd.to_datetime(self.df_index_all['Date'])
         self.df_index_all.set_index('Date', inplace=True)
-
 
     
     def update_stock_list(self, datetime : datetime = None):
@@ -54,7 +51,7 @@ class Universe():
                 f"financial_data/{self.args.index}/constituants/{year}.csv", 
                 usecols=["Ticker"]
             )["Ticker"].str.split().str[0].str.replace("/", ".")
-
+        
         if datetime is None:
             #appelle dans le constructeur premier universe
             self.year = int(self.args.start_date[0:4])
