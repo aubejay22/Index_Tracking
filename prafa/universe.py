@@ -35,7 +35,7 @@ class Universe():
     def initialisation_donnes(self):
         #données sur toutes l'historique
         self.df_return_all = pd.read_csv(f"financial_data/{self.args.index}/returns_stocks.csv")  #return des stocks 
-        self.df_return_all.columns = [col.split()[0].replace('/', '.') for col in self.df_return_all.columns]
+        #self.df_return_all.columns = [col.split()[0].replace('/', '.') for col in self.df_return_all.columns]
         self.df_return_all['date'] = pd.to_datetime(self.df_return_all['date'])
         self.df_return_all.set_index('date', inplace=True)
 
@@ -48,9 +48,7 @@ class Universe():
         #ce code va aller chercher la compositon
         #df = lambda year : pd.read_csv(f"financial_data/{self.args.index}/constituants/{year}.csv",usecols=["Ticker"]).str.split().str[0].str.replace("/", ".")
         df = lambda year: pd.read_csv(
-                f"financial_data/{self.args.index}/constituants/{year}.csv", 
-                usecols=["Ticker"]
-            )["Ticker"].str.split().str[0].str.replace("/", ".")
+                f"financial_data/{self.args.index}/constituants/{year}.csv", dtype={'permno': str})["permno"]
         
         if datetime is None:
             #appelle dans le constructeur premier universe
@@ -97,7 +95,7 @@ class Universe():
         # ⚠️ À mettre dans la méthode new_universe juste avant d'extraire les rendements :
         valid_stocks = [stock for stock in self.stock_list if stock in self.df_return_all.columns]
         missing_stocks = set(self.stock_list) - set(valid_stocks)
-
+     
         if missing_stocks:
             print(f"⚠️ Les actions suivantes ne sont pas dans les données de rendement : {missing_stocks}")
         self.stock_list = valid_stocks
