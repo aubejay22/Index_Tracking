@@ -102,15 +102,54 @@ class Universe():
         
     
         #retourne les stocks de l'univers au bonne periode de temps
-        stocks_returns = self.df_return_all.loc[start_datetime:end_datetime, self.stock_list]
-        index_returns = self.df_index_all.loc[start_datetime:end_datetime]
-        common_index = stocks_returns.index.intersection(index_returns.index)
-        
-        self.df_return = stocks_returns.loc[common_index]
-        self.df_index = index_returns.loc[common_index]
-        self.data_cleaning()
+        self.df_return = self.df_return_all.loc[start_datetime:end_datetime, self.stock_list].copy().fillna(0)
+        self.df_index = self.df_index_all.loc[start_datetime:end_datetime].copy().fillna(0)
+        #self.data_cleaning()
+        self.stock_list = list(self.df_return.columns)
+
+    
+
+    
+    """
+    def data_cleaning(self):
+        # Nombre de colonnes avant remplacement
+        colonnes_avant = self.df_return.shape[1]
+
+        # Remplacer les NaN par des zéros
+        nan_avant = self.df_return.isna().sum().sum()
+        self.df_return.fillna(0, inplace=True)
+        nan_apres = self.df_return.isna().sum().sum()
+        print(f"Replaced {nan_avant} NaN values in df_return with 0.")
+
+        # S'assurer que l'index de df_index n'a pas de NaN
+        nan_index_avant = self.df_index.isna().sum().sum()
+        self.df_index.fillna(0, inplace=True)
+        print(f"Replaced {nan_index_avant} NaN values in df_index with 0.")
+
+        # Synchroniser les index
+        common_index = self.df_return.index.intersection(self.df_index.index)
+        self.df_return = self.df_return.loc[common_index]
+        self.df_index = self.df_index.loc[common_index]
+
+        print(f"Data cleaned and aligned on {len(common_index)} common dates.")
+    """
 
 
+    def get_stocks_returns(self):
+        return self.df_return
+    
+    def get_index_returns(self):
+        #retourne une série!
+        return self.df_index.squeeze()
+    
+    def get_stock_namme_in_order(self):
+        return self.df_return.columns
+    
+    def get_number_of_stocks(self):
+        return len(self.stock_list)
+    
+    
+    """
     def data_cleaning(self):
         # Nombre de colonnes avant suppression
         colonnes_avant = self.df_return.shape[1]
@@ -135,18 +174,6 @@ class Universe():
         
         self.df_return = self.df_return.loc[common_index]
         self.df_index = self.df_index.loc[common_index]
-
-
-
-    def get_stocks_returns(self):
-        return self.df_return
-    
-    def get_index_returns(self):
-        return self.df_index
-    
-    def get_stock_list(self):
-        return self.stock_list
-    
-    def get_number_of_stocks(self):
-        return len(self.stock_list)
-    
+        lignes_apres = self.df_return.shape[0]
+        print(f"Removed {lignes_avant - lignes_apres} rows due to missing values.")
+    """

@@ -8,6 +8,9 @@ import pickle
 from scipy.optimize import minimize
 
 
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
+
 """
 Cette classe centralise le code. Elle qui mets a jour l'univers et ensuite calcule L'optimisation et stack la reponse ici avec la date 
 Faire bien attention de bien ajuster universe avant optimization parce l'universe est réutiliser dans L'optimisation , mais on la récupere 
@@ -30,8 +33,9 @@ class Portfolio:
         self.universe.new_universe(start_datetime, end_datetime)
         sol = Solution(self)
 
-        self.portfolios[end_datetime] = sol.solve() #dictionnire contenant poids 
-
+        self.portfolios[end_datetime] = sol.solve() #dictionnire contenant poids
+        return self.portfolios[end_datetime]
+       
 
     def get_universe(self) -> Universe:
         return self.universe
@@ -42,9 +46,10 @@ class Portfolio:
             pickle.dump(self.portfolios, f)
             print('les portefeuilles ont été enregistrés!! pret a réalisé le backtest')
     
+    
     def __del__(self):
         self.save_portfolio()
-
+    
 
 
 
@@ -52,6 +57,7 @@ class Portfolio:
 La classe solution est la classe permettant de résoudre le problème d'optimisation.
 """
 
+    
 class Solution:
     
     def __init__(
@@ -65,21 +71,22 @@ class Solution:
         self.num_assets = self.universe.get_number_of_stocks()
         self.K = self.universe.args.cardinality
         
-        self.new_return = np.array(self.universe.get_stocks_returns())
-        self.new_index = np.array(self.universe.get_index_returns())
+        #self.new_return = np.array(self.universe.get_stocks_returns())
+        #self.new_index = np.array(self.universe.get_index_returns())
         
-        #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        #falloir je le change pas rigoureux 
-        self.stock_list = self.universe.get_stock_list()
-        #self.stock_list = self.universe.stock_list
+        self.new_return = self.universe.get_stocks_returns()
+        self.new_index = self.universe.get_index_returns()
+        self.stock_list = self.universe.get_stock_namme_in_order()
         
-        self.eps = 1e-4
-        self.coefficient = 100000000
+        
+        self.eps = 0.0001
+        self.coefficient = 1000
         
         # print(self.new_index)
         # print(self.new_return)
         # raise Exception("Finish")
-    
+        # 3. Vérification manuelle de cohérence poids <-> action
+        
 
     
     def objective_function(
@@ -87,7 +94,7 @@ class Solution:
         weight : list,
     ) -> list :
         # 누적 수익률
-        error = self.new_return @ weight - self.new_index
+        error = self.new_return.values @ weight - self.new_index.values
         error = np.sum(error**2)
         
         return error# + 1000 * self.penalty(weight) #! ablation 
@@ -103,35 +110,21 @@ class Solution:
         return np.sum(weight) - 1
     
     
-    # def cardinality_constraint(
-    #     self,
-    #     weight : list,
-    # ) -> list :
-    #     error = 1e-4
-    #     coefficient = 999999999
-    #     weight = 1 - 1 / ( coefficient * weight + 1 )
-    #     # print("num of stocks :", np.sum(weight))
-    #     # print("max num of stocks :", self.K)
-    #     return - np.sum(weight) + self.K - error  # (number of stocks) >= (min number of stocks)
-    
+   
 
     def cardinality_constraint2(
         self,
         weight : list,
     ):
-        eps = self.eps
-        # Approximated extended cardinality constraint
-        # 99999999
-        coefficient = self.coefficient
-
+        
         # print("weight sum :", np.sum(weight))
         # print("weight :", weight)
-        weight = 1 / ( 1 + np.e ** ( - coefficient * ( weight - eps) ) ) # before 1e-4
+        weight = 1 / ( 1 + np.e ** ( - self.coefficient * ( weight - self.eps) ) ) # before 1e-4
         # print("binary :", weight)
         # print("num of stocks :", np.sum(weight))
         # print("min num of stocks :", self.K)
         return - np.sum(weight) + self.K 
-    
+        
     
 
     def lagrange_full_replication(
@@ -148,19 +141,9 @@ class Solution:
         
         # Optimization
         result = minimize(self.objective_function, initial_weight, method = 'SLSQP', constraints=constraint, bounds=bounds)
-        self.optimal_weight = result.x
-        self.stock2weight = {}
-        for i in range(len(self.stock_list)):
-            self.stock2weight[self.stock_list[i]] = result.x[i]
-        """
-        # Update Portfolio & Calculate Error
-        self.portfolio.update_portfolio(self.stock2weight)
-        self.optimal_error = self.objective_function(self.optimal_weight)
-        print(f"Calculated error : {self.optimal_error}")
-        """
-        # print(result)
-        return self.stock2weight #, self.optimal_error
-    
+        weights = pd.Series(result.x, index=self.new_return.columns)
+        return weights
+
     
     def lagrange_partial_ours(
         self
@@ -183,12 +166,13 @@ class Solution:
             constraint = [{'type': 'eq', 'fun': self.weight_sum_constraint},# 'jac': self.weight_sum_jac},
                         {'type': 'ineq', 'fun': self.cardinality_constraint2}]#, 'jac': self.cardinality_jac}]
             
+
             # Optimization
             result = minimize(self.objective_function, initial_weight, method = 'SLSQP', constraints=constraint, bounds=bounds, options={'maxiter': 200})#, tol=1e-6)
             self.optimal_weight = result.x
             self.stock2weight = {}
             for i in range(len(self.stock_list)):
-                if result.x[i] <= 1e-4:
+                if result.x[i] < self.eps:
                     self.stock2weight[self.stock_list[i]] = 0
                 else:
                     self.stock2weight[self.stock_list[i]] = result.x[i]
@@ -242,9 +226,17 @@ class Solution:
                 # print(result)
                 break
             raise Exception("")
-        return self.stock2weight #, self.optimal_error
+        #return self.stock2weight #, self.optimal_error
+        return np.array(list(self.stock2weight.values()))
     
     
+
+
+ 
+    
+    
+        
+
     def lagrange_partial_forward(
         self
     ) -> dict :
@@ -384,6 +376,8 @@ class Solution:
             weights = self.lagrange_full_replication()
         elif solution_name == 'lagrange_ours':
             weights = self.lagrange_partial_ours()
+        elif solution_name == 'lagrange_ours_m':
+            weights = self.lagrange_ours_m()
         elif solution_name == 'lagrange_forward':
             weights = self.lagrange_partial_forward()
         elif solution_name == 'lagrange_backward':
